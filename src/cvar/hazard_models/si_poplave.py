@@ -15,548 +15,203 @@ from hazard.sources.wri_aqueduct import WRIAqueductSource
 from hazard.utilities.map_utilities import alphanumeric
 from hazard.utilities.tiles import create_tile_set
 
+from contextlib import contextmanager
+import xarray as xr
+from rasterio.crs import CRS  # type: ignore
+
 logger = logging.getLogger(__name__)
 
 
 @dataclass
 class BatchItem:
-    resource: HazardResource
     path: str
     scenario: str
     year: str
     filename_return_period: str  # the filename of the input
 
 
-class SIFlood(IndicatorModel):
+class SIPoplaveSource:
+    def __init__(self, source_dir):
+        self.source_dir = source_dir
+
+    # def load_file(self, rp: int) -> gpd.GeoDataFrame:
+    #     path = os.path.join(self.source_dir, f"globine_q{rp}.gpkg")
+    #     print("Loading file: ", path)
+    #     return gpd.read_file(path)
+
+    # def razterize_flood_depth(self, df: gpd.GeoDataFrame) -> gpd.GeoDataFrame:
+    #     pass
+    
+    @contextmanager
+    def load_file(self, fname: str):
+        da: Optional[xr.DataArray] = None
+        fpath = os.path.join(self.source_dir, fname)
+        print("Loading file: ", fpath)
+        f = None
+        try:
+            f = open(fpath, "rb")
+            da = xr.open_rasterio(f)
+            yield da
+        finally:
+            if da is not None:
+                da.close()
+            if f is not None:
+                f.close()
+
+    # def open_
+
+    # def prepare(self, working_dir: Optional[str] = None):
+    #     path = ""
+    #     self.df = gpd.read_file(path)
+
+    # def open_dataset_year(
+    #     self, gcm: str, scenario: str, quantity: str, year: int, chunks=None
+    # ) -> xr.Dataset:
+    #     """_summary_
+
+    #     Args:
+    #         gcm (str): Ignored.
+    #         scenario (str): Ignored.
+    #         quantity (str): 'RiverineInundation' or 'CoastalInundation'.
+    #         year (int): Ignored.
+    #         chunks (_type_, optional): _description_. Defaults to None.
+
+    #     Returns:
+    #         xr.Dataset: Data set named 'indicator' with 'max' and 'min' coordinate labels in the index coordinate.
+    #     """
+    #     hazard_type = quantity
+
+    #     def get_merged_rp(row, min_max: str, flood_type: str):
+    #         """Calculate min or max from database entry (GeoDataFrame row).
+
+    #         From the paper: "In practice, if information is available in the design layer for a given sub-country unit, then
+    #         this information is included in the merged layer. If no information is contained in the design layer, then the policy layer
+    #         information is included in the merged layer. Finally, if information is not available even at the policy layer, then the
+    #         model layer information is included in the merged layer."
+
+    #         Args:
+    #             row: GeoDataFrame row
+    #             flood_type (str, optional): "Riv" or "Co". Defaults to "Riv".
+
+    #         Returns:
+    #             float: Protection level as return period in years.
+    #         """
+    #         layers = ["DL", "PL", "ModL"] if flood_type == "Riv" else ["DL", "PL"]
+    #         for layer in layers:  # design layer, policy layer, modelled layer
+    #             # note that for the modelled layer, both min and max are set to the modelled value
+    #             layer_rp = (
+    #                 row[f"{layer}_{flood_type}"]
+    #                 if layer == "ModL"
+    #                 else row[f"{layer}_{min_max}_{flood_type}"]
+    #             )
+    #             if layer_rp > 0:  # if 0, layer is considered missing
+    #                 # if design layer is present, use this, otherwise use the policy layer, otherwise the modelled, otherwise missing
+    #                 return layer_rp
+    #         return float("Nan")  # zero is no data, represented by NaN here.
+
+    #     logger.info(f"Processing hazard type {hazard_type}")
+    #     min_shapes: List[Tuple[float, Any]] = []
+    #     max_shapes: List[Tuple[float, Any]] = []
+    #     logger.info("Inferring max and min protection levels per region")
+    #     for _, row in self.df.iterrows():
+    #         flood_type = (
+    #             "Riv" if hazard_type == "RiverineInundation" else "Co"
+    #         )  # riverine and coastal
+    #         min, max = (
+    #             get_merged_rp(row, "Min", flood_type),
+    #             get_merged_rp(row, "Max", flood_type),
+    #         )
+    #         if row["name"] is None and (min is None and max is None):
+    #             continue
+    #         # if either the min or max is NaN, that is OK: the vulnerability model is expected to deal with that
+    #         if not math.isnan(min) and not math.isnan(max) and min > max:
+    #             # it can occur that for a layer there is only information about minimum
+    #             raise ValueError("unexpected return period")
+
+    #         if not math.isnan(min):
+    #             min_shapes.append((row.geometry, min))
+    #         if not math.isnan(max):
+    #             max_shapes.append((row.geometry, max))
+
+    #     resolution_in_arc_mins = 1
+    #     width, height = (
+    #         int(60 * 360 / resolution_in_arc_mins),
+    #         int(60 * 180 / resolution_in_arc_mins),
+    #     )
+    #     crs, transform = global_crs_transform(width, height)
+    #     logger.info("Creating empty array")
+    #     da = empty_data_array(
+    #         width,
+    #         height,
+    #         transform,
+    #         str(crs),
+    #         index_name="min_max",
+    #         index_values=["min", "max"],
+    #     )
+    #     for min_max in ["min", "max"]:
+    #         logger.info(
+    #             f"Creating raster at {(360 * 60) / width} arcmin resolution for {min_max} protection"
+    #         )
+    #         rasterized = features.rasterize(
+    #             min_shapes if min_max == "min" else max_shapes,
+    #             out_shape=[height, width],
+    #             transform=transform,
+    #             all_touched=True,
+    #             fill=float("nan"),  # background value
+    #             merge_alg=MergeAlg.replace,
+    #         )
+    #         index = 0 if min_max == "min" else 1
+    #         da[index, :, :] = rasterized[:, :]
+    #     return da.to_dataset(name="sop")
+
+
+
+class SIFloodIndicatorModel(IndicatorModel):
     """On-board the SI Flood model data set from 
     # TODO: Add url for SI Flood model
     """
 
     def __init__(self):
-        self.resources = {}
-        for res in self.inventory():
-            for scen in res.scenarios:
-                for year in scen.years:
-                    path = res.path.format(scenario=scen.id, year=year)
-                    self.resources[path] = res
-        self.return_periods = [2, 5, 10, 25, 50, 100, 250, 500, 1000]
+        pass
+        self.return_periods = [
+            10, 
+            # 100, 
+            # 500
+        ]
 
-    def _resource(self, path):
-        return self.resources[path]
+    # def _resource(self, path):
+    #     return self.resources[path]
 
     def batch_items(self) -> Iterable[BatchItem]:
-        items = self.batch_items_riverine() + self.batch_items_coastal()
-        # filtered = [i for i in items if i.resource.path in \
-        # ["inundation/wri/v2/inuncoast_historical_nosub_hist_0",
-        # "inundation/wri/v2/inuncoast_historical_wtsub_hist_0"]]
-        return items
-
-    def batch_items_riverine(self) -> List[BatchItem]:
-        gcms = [
-            "00000NorESM1-M",
-            "0000GFDL-ESM2M",
-            "0000HadGEM2-ES",
-            "00IPSL-CM5A-LR",
-            "MIROC-ESM-CHEM",
-        ]
-        years = [2030, 2050, 2080]
-        scenarios = ["rcp4p5", "rcp8p5"]
-        items = []
-        for gcm in gcms:
-            for year in years:
-                for scenario in scenarios:
-                    path, filename_return_period = self.path_riverine(
-                        scenario, gcm, year
-                    )
-                    items.append(
-                        BatchItem(
-                            self._resource(path),
-                            path,
-                            scenario,
-                            str(year),
-                            filename_return_period,
-                        )
-                    )
-        # plus one extra historical/baseline item
-        scenario, year = "historical", 1980
-        path, filename_return_period = self.path_riverine(
-            scenario, "000000000WATCH", year
-        )
-        items.append(
+        items = [
             BatchItem(
-                self._resource(path), path, scenario, str(year), filename_return_period
-            )
-        )
-        return items
-
-    def batch_items_coastal(self) -> List[BatchItem]:
-        models = ["0", "0_perc_05", "0_perc_50"]
-        subs = ["wtsub", "nosub"]
-        years = [2030, 2050, 2080]
-        scenarios = ["rcp4p5", "rcp8p5"]
-        items = []
-        for model in models:
-            for sub in subs:
-                for year in years:
-                    for scenario in scenarios:
-                        path, filename_return_period = self.path_coastal(
-                            scenario, sub, str(year), model
-                        )
-                        items.append(
-                            BatchItem(
-                                self._resource(path),
-                                path,
-                                scenario,
-                                str(year),
-                                filename_return_period,
-                            )
-                        )
-        # plus two extra historical/baseline items
-        for sub in subs:
-            hist_scenario: str = "historical"
-            hist_year: str = "hist"
-            path, filename_return_period = self.path_coastal(
-                hist_scenario, sub, hist_year, "0"
-            )
-            items.append(
-                BatchItem(
-                    self._resource(path),
-                    path,
-                    hist_scenario,
-                    hist_year,
-                    filename_return_period,
-                )
-            )
-        return items
-
-    def path_riverine(self, scenario: str, gcm: str, year: int):
-        path = "inundation/wri/v2/" + f"inunriver_{scenario}_{gcm}_{year}"
-        return path, f"inunriver_{scenario}_{gcm}_{year}_rp{{return_period:05d}}"
-
-    def path_coastal(self, scenario: str, sub: str, year: str, model: str):
-        path = "inundation/wri/v2/" + f"inuncoast_{scenario}_{sub}_{year}_{model}"
-        return (
-            path,
-            f"inuncoast_{scenario}_{sub}_{year}_rp{{return_period:04d}}_{model}",
-        )
-
-    def inventory(self) -> Iterable[HazardResource]:
-        """Here we create the JSON directly, as a demonstration and for the sake of variety."""
-        with open(
-            os.path.join(os.path.dirname(__file__), "wri_aqueduct_flood.md"), "r"
-        ) as f:
-            aqueduct_description = f.read()
-
-        wri_colormap = {
-            "name": "flare",
-            "nodata_index": 0,
-            "min_index": 1,
-            "min_value": 0.0,
-            "max_index": 255,
-            "max_value": 2.0,
-            "units": "m",
-        }
-
-        wri_riverine_inundation_models = [
-            {
-                "hazard_type": "RiverineInundation",
-                "path": "inundation/wri/v2/inunriver_{scenario}_000000000WATCH_{year}",
-                "indicator_id": "flood_depth",
-                "indicator_model_gcm": "historical",
-                "display_name": "Flood depth/baseline (WRI)",
-                "description": """
-World Resources Institute Aqueduct Floods baseline riverine model using historical data.
-
-                """
-                + aqueduct_description,  # noqa:W503
-                "map": {
-                    "colormap": wri_colormap,
-                    "path": "inundation/wri/v2/inunriver_{scenario}_000000000WATCH_{year}_map",
-                    "source": "map_array_pyramid",
-                },
-                "units": "metres",
-                "scenarios": [
-                    {
-                        "id": "historical",
-                        "years": [1980],
-                        "periods": [{"year": 1980, "map_id": "gw4vgq"}],
-                    }
-                ],
-            },
-            {
-                "hazard_type": "RiverineInundation",
-                "path": "inundation/wri/v2/inunriver_{scenario}_00000NorESM1-M_{year}",
-                "indicator_id": "flood_depth",
-                "indicator_model_gcm": "NorESM1-M",
-                "display_name": "Flood depth/NorESM1-M (WRI)",
-                "description": """
-World Resources Institute Aqueduct Floods riverine model using GCM model from
-Bjerknes Centre for Climate Research, Norwegian Meteorological Institute.
-
-                """
-                + aqueduct_description,  # noqa:W503
-                "map": {
-                    "colormap": wri_colormap,
-                    "index_values": [8],
-                    "path": "inundation/wri/v2/inunriver_{scenario}_00000NorESM1-M_{year}_map",
-                    "source": "map_array_pyramid",
-                },
-                "units": "metres",
-                "scenarios": [
-                    {"id": "rcp4p5", "years": [2030, 2050, 2080]},
-                    {"id": "rcp8p5", "years": [2030, 2050, 2080]},
-                ],
-            },
-            {
-                "hazard_type": "RiverineInundation",
-                "path": "inundation/wri/v2/inunriver_{scenario}_0000GFDL-ESM2M_{year}",
-                "indicator_id": "flood_depth",
-                "indicator_model_gcm": "GFDL-ESM2M",
-                "display_name": "Flood depth/GFDL-ESM2M (WRI)",
-                "description": """
-World Resource Institute Aqueduct Floods riverine model using GCM model from
-Geophysical Fluid Dynamics Laboratory (NOAA).
-
-                """
-                + aqueduct_description,  # noqa:W503
-                "map": {
-                    "colormap": wri_colormap,
-                    "index_values": [8],
-                    "path": "inundation/wri/v2/inunriver_{scenario}_0000GFDL-ESM2M_{year}_map",
-                    "source": "map_array_pyramid",
-                },
-                "units": "metres",
-                "scenarios": [
-                    {"id": "rcp4p5", "years": [2030, 2050, 2080]},
-                    {"id": "rcp8p5", "years": [2030, 2050, 2080]},
-                ],
-            },
-            {
-                "hazard_type": "RiverineInundation",
-                "path": "inundation/wri/v2/inunriver_{scenario}_0000HadGEM2-ES_{year}",
-                "indicator_id": "flood_depth",
-                "indicator_model_gcm": "HadGEM2-ES",
-                "display_name": "Flood depth/HadGEM2-ES (WRI)",
-                "description": """
-World Resource Institute Aqueduct Floods riverine model using GCM model:
-Met Office Hadley Centre.
-
-                """
-                + aqueduct_description,  # noqa:W503
-                "map": {
-                    "colormap": wri_colormap,
-                    "index_values": [8],
-                    "path": "inundation/wri/v2/inunriver_{scenario}_0000HadGEM2-ES_{year}_map",
-                    "source": "map_array_pyramid",
-                },
-                "units": "metres",
-                "scenarios": [
-                    {"id": "rcp4p5", "years": [2030, 2050, 2080]},
-                    {"id": "rcp8p5", "years": [2030, 2050, 2080]},
-                ],
-            },
-            {
-                "hazard_type": "RiverineInundation",
-                "path": "inundation/wri/v2/inunriver_{scenario}_00IPSL-CM5A-LR_{year}",
-                "indicator_id": "flood_depth",
-                "indicator_model_gcm": "IPSL-CM5A-LR",
-                "display_name": "Flood depth/IPSL-CM5A-LR (WRI)",
-                "description": """
-World Resource Institute Aqueduct Floods riverine model using GCM model from
-Institut Pierre Simon Laplace
-
-                """
-                + aqueduct_description,  # noqa:W503
-                "map": {
-                    "colormap": wri_colormap,
-                    "index_values": [8],
-                    "path": "inundation/wri/v2/inunriver_{scenario}_00IPSL-CM5A-LR_{year}_map",
-                    "source": "map_array_pyramid",
-                },
-                "units": "metres",
-                "scenarios": [
-                    {"id": "rcp4p5", "years": [2030, 2050, 2080]},
-                    {"id": "rcp8p5", "years": [2030, 2050, 2080]},
-                ],
-            },
-            {
-                "hazard_type": "RiverineInundation",
-                "path": "inundation/wri/v2/inunriver_{scenario}_MIROC-ESM-CHEM_{year}",
-                "indicator_id": "flood_depth",
-                "indicator_model_gcm": "MIROC-ESM-CHEM",
-                "display_name": "Flood depth/MIROC-ESM-CHEM (WRI)",
-                "description": """World Resource Institute Aqueduct Floods riverine model using
- GCM model from Atmosphere and Ocean Research Institute
- (The University of Tokyo), National Institute for Environmental Studies, and Japan Agency
- for Marine-Earth Science and Technology.
-
-                """
-                + aqueduct_description,  # noqa:W503
-                "map": {
-                    "colormap": wri_colormap,
-                    "index_values": [8],
-                    "path": "inundation/wri/v2/inunriver_{scenario}_MIROC-ESM-CHEM_{year}_map",
-                    "source": "map_array_pyramid",
-                },
-                "units": "metres",
-                "scenarios": [
-                    {
-                        "id": "rcp4p5",
-                        "years": [2030, 2050, 2080],
-                        "periods": [
-                            {"year": 2030, "map_id": "ht2kn3"},
-                            {"year": 2050, "map_id": "1k4boi"},
-                            {"year": 2080, "map_id": "3rok7b"},
-                        ],
-                    },
-                    {"id": "rcp8p5", "years": [2030, 2050, 2080]},
-                ],
-            },
+                path="inundation/si_poplave/v1/si_poplave", # Structur of output path
+                scenario="historical", # ?
+                year=1971, # ?
+                filename_return_period="globine_q{return_period}.tif", # Input filename
+            ),
         ]
-
-        wri_coastal_inundation_models = [
-            {
-                "hazard_type": "CoastalInundation",
-                "path": "inundation/wri/v2/inuncoast_historical_nosub_hist_0",
-                "indicator_id": "flood_depth",
-                "indicator_model_id": "nosub",
-                "indicator_model_gcm": "unknown",
-                "display_name": "Flood depth/baseline, no subsidence (WRI)",
-                "description": """
-World Resources Institute Aqueduct Floods baseline coastal model using historical data. Model excludes subsidence.
-
-                """
-                + aqueduct_description,  # noqa:W503
-                "map": {
-                    "colormap": wri_colormap,
-                    "index_values": [8],
-                    "path": "inundation/wri/v2/inuncoast_historical_nosub_hist_0_map",
-                    # "inuncoast_historical_nosub_hist_rp{return_period:04d}_0",
-                    "source": "map_array_pyramid",  # "mapbox",
-                },
-                "units": "metres",
-                "scenarios": [{"id": "historical", "years": [1980]}],
-            },
-            {
-                "hazard_type": "CoastalInundation",
-                "path": "inundation/wri/v2/inuncoast_{scenario}_nosub_{year}_0",
-                "indicator_id": "flood_depth",
-                "indicator_model_id": "nosub/95",
-                "indicator_model_gcm": "unknown",
-                "display_name": "Flood depth/95%, no subsidence (WRI)",
-                "description": """
-World Resource Institute Aqueduct Floods coastal model, excluding subsidence; 95th percentile sea level rise.
-
-                """
-                + aqueduct_description,  # noqa:W503
-                "map": {
-                    "colormap": wri_colormap,
-                    "index_values": [8],
-                    "path": "inundation/wri/v2/inuncoast_{scenario}_nosub_{year}_0_map",
-                    "source": "map_array_pyramid",
-                },
-                "units": "metres",
-                "scenarios": [
-                    {"id": "rcp4p5", "years": [2030, 2050, 2080]},
-                    {"id": "rcp8p5", "years": [2030, 2050, 2080]},
-                ],
-            },
-            {
-                "hazard_type": "CoastalInundation",
-                "path": "inundation/wri/v2/inuncoast_{scenario}_nosub_{year}_0_perc_05",
-                "indicator_id": "flood_depth/nosub/5",
-                "indicator_model_id": "nosub/5",
-                "indicator_model_gcm": "unknown",
-                "display_name": "Flood depth/5%, no subsidence (WRI)",
-                "description": """
-World Resource Institute Aqueduct Floods coastal model, excluding subsidence; 5th percentile sea level rise.
-
-                """
-                + aqueduct_description,  # noqa:W503
-                "map": {
-                    "colormap": wri_colormap,
-                    "index_values": [8],
-                    "path": "inundation/wri/v2/inuncoast_{scenario}_nosub_{year}_0_perc_05_map",
-                    "source": "map_array_pyramid",
-                },
-                "units": "metres",
-                "scenarios": [
-                    {"id": "rcp4p5", "years": [2030, 2050, 2080]},
-                    {"id": "rcp8p5", "years": [2030, 2050, 2080]},
-                ],
-            },
-            {
-                "hazard_type": "CoastalInundation",
-                "path": "inundation/wri/v2/inuncoast_{scenario}_nosub_{year}_0_perc_50",
-                "indicator_id": "flood_depth",
-                "indicator_model_id": "nosub/50",
-                "indicator_model_gcm": "unknown",
-                "display_name": "Flood depth/50%, no subsidence (WRI)",
-                "description": """
-World Resource Institute Aqueduct Floods model, excluding subsidence; 50th percentile sea level rise.
-
-                """
-                + aqueduct_description,  # noqa:W503
-                "map": {
-                    "colormap": wri_colormap,
-                    "index_values": [8],
-                    "path": "inundation/wri/v2/inuncoast_{scenario}_nosub_{year}_0_perc_50_map",
-                    "source": "map_array_pyramid",
-                },
-                "units": "metres",
-                "scenarios": [
-                    {"id": "rcp4p5", "years": [2030, 2050, 2080]},
-                    {"id": "rcp8p5", "years": [2030, 2050, 2080]},
-                ],
-            },
-            {
-                "hazard_type": "CoastalInundation",
-                "path": "inundation/wri/v2/inuncoast_historical_wtsub_hist_0",
-                "indicator_id": "flood_depth",
-                "indicator_model_id": "wtsub",
-                "indicator_model_gcm": "unknown",
-                "display_name": "Flood depth/baseline, with subsidence (WRI)",
-                "description": """
-World Resource Institute Aqueduct Floods model, excluding subsidence; baseline (based on historical data).
-
-                """
-                + aqueduct_description,  # noqa:W503
-                "map": {
-                    "colormap": wri_colormap,
-                    "index_values": [8],
-                    "path": "inundation/wri/v2/inuncoast_historical_wtsub_hist_0_map",
-                    "source": "map_array_pyramid",  # "mapbox",
-                },
-                "units": "metres",
-                "scenarios": [{"id": "historical", "years": [1980]}],
-            },
-            {
-                "hazard_type": "CoastalInundation",
-                "path": "inundation/wri/v2/inuncoast_{scenario}_wtsub_{year}_0",
-                "indicator_id": "flood_depth",
-                "indicator_model_id": "wtsub/95",
-                "indicator_model_gcm": "unknown",
-                "display_name": "Flood depth/95%, with subsidence (WRI)",
-                "description": """
-World Resource Institute Aqueduct Floods model, including subsidence; 95th percentile sea level rise.
-
-                """
-                + aqueduct_description,  # noqa:W503
-                "map": {
-                    "colormap": wri_colormap,
-                    "index_values": [8],
-                    "path": "inundation/wri/v2/inuncoast_{scenario}_wtsub_{year}_0_map",
-                    "source": "map_array_pyramid",
-                },
-                "units": "metres",
-                "scenarios": [
-                    {"id": "rcp4p5", "years": [2030, 2050, 2080]},
-                    {"id": "rcp8p5", "years": [2030, 2050, 2080]},
-                ],
-            },
-            {
-                "hazard_type": "CoastalInundation",
-                "path": "inundation/wri/v2/inuncoast_{scenario}_wtsub_{year}_0_perc_05",
-                "indicator_id": "flood_depth",
-                "indicator_model_id": "wtsub/5",
-                "indicator_model_gcm": "unknown",
-                "display_name": "Flood depth/5%, with subsidence (WRI)",
-                "description": """
-World Resource Institute Aqueduct Floods model, including subsidence; 5th percentile sea level rise.
-
-                """
-                + aqueduct_description,  # noqa:W503
-                "map": {
-                    "colormap": wri_colormap,
-                    "index_values": [8],
-                    "path": "inundation/wri/v2/inuncoast_{scenario}_wtsub_{year}_0_perc_05_map",
-                    "source": "map_array_pyramid",
-                },
-                "units": "metres",
-                "scenarios": [
-                    {"id": "rcp4p5", "years": [2030, 2050, 2080]},
-                    {"id": "rcp8p5", "years": [2030, 2050, 2080]},
-                ],
-            },
-            {
-                "hazard_type": "CoastalInundation",
-                "path": "inundation/wri/v2/inuncoast_{scenario}_wtsub_{year}_0_perc_50",
-                "indicator_id": "flood_depth",
-                "indicator_model_id": "wtsub/50",
-                "indicator_model_gcm": "unknown",
-                "display_name": "Flood depth/50%, with subsidence (WRI)",
-                "description": """
-World Resource Institute Aqueduct Floods model, including subsidence; 50th percentile sea level rise.
-
-                """
-                + aqueduct_description,  # noqa:W503
-                "map": {
-                    "colormap": wri_colormap,
-                    "index_values": [8],
-                    "path": "inundation/wri/v2/inuncoast_{scenario}_wtsub_{year}_0_perc_50_map",
-                    "source": "map_array_pyramid",
-                },
-                "units": "metres",
-                "scenarios": [
-                    {"id": "rcp4p5", "years": [2030, 2050, 2080]},
-                    {"id": "rcp8p5", "years": [2030, 2050, 2080]},
-                ],
-            },
-        ]
-        resources = parse_obj_as(
-            List[HazardResource],
-            wri_riverine_inundation_models + wri_coastal_inundation_models,
-        )
-        return resources  # self._expand_resources(resources)
-
-    def _expand_resources(self, models: List[HazardResource]) -> List[HazardResource]:
-        expanded_models = [e for model in models for e in model.expand()]
-        # we populate map_id hashes programmatically
-        for model in expanded_models:
-            for scenario in model.scenarios:
-                test_periods = scenario.periods
-                scenario.periods = []
-                for year in scenario.years:
-                    if model.map and model.map.path:
-                        name_format = model.map.path
-                        path = name_format.format(
-                            scenario=scenario.id,
-                            year=year,
-                            id=model.indicator_id,
-                            return_period=1000,
-                        )
-                        id = alphanumeric(path)[0:6]
-                    else:
-                        id = ""
-                    scenario.periods.append(Period(year=year, map_id=id))
-                # if a period was specified explicitly, we check that hash is the same: a build-in check
-                if test_periods is not None:
-                    for period, test_period in zip(scenario.periods, test_periods):
-                        if period.map_id != test_period.map_id:
-                            raise Exception(
-                                f"validation error: hash {period.map_id} different to specified hash {test_period.map_id}"  # noqa: E501
-                            )
-
-        return expanded_models
+        return items
 
     def run_single(
-        self,
-        item: BatchItem,
-        source: WRIAqueductSource,
-        target: WriteDataArray,
-        client: Client,
+        self, item, source, target: OscZarr, client: Client
     ):
-        assert isinstance(target, OscZarr)
-        logger.info(f"Running batch item with path {item.path}")
+        print("SOURCE: ", source)
+        print("TARGET: ", target)
+        print("type: ", type(source))
+        assert isinstance(source, SIPoplaveSource), "Source is type: " + type(source)
+        assert isinstance(target, OscZarr), "Target is type: " + type(target)
+
         for i, ret in enumerate(self.return_periods):
-            logger.info(f"Copying return period {i + 1}/{len(self.return_periods)}")
-            with source.open_dataset(
-                item.filename_return_period.format(return_period=ret)
-            ) as da:
+            print(f"Copying return period {i + 1}/{len(self.return_periods)}")
+            fname = item.filename_return_period.format(return_period=ret)
+            print("Loading fname: ", fname)
+
+            with source.load_file(fname) as da:
                 assert da is not None
                 if ret == self.return_periods[0]:
                     z = target.create_empty(
-                        item.resource.path,
+                        item.path,
                         len(da.x),
                         len(da.y),
                         Affine(
@@ -567,7 +222,7 @@ World Resource Institute Aqueduct Floods model, including subsidence; 50th perce
                             da.transform[4],
                             da.transform[5],
                         ),
-                        str(da.crs),
+                        str(CRS.from_epsg(3912)),
                         index_values=self.return_periods,
                     )
                 # ('band', 'y', 'x')
@@ -578,21 +233,5 @@ World Resource Institute Aqueduct Floods model, including subsidence; 50th perce
                 z[i, :, :] = values
         print("done")
 
-    def generate_tiles_single(self, item: BatchItem, source: OscZarr, target: OscZarr):
-        logger.info(f"Generating tile-set for batch item with path {item.path})")
-        source_path = item.path
-        assert item.resource.map is not None
-        target_path = item.resource.map.path.format(
-            scenario=item.scenario, year=item.year
-        )
-        if target_path != source_path + "_map":
-            raise ValueError(f"unexpected target path {target_path}")
-        create_tile_set(
-            source,
-            source_path,
-            target,
-            target_path,
-            nodata=-9999.0,
-            nodata_as_zero=True,
-        )
-        # create_tiles_for_resource(source, target, resource)
+    def inventory(self) -> Iterable[HazardResource]:
+        return []
