@@ -19,7 +19,7 @@ def get_wri_and_si_hazard_data(coords: dict):
         "interpolation": "max",
         "items": [
             {
-                "request_item_id": "my_flood_request",
+                "request_item_id": "wri", # friendly name
                 "hazard_type": "RiverineInundation",
                 "indicator_id": "flood_depth",
                 "scenario": "rcp4p5",
@@ -29,7 +29,7 @@ def get_wri_and_si_hazard_data(coords: dict):
                 "latitudes": [coords["lat"]],
             },
             {
-                "request_item_id": "my_flood_request",
+                "request_item_id": "si", # friendly name
                 "hazard_type": "RiverineInundation",
                 "indicator_id": "flood_depth",
                 "scenario": "historical",
@@ -56,6 +56,18 @@ def get_wri_and_si_hazard_data(coords: dict):
 
     result = requester_ls.get(request_id="get_hazard_data", request_dict=request)
     data = json.loads(result)
+    
+    # Parse/clean data for easier processing
+    parsed_data = {}
+    for item in data["items"]:
+        rps = item["intensity_curve_set"][0]["index_values"]
+        intensities  = item["intensity_curve_set"][0]["intensities"]
+        parsed_data[item["request_item_id"]] = {
+            rp: intensity
+            for rp, intensity in zip(rps, intensities)
+        }
+    data["processed"] = parsed_data
+
     return data, request
 
 
