@@ -53,12 +53,13 @@ class SIFloodIndicatorModel(IndicatorModel):
     # TODO: Add url for SI Flood model
     """
 
-    def __init__(self):
+    def __init__(self, epsg: int = 3912):
         self.return_periods = [
-            10,
+            # 10,
             100,
-            500,
+            # 500,
         ]
+        self.epsg = epsg
 
     def batch_items(self) -> Iterable[BatchItem]:
         items = [
@@ -82,6 +83,17 @@ class SIFloodIndicatorModel(IndicatorModel):
         PROJCS["MGI_1901_Slovene_National_Grid",GEOGCS["GCS_MGI_1901",DATUM["D_MGI_1901",SPHEROID["Bessel_1841",6377397.155,299.1528128]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Transverse_Mercator"],PARAMETER["False_Easting",500000.0],PARAMETER["False_Northing",-5000000.0],PARAMETER["Central_Meridian",15.0],PARAMETER["Scale_Factor",0.9999],PARAMETER["Latitude_Of_Origin",0.0],UNIT["Meter",1.0]]
         """.replace("\n", "")
 
+        epsg_3974 = """
+        PROJCS["Slovenia 1996 / Slovene National Grid",GEOGCS["Slovenia 1996",DATUM["Slovenia_Geodetic_Datum_1996",SPHEROID["GRS 1980",6378137,298.257222101],TOWGS84[0,0,0,0,0,0,0]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4765"]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",15],PARAMETER["scale_factor",0.9999],PARAMETER["false_easting",500000],PARAMETER["false_northing",-5000000],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","3794"]]
+        """
+
+        if self.epsg == 3912:
+            epsg_str = epsg_3912
+        elif self.epsg == 3974:
+            epsg_str = epsg_3974
+        else:
+            raise ValueError(f"Invalid EPSG code: {self.epsg}")
+
         for i, ret in enumerate(self.return_periods):
             print(f"Copying return period {i + 1}/{len(self.return_periods)}")
             fname = item.filename_return_period.format(return_period=ret)
@@ -102,7 +114,7 @@ class SIFloodIndicatorModel(IndicatorModel):
                             da.transform[4],
                             da.transform[5],
                         ),
-                        epsg_3912,
+                        epsg_str,
                         index_values=self.return_periods,
                     )
                 # ('band', 'y', 'x')

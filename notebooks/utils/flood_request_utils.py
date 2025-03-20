@@ -29,11 +29,21 @@ def get_wri_and_si_hazard_data(coords: dict):
                 "latitudes": [coords["lat"]],
             },
             {
-                "request_item_id": "si", # friendly name
+                "request_item_id": "si_old", # friendly name
                 "hazard_type": "RiverineInundation",
                 "indicator_id": "flood_depth",
                 "scenario": "historical",
                 "path": "inundation/si_poplave/v1/si_poplave_{scenario}_{year}",
+                "year": 2025,
+                "longitudes": [coords["lng"]],
+                "latitudes": [coords["lat"]],
+            },
+            {
+                "request_item_id": "si", # friendly name
+                "hazard_type": "RiverineInundation",
+                "indicator_id": "flood_depth",
+                "scenario": "historical",
+                "path": "inundation/si_poplave/v2/si_poplave_{scenario}_{year}",
                 "year": 2025,
                 "longitudes": [coords["lng"]],
                 "latitudes": [coords["lat"]],
