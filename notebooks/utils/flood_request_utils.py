@@ -76,7 +76,15 @@ def get_wri_and_si_hazard_data(coords: dict):
             rp: intensity
             for rp, intensity in zip(rps, intensities)
         }
-    data["processed"] = parsed_data
+    data["flood_depths"] = parsed_data
+
+    # Apply damage fractions
+    processed_damage_fractions = {}
+    for k, vals in data["flood_depths"].items():
+        processed_damage_fractions[k] = {}
+        for rp, depth in vals.items():
+            processed_damage_fractions[k][rp] = get_damage_fraction(depth)
+    data["damage_fractions"] = processed_damage_fractions
 
     return data, request
 
