@@ -105,14 +105,18 @@ def get_metrics(real_values:List[float], predicted_values:List[float]) -> dict:
     :return: dict
     """
     return {
-        "within_5": within_x(real_values, predicted_values, 5),
-        "within_10": within_x(real_values, predicted_values, 10),
-        "within_15": within_x(real_values, predicted_values, 15),
+        # "within_5": within_x(real_values, predicted_values, 5),
+        # "within_10": within_x(real_values, predicted_values, 10),
+        # "within_15": within_x(real_values, predicted_values, 15),
         "within_20": within_x(real_values, predicted_values, 20),
-        "overshoot_20": overshoot_x(real_values, predicted_values, 20),
-        "median_relative_error": median_relative_error(real_values, predicted_values), # 
-        "median_absolute_relative_error": median_absolute_relative_error(real_values, predicted_values),
-        "st_dev_residuals": st_dev_residuals(real_values, predicted_values), #
+        # "overshoot_20": overshoot_x(real_values, predicted_values, 20),
+        # "median_relative_error": median_relative_error(real_values, predicted_values),
+        # "median_absolute_relative_error": median_absolute_relative_error(real_values, predicted_values),
+        "median_error": median([real - pred for real, pred in zip(real_values, predicted_values)]),
+        # "mean_error": np.mean([real - pred for real, pred in zip(real_values, predicted_values)]),
+        "median_absolute_error": np.median([abs(real - pred) for real, pred in zip(real_values, predicted_values)]),
+        # "mean_absolute_error": np.mean([abs(real - pred) for real, pred in zip(real_values, predicted_values)]),
+        "st_dev_residuals": st_dev_residuals(real_values, predicted_values),
         "total_samples": len(real_values),
     }
 
