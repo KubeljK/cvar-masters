@@ -1,0 +1,137 @@
+\documentclass[a4paper,10.80pt,twoside]{article}
+\usepackage{informat}
+\usepackage{epsfig}
+\usepackage{booktabs}
+
+%\usepackage{fontspec}
+%\setmainfont{Times New Roman}
+
+\begin{document}
+    %\setcounter{page}{555}
+    \title{Physical climate risk: Flood Model Comparison, Hazard and Vulnerabilty Assessment and Financial Implications}
+    \author{Klemen Kubelj \\
+        Arvio d.o.o\\
+        klemen.kubelj@gmail.com \\
+        \AndAuthor
+        Boštjan Kaluža\\
+        Arvio d.o.o\\
+        bostjan@arvio.si
+        \AndAuthor
+        Mitja Luštrek\\
+        IJS\\
+        mitja@ijs.si}
+    \titleodd{Title of the\ldots}
+    \authoreven{K. Kubelj et al.}
+    \keywords{flood risk, physical risk, ESG, water, hazard}
+    \received{May 1, 2025}
+    
+    \abstract{This thesis investigates the assessment of physical climate risk, with a focus on flood hazards and their impact on property value. It compares global and local flood hazard models, evaluates vulnerability functions using observed flood damage reports, and examines their integration into a unified flood risk framework. The analysis is based on empirical data from flood events in Slovenia and includes technical contributions related to data processing workflows and model onboarding to a standardized risk assessment platform.}
+    \abstractSi{TODO: SI PREVOD!}
+
+\maketitle
+    
+\section{Introduction \& background}
+
+Climate-related risks are becoming an increasingly important consideration in real estate and financial decision-making. ESG (Environmental, Social, and Governance) frameworks often incorporate physical climate risks, particularly those arising from acute weather events such as flooding. These risks have implications for asset valuation, investment planning, and long-term portfolio resilience.
+
+Among acute hazards, flooding is one of the most frequent and economically damaging. Climate change is expected to increase the frequency and severity of flood events, heightening risks to both property and infrastructure. Assessing these risks requires models capable of estimating the likelihood and intensity of flooding (hazard), as well as the extent of resulting damage (vulnerability). When combined with asset-level exposure data, such models can be used to quantify financial impacts.
+
+This thesis investigates the accuracy of flood hazard and vulnerability models in the context of physical climate risk assessment. It focuses on two flood depth models—one global and one local—whose predictions are evaluated against observed data from recent flood events in Slovenia. In addition, the suitability of a global flood depth-damage function is assessed by comparing its outputs with reported damage estimates from national authorities.
+
+The aim of this work is to explore how flood-related physical risks can be more reliably integrated into financial risk assessment processes, particularly those aligned with ESG objectives, through the use of validated, data-driven models.
+
+\section{Literature Review \& Related Work}
+TODO: Write this section!
+
+\section{Study Area, Data, and Methodology}
+
+In this study, physical climate risk is assessed using the property value as the primary indicator. This choice reflects the relevance of property valuation for financial stakeholders such as banks, insurers, and investors, and provides a consistent basis for quantifying exposure. Accordingly, exposure is defined as the full estimated market value of the affected properties.
+
+The assessment of flood-related physical climate risk typically follows a structured framework based on three core components: hazard, vulnerability, and exposure. These components are used to quantify the potential impact of climate hazards on assets, and the resulting risk is expressed as:
+
+\begin{equation}
+\mathrm{Risk} = \mathrm{Hazard} \times \mathrm{Vulnerability} \times \mathrm{Exposure}
+\end{equation}
+
+This formulation is widely used in physical risk modeling, particularly for acute climate hazards such as floods. Each term in the equation represents a distinct element of the risk chain:
+
+\begin{itemize}
+  \item \textbf{Hazard} refers to the physical characteristics of a potential flood event, such as water depth or extent, and is typically defined probabilistically based on return periods.
+  \item \textbf{Vulnerability} describes the expected damage to an asset given a certain hazard intensity, often represented as a fraction of the asset's value.
+  \item \textbf{Exposure} quantifies the value of the assets at risk—in this case, the monetary value of real estate properties.
+\end{itemize}
+
+The combination of these three components enables the estimation of expected loss for individual assets, portfolios, or geographic regions under a given climate scenario.
+
+\subsection{Hazard}
+
+Flood hazard is represented through the intensity and likelihood of inundation, with depth being the most common metric. Hazard models often use either event-based or return-period-based approaches:
+
+\begin{itemize}
+  \item \emph{Event-based models} simulate specific flood events and produce spatial footprints of flood depths for each event. These models are useful for analyzing correlated risks across nearby assets.
+  \item \emph{Return-period-based models} provide flood depths associated with predefined return intervals (e.g., 10-year, 100-year, 500-year floods) for each location independently. These models are widely used for portfolio risk analysis and regulatory reporting.
+\end{itemize}
+
+In both approaches, hazard is fundamentally probabilistic. Flood depth estimates are typically provided as part of a hazard map or dataset and are used as input into subsequent stages of the risk calculation.
+
+\subsection{Vulnerability}
+
+The vulnerability component relates hazard intensity to expected damage. This is typically done using depth-damage functions, which estimate the fraction of an asset’s value that would be lost at a given flood depth. Vulnerability models can be deterministic or probabilistic:
+
+\begin{itemize}
+  \item \emph{Deterministic models} assign a fixed damage value for each depth.
+  \item \emph{Probabilistic models} use distributions to capture uncertainty in damage outcomes due to variability in asset characteristics or flood dynamics.
+\end{itemize}
+
+Vulnerability functions may be generic (e.g., global functions for broad asset classes) or highly specific, based on local empirical data or engineering assessments. In practical applications, segmentation by building type, construction material, or use case improves accuracy.
+
+\subsection{Exposure}
+
+Exposure quantifies the economic value at risk. It is typically defined by the replacement or market value of physical assets such as buildings or infrastructure. Exposure data can be obtained from cadastral datasets, insurance portfolios, or satellite-derived proxies.
+
+While the exposure component is often treated as static, dynamic exposure modeling (e.g., accounting for future development or asset turnover) is increasingly relevant for forward-looking climate risk assessments.
+
+
+
+\section{Model Integration and Analysis Framework}
+TODO: Write this section!
+
+\subsection{Architectural Diagram}
+\subsection{Pipelines for Combining SI Model}
+\subsection{Physrisk Model Onboarding}
+\subsection{Comparison Toolset}
+
+\section{Experimental Design and Evaluation}
+\subsection{Experimental Goals}
+\subsubsection{Compare Global vs Local Models}
+\subsubsection{Analyse Global Depth-Damage Functions}
+\subsection{Experimental Setup}
+\subsubsection{Validation Dataset Description}
+\subsubsection{Hazard, Vulnerability Models}
+\subsubsection{Quality Metrics}
+\subsection{Experimental Results for Flood Depth}
+\subsection{Experimental Results for Damage Functions}
+\subsection{Analysis of Impact on Total Exposed Property Value}
+
+\section{Discussion \& Conclusion}
+\subsection{Limitations of This Work}
+\subsection{Interpretation of Results}
+\subsection{Future Work}
+\subsection{Conclusion with Main Contributions}
+
+% bibliography style is not predefined; authors can apply their own,
+% but it should be sent to matjaz.gams@ijs.si with the accepted paper
+\begin{thebibliography}{99}
+
+% book
+\bibitem{} Author (year) {\it Title of the book}, Publisher.
+
+% journal paper
+\bibitem{} Author (year) Title of the paper, {\it Title of the journal}, Publisher, pp. nn--mm.
+
+% conference
+\bibitem{} Author (year) Title of the paper, {\it Title of the proceedings}, Publisher, Location, pp. nn--mm.
+
+\end{thebibliography}
+
+\end{document}

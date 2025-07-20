@@ -1,5 +1,6 @@
 import json
 import os
+from matplotlib import pyplot as plt
 import requests
 import zarr
 
@@ -89,7 +90,20 @@ def get_wri_and_si_hazard_data(coords: dict):
     return data, request
 
 
-def plot_wri_and_si_hazard_data(data: dict, request: dict):
+def plot_wri_and_si_hazard_data(data: dict, request: dict, x_axis: str = "RP"):
+    """
+    Plot the hazard data for the WRI and SI models.
+
+    x_axis can be "RP" (Return Period) or "AEP" (Annual Exceedance Probability).
+    """
+
+    if x_axis == "RP":
+        x_axis_title = "Return period (years)"
+    elif x_axis == "AEP":
+        x_axis_title = "Annual exceedance probability"
+    else:
+        raise ValueError(f"Invalid x_axis: {x_axis}")
+    
     fig1 = make_subplots()
 
     gps = {
@@ -100,10 +114,16 @@ def plot_wri_and_si_hazard_data(data: dict, request: dict):
     for idx, item in enumerate(data["items"]):
         name = request["items"][idx]["path"].format(**request["items"][idx])
         index_values = item["intensity_curve_set"][0]["index_values"]
+        if x_axis == "AEP":
+            index_values = [1 / rp for rp in index_values]
+
+        print("index_values: ",index_values)
+        
         intensities = item["intensity_curve_set"][0]["intensities"]
+        print("intensities: ", intensities)
         fig1.add_scatter(x=index_values, y=intensities, name=name, row=1, col=1)
 
-    fig1.update_xaxes(title="Return period (years)", title_font={"size": 14}, row=1, col=1, type="log")
+    fig1.update_xaxes(title=x_axis_title, title_font={"size": 14}, row=1, col=1, type="log")
     fig1.update_yaxes(title="Flood depth (m)", title_font={"size": 14}, row=1, col=1)
     fig1.update_layout(legend=dict(orientation="h", y=-0.15))
     fig1.update_layout(margin=dict(l=20, r=20, t=40, b=20))
@@ -179,4 +199,6 @@ def get_damage_fraction(depth: float) -> float:
 
     # Create interpolation function
     f = interp1d(flood_depths, damage_fractions, kind="linear", bounds_error=False, fill_value=(0, 1))
+    
+    
     return float(f(depth))

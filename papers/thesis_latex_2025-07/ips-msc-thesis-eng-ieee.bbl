@@ -1,0 +1,1310 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{pythagoras}{online}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{title}{Pythagorean Theorem}
+      \field{urlday}{1}
+      \field{urlmonth}{2}
+      \field{urlyear}{2014}
+      \field{year}{2014}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://en.wikipedia.org/wiki/Pythagorean_theorem
+      \endverb
+      \verb{url}
+      \verb http://en.wikipedia.org/wiki/Pythagorean_theorem
+      \endverb
+    \endentry
+    \entry{mihailovic06}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=613f8a7b4ad50ea84aed827d05ceaa00}{%
+           family={Mihailović},
+           familyi={M\bibinitperiod},
+           given={Dragan},
+           giveni={D\bibinitperiod}}}%
+        {{hash=062e8a1a8d2d5afe24d56e26b6838808}{%
+           family={Kušar},
+           familyi={K\bibinitperiod},
+           given={Primož},
+           giveni={P\bibinitperiod}}}%
+        {{hash=c489291bcdb84ac06b51428b901dbc2d}{%
+           family={Demšar},
+           familyi={D\bibinitperiod},
+           given={Jure},
+           giveni={J\bibinitperiod}}}%
+        {{hash=83209b233156cbd6d12e1ecebe236b41}{%
+           family={Kabanov},
+           familyi={K\bibinitperiod},
+           given={Viktor\bibnamedelima V},
+           giveni={V\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{ea8fc7bb310a0af518e86adee766116c}
+      \strng{fullhash}{7d2b09e9104bec17a5c4066470b14433}
+      \strng{fullhashraw}{7d2b09e9104bec17a5c4066470b14433}
+      \strng{bibnamehash}{7d2b09e9104bec17a5c4066470b14433}
+      \strng{authorbibnamehash}{7d2b09e9104bec17a5c4066470b14433}
+      \strng{authornamehash}{ea8fc7bb310a0af518e86adee766116c}
+      \strng{authorfullhash}{7d2b09e9104bec17a5c4066470b14433}
+      \strng{authorfullhashraw}{7d2b09e9104bec17a5c4066470b14433}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Superconductivity}
+      \field{number}{1/2}
+      \field{title}{The determination of length scales associated with dynamic inhomogeneity in cuprate superconductors}
+      \field{volume}{19}
+      \field{year}{2006}
+      \field{pages}{43\bibrangedash 47}
+      \range{pages}{5}
+      \keyw{myarticle}
+    \endentry
+    \entry{tusar14}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=08f03c75c9e9b5afea3b578b903ffc47}{%
+           family={Tušar},
+           familyi={T\bibinitperiod},
+           given={Tea},
+           giveni={T\bibinitperiod}}}%
+        {{hash=d23bdd5d18d8274250cab53cf50831fc}{%
+           family={Filipič},
+           familyi={F\bibinitperiod},
+           given={Bogdan},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{de67ffa9c228016172a250694193921c}
+      \strng{fullhash}{de67ffa9c228016172a250694193921c}
+      \strng{fullhashraw}{de67ffa9c228016172a250694193921c}
+      \strng{bibnamehash}{de67ffa9c228016172a250694193921c}
+      \strng{authorbibnamehash}{de67ffa9c228016172a250694193921c}
+      \strng{authornamehash}{de67ffa9c228016172a250694193921c}
+      \strng{authorfullhash}{de67ffa9c228016172a250694193921c}
+      \strng{authorfullhashraw}{de67ffa9c228016172a250694193921c}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Evolutionary Computation}
+      \field{note}{In press}
+      \field{title}{Visualization of {Pareto} Front Approximations in Evolutionary Multiobjective Optimization: {A} Critical Review and the Prosection Method}
+      \field{year}{2014}
+      \verb{doi}
+      \verb 10.1109/TEVC.2014.2313407
+      \endverb
+      \keyw{myarticle}
+    \endentry
+    \entry{depolli13}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=65fe40e52accc0bc06f3e3cdccd76c99}{%
+           family={Depolli},
+           familyi={D\bibinitperiod},
+           given={Matjaž},
+           giveni={M\bibinitperiod}}}%
+        {{hash=884ad0f8ec44c63b6122e703324780ae}{%
+           family={Trobec},
+           familyi={T\bibinitperiod},
+           given={Roman},
+           giveni={R\bibinitperiod}}}%
+        {{hash=d23bdd5d18d8274250cab53cf50831fc}{%
+           family={Filipič},
+           familyi={F\bibinitperiod},
+           given={Bogdan},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{177a62290431c825fc4e34f0622a1683}
+      \strng{fullhash}{cceef5638a88638631f9ae67b3c1dce9}
+      \strng{fullhashraw}{cceef5638a88638631f9ae67b3c1dce9}
+      \strng{bibnamehash}{cceef5638a88638631f9ae67b3c1dce9}
+      \strng{authorbibnamehash}{cceef5638a88638631f9ae67b3c1dce9}
+      \strng{authornamehash}{177a62290431c825fc4e34f0622a1683}
+      \strng{authorfullhash}{cceef5638a88638631f9ae67b3c1dce9}
+      \strng{authorfullhashraw}{cceef5638a88638631f9ae67b3c1dce9}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Evolutionary Computation}
+      \field{number}{2}
+      \field{title}{Asynchronous master-slave parallelization of differential evolution for multiobjective optimization}
+      \field{volume}{21}
+      \field{year}{2013}
+      \field{pages}{261\bibrangedash 291}
+      \range{pages}{31}
+      \keyw{myarticle}
+    \endentry
+    \entry{kobal04}{article}{}{}
+      \name{author}{12}{}{%
+        {{hash=66c79615822035b55754ca26259eaa97}{%
+           family={Kobal},
+           familyi={K\bibinitperiod},
+           given={Alfred\bibnamedelima Bogomir},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=cdf6ea7a3cab8298a462b98f22ef92c2}{%
+           family={Horvat},
+           familyi={H\bibinitperiod},
+           given={Milena},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0182782745ddb1c787521186c7802a9e}{%
+           family={Prezelj},
+           familyi={P\bibinitperiod},
+           given={Marija},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e941b9badded1f9d8a978cf661d8cdd7}{%
+           family={Sešek-Briški},
+           familyi={S\bibinithyphendelim B\bibinitperiod},
+           given={Alenka},
+           giveni={A\bibinitperiod}}}%
+        {{hash=7dc825a6e64d8679be3282e866455a8c}{%
+           family={Krsnik},
+           familyi={K\bibinitperiod},
+           given={Mladen},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d6ccf1a843c11218081d0d24fa87319a}{%
+           family={Dizdarevič},
+           familyi={D\bibinitperiod},
+           given={Tatjana},
+           giveni={T\bibinitperiod}}}%
+        {{hash=e26c95e8c517169e5dc0c0a90a8bb5ae}{%
+           family={Mazej},
+           familyi={M\bibinitperiod},
+           given={Darja},
+           giveni={D\bibinitperiod}}}%
+        {{hash=e7dd495bd4e47e33dd729035757f528e}{%
+           family={Falnoga},
+           familyi={F\bibinitperiod},
+           given={Ingrid},
+           giveni={I\bibinitperiod}}}%
+        {{hash=e38b32876a59e615ff6abdfbd4062dc0}{%
+           family={Stibilj},
+           familyi={S\bibinitperiod},
+           given={Vekoslava},
+           giveni={V\bibinitperiod}}}%
+        {{hash=ffe3d4c94c529b90bae04bcfb8b8abbf}{%
+           family={Arnerić},
+           familyi={A\bibinitperiod},
+           given={Niko},
+           giveni={N\bibinitperiod}}}%
+        {{hash=b79bccb46c008ce8b98fdf0fb815f5e4}{%
+           family={Grum},
+           familyi={G\bibinitperiod},
+           given={Darja\bibnamedelima Kobal},
+           giveni={D\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=2fbdfc0d1926def31d40b38fb1187a34}{%
+           family={Osredkar},
+           familyi={O\bibinitperiod},
+           given={Joško},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{67450614303a1b1ca3a8e30d1de20467}
+      \strng{fullhash}{bb220167db9f3c6f1da4d2e17e1ecea6}
+      \strng{fullhashraw}{bb220167db9f3c6f1da4d2e17e1ecea6}
+      \strng{bibnamehash}{67450614303a1b1ca3a8e30d1de20467}
+      \strng{authorbibnamehash}{67450614303a1b1ca3a8e30d1de20467}
+      \strng{authornamehash}{67450614303a1b1ca3a8e30d1de20467}
+      \strng{authorfullhash}{bb220167db9f3c6f1da4d2e17e1ecea6}
+      \strng{authorfullhashraw}{bb220167db9f3c6f1da4d2e17e1ecea6}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Trace Elements in Medicine and Biology}
+      \field{title}{The impact of long-term past exposure to elemental mercury on antioxidative capacity and lipid peroxidation in mercury miners}
+      \field{volume}{17}
+      \field{year}{2004}
+      \field{pages}{261\bibrangedash 274}
+      \range{pages}{14}
+    \endentry
+    \entry{grace10}{book}{}{}
+      \name{author}{7}{}{%
+        {{hash=cf05b25d45dd98a47002f789c95c9f56}{%
+           family={Grace},
+           familyi={G\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=457c38bbf67271f3d02218c3352fff1e}{%
+           family={Mohorčič},
+           familyi={M\bibinitperiod},
+           given={Mihael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4e406e22f7f5e9e47a3cee40698c5770}{%
+           family={Kedhar},
+           familyi={K\bibinitperiod},
+           given={Debbie},
+           giveni={D\bibinitperiod}}}%
+        {{hash=deff38b3f2a543d7745a0b04b8d1f0b8}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Guanhua},
+           giveni={G\bibinitperiod}}}%
+        {{hash=2a6f9831acc71a340d75d076f700ec72}{%
+           family={Likitthanasate},
+           familyi={L\bibinitperiod},
+           given={Pairoj},
+           giveni={P\bibinitperiod}}}%
+        {{hash=a465198fcf16f7c553299d4eaadd2086}{%
+           family={Novak},
+           familyi={N\bibinitperiod},
+           given={Roman},
+           giveni={R\bibinitperiod}}}%
+        {{hash=671541cf00fef91b6e9285e97a54f26b}{%
+           family={Javornik},
+           familyi={J\bibinitperiod},
+           given={Tomaž},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Chichester}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{649eb84289ca254f54815b4486825e15}
+      \strng{fullhash}{3914846708891f8f57de2f63f8da013a}
+      \strng{fullhashraw}{3914846708891f8f57de2f63f8da013a}
+      \strng{bibnamehash}{649eb84289ca254f54815b4486825e15}
+      \strng{authorbibnamehash}{649eb84289ca254f54815b4486825e15}
+      \strng{authornamehash}{649eb84289ca254f54815b4486825e15}
+      \strng{authorfullhash}{3914846708891f8f57de2f63f8da013a}
+      \strng{authorfullhashraw}{3914846708891f8f57de2f63f8da013a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Broadband Communications via High-Altitude Platforms}
+      \field{year}{2010}
+    \endentry
+    \entry{novak12eng}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=35dcf90aec2637218134d357e76ad740}{%
+           family={Novak},
+           familyi={N\bibinitperiod},
+           given={Nikola},
+           giveni={N\bibinitperiod}}}%
+        {{hash=3d56b0649d65d8b14dbe660fa1832789}{%
+           family={Kutnjak},
+           familyi={K\bibinitperiod},
+           given={Zdravko},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \name{editor}{3}{}{%
+        {{hash=c7c74a1cc092e4123f4d78ab417b0c58}{%
+           family={Petelin},
+           familyi={P\bibinitperiod},
+           given={Dejan},
+           giveni={D\bibinitperiod}}}%
+        {{hash=3078ff4378fd834d829b013a0e567085}{%
+           family={Tavčar},
+           familyi={T\bibinitperiod},
+           given={Aleš},
+           giveni={A\bibinitperiod}}}%
+        {{hash=98aac9d40e82b77a2b68144a0aefa0cb}{%
+           family={Kaluža},
+           familyi={K\bibinitperiod},
+           given={Boštjan},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Ljubljana, Slovenia}%
+      }
+      \list{publisher}{1}{%
+        {Jožef Stefan International Postgraduate School}%
+      }
+      \strng{namehash}{1ae7e96483f114245610b83a8e2b8224}
+      \strng{fullhash}{1ae7e96483f114245610b83a8e2b8224}
+      \strng{fullhashraw}{1ae7e96483f114245610b83a8e2b8224}
+      \strng{bibnamehash}{1ae7e96483f114245610b83a8e2b8224}
+      \strng{authorbibnamehash}{1ae7e96483f114245610b83a8e2b8224}
+      \strng{authornamehash}{1ae7e96483f114245610b83a8e2b8224}
+      \strng{authorfullhash}{1ae7e96483f114245610b83a8e2b8224}
+      \strng{authorfullhashraw}{1ae7e96483f114245610b83a8e2b8224}
+      \strng{editorbibnamehash}{710899c552d55bbf104a654b4a493eb6}
+      \strng{editornamehash}{67f261d58ed3a4708ec28cdb5663f4ac}
+      \strng{editorfullhash}{710899c552d55bbf104a654b4a493eb6}
+      \strng{editorfullhashraw}{710899c552d55bbf104a654b4a493eb6}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 4th {Jožef Stefan International Postgraduate School} Students Conference}
+      \field{title}{Basic study of relaxors: materials for high technological devices}
+      \field{year}{2012}
+      \field{pages}{275\bibrangedash 280}
+      \range{pages}{6}
+    \endentry
+    \entry{zupanc13}{inproceedings}{}{}
+      \name{author}{8}{}{%
+        {{hash=dfbfcb2eb8d2ff099e01cc6abf376926}{%
+           family={Zupanc},
+           familyi={Z\bibinitperiod},
+           given={Mojca},
+           giveni={M\bibinitperiod}}}%
+        {{hash=cf46ffc850d001c289e0db4f9daf43a2}{%
+           family={Kosjek},
+           familyi={K\bibinitperiod},
+           given={Tina},
+           giveni={T\bibinitperiod}}}%
+        {{hash=3d79338f6391c365eebf73a69aea2e61}{%
+           family={Petkovšek},
+           familyi={P\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b5ecd886969929adb879cfddbc89cce7}{%
+           family={Dular},
+           familyi={D\bibinitperiod},
+           given={Matevž},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e4b1435e87c6eef7190edc3d4121d255}{%
+           family={Kompare},
+           familyi={K\bibinitperiod},
+           given={Boris},
+           giveni={B\bibinitperiod}}}%
+        {{hash=0ab78480ebb204c221149e3a0cbaaa63}{%
+           family={Širok},
+           familyi={Š\bibinitperiod},
+           given={Brane},
+           giveni={B\bibinitperiod}}}%
+        {{hash=c3d3cb81cdfb1783cd6a425f76b49f6a}{%
+           family={Blažeka},
+           familyi={B\bibinitperiod},
+           given={Željko},
+           giveni={Ž\bibinitperiod}}}%
+        {{hash=f34545b3f9ab780fd5c85236c8da79b8}{%
+           family={Heath},
+           familyi={H\bibinitperiod},
+           given={Ester},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Paris, France}%
+      }
+      \list{publisher}{1}{%
+        {International Water Association}%
+      }
+      \strng{namehash}{5483ba6289d0d54dc30ae4fb7b76ae20}
+      \strng{fullhash}{1bc19a2978d557108a594ceb8274ac91}
+      \strng{fullhashraw}{1bc19a2978d557108a594ceb8274ac91}
+      \strng{bibnamehash}{5483ba6289d0d54dc30ae4fb7b76ae20}
+      \strng{authorbibnamehash}{5483ba6289d0d54dc30ae4fb7b76ae20}
+      \strng{authornamehash}{5483ba6289d0d54dc30ae4fb7b76ae20}
+      \strng{authorfullhash}{1bc19a2978d557108a594ceb8274ac91}
+      \strng{authorfullhashraw}{1bc19a2978d557108a594ceb8274ac91}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 9th International Conference on Biofilm Reactors}
+      \field{title}{Removal of micropollutants by suspended biomass and biofilm processes and their improved removal by coupling biofilm process with alternative treatments}
+      \field{year}{2012}
+      \keyw{myconf}
+    \endentry
+    \entry{smodis09}{incollection}{}{}
+      \name{author}{2}{}{%
+        {{hash=39f7456154f3ac71ce1de4d0255d65d8}{%
+           family={Smodiš},
+           familyi={S\bibinitperiod},
+           given={Borut},
+           giveni={B\bibinitperiod}}}%
+        {{hash=3492593f4b2002bfcc9ad06564247913}{%
+           family={Benedik},
+           familyi={B\bibinitperiod},
+           given={Ljudmila},
+           giveni={L\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=3b9c958c77390fa6fe4171ba6826b76e}{%
+           family={Aycik},
+           familyi={A\bibinitperiod},
+           given={Gul\bibnamedelima Asiye},
+           giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{205d7435e47318a6bc12fd253f020dad}
+      \strng{fullhash}{205d7435e47318a6bc12fd253f020dad}
+      \strng{fullhashraw}{205d7435e47318a6bc12fd253f020dad}
+      \strng{bibnamehash}{205d7435e47318a6bc12fd253f020dad}
+      \strng{authorbibnamehash}{205d7435e47318a6bc12fd253f020dad}
+      \strng{authornamehash}{205d7435e47318a6bc12fd253f020dad}
+      \strng{authorfullhash}{205d7435e47318a6bc12fd253f020dad}
+      \strng{authorfullhashraw}{205d7435e47318a6bc12fd253f020dad}
+      \strng{editorbibnamehash}{3b9c958c77390fa6fe4171ba6826b76e}
+      \strng{editornamehash}{3b9c958c77390fa6fe4171ba6826b76e}
+      \strng{editorfullhash}{3b9c958c77390fa6fe4171ba6826b76e}
+      \strng{editorfullhashraw}{3b9c958c77390fa6fe4171ba6826b76e}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{New Techniques for the Detection of Nuclear and Radioactive Agents}
+      \field{title}{Combination of radiochemical and activation techniques for the detection of radionuclides}
+      \field{year}{2009}
+    \endentry
+    \entry{ivekovic13eng}{report}{}{}
+      \name{author}{3}{}{%
+        {{hash=6e7bc06dedc721b2b630e15e3c853df7}{%
+           family={Iveković},
+           familyi={I\bibinitperiod},
+           given={Aljaž},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b4a17ed32c2a79f0ba344948b4c580c4}{%
+           family={Novak},
+           familyi={N\bibinitperiod},
+           given={Saša},
+           giveni={S\bibinitperiod}}}%
+        {{hash=a2bfb01f30d0c569b271fb4ac277836b}{%
+           family={Dražić},
+           familyi={D\bibinitperiod},
+           given={Goran},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {{Jožef Stefan} Institute}%
+      }
+      \strng{namehash}{d7a51e35205e6435efa96e15d7c1ddd4}
+      \strng{fullhash}{8a31a07ac7d7f9f21eb99afa39c3f74d}
+      \strng{fullhashraw}{8a31a07ac7d7f9f21eb99afa39c3f74d}
+      \strng{bibnamehash}{8a31a07ac7d7f9f21eb99afa39c3f74d}
+      \strng{authorbibnamehash}{8a31a07ac7d7f9f21eb99afa39c3f74d}
+      \strng{authornamehash}{d7a51e35205e6435efa96e15d7c1ddd4}
+      \strng{authorfullhash}{8a31a07ac7d7f9f21eb99afa39c3f74d}
+      \strng{authorfullhashraw}{8a31a07ac7d7f9f21eb99afa39c3f74d}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{{IJS-DP} 11281}
+      \field{title}{Definition of a fabrication route for an optimised {SiC}-based composite: {A}nnual report on {EFDA} task activities in 2011}
+      \field{type}{Technical report}
+      \field{year}{2013}
+    \endentry
+    \entry{dovgan14eng}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=2c5d7284a38e31e404380ca41de25875}{%
+           family={Dovgan},
+           familyi={D\bibinitperiod},
+           given={Erik},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Jožef Stefan International Postgraduate School}%
+      }
+      \list{location}{1}{%
+        {Ljubljana, Slovenia}%
+      }
+      \strng{namehash}{2c5d7284a38e31e404380ca41de25875}
+      \strng{fullhash}{2c5d7284a38e31e404380ca41de25875}
+      \strng{fullhashraw}{2c5d7284a38e31e404380ca41de25875}
+      \strng{bibnamehash}{2c5d7284a38e31e404380ca41de25875}
+      \strng{authorbibnamehash}{2c5d7284a38e31e404380ca41de25875}
+      \strng{authornamehash}{2c5d7284a38e31e404380ca41de25875}
+      \strng{authorfullhash}{2c5d7284a38e31e404380ca41de25875}
+      \strng{authorfullhashraw}{2c5d7284a38e31e404380ca41de25875}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Multiobjective Discovery of Driving Strategies}
+      \field{type}{phdthesis}
+      \field{year}{2014}
+    \endentry
+    \entry{tusar07eng}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=08f03c75c9e9b5afea3b578b903ffc47}{%
+           family={Tušar},
+           familyi={T\bibinitperiod},
+           given={Tea},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {Faculty of Computer}%
+        {Information Science, University of {Ljubljana}}%
+      }
+      \list{location}{1}{%
+        {Ljubljana, Slovenia}%
+      }
+      \strng{namehash}{08f03c75c9e9b5afea3b578b903ffc47}
+      \strng{fullhash}{08f03c75c9e9b5afea3b578b903ffc47}
+      \strng{fullhashraw}{08f03c75c9e9b5afea3b578b903ffc47}
+      \strng{bibnamehash}{08f03c75c9e9b5afea3b578b903ffc47}
+      \strng{authorbibnamehash}{08f03c75c9e9b5afea3b578b903ffc47}
+      \strng{authornamehash}{08f03c75c9e9b5afea3b578b903ffc47}
+      \strng{authorfullhash}{08f03c75c9e9b5afea3b578b903ffc47}
+      \strng{authorfullhashraw}{08f03c75c9e9b5afea3b578b903ffc47}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Design of an Algorithm for Multiobjective Optimization with Differential Evolution}
+      \field{type}{mathesis}
+      \field{year}{2007}
+    \endentry
+  \enddatalist
+\endrefsection
+
+\refsection{1}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{depolli13}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=65fe40e52accc0bc06f3e3cdccd76c99}{%
+           family={Depolli},
+           familyi={D\bibinitperiod},
+           given={Matjaž},
+           giveni={M\bibinitperiod}}}%
+        {{hash=884ad0f8ec44c63b6122e703324780ae}{%
+           family={Trobec},
+           familyi={T\bibinitperiod},
+           given={Roman},
+           giveni={R\bibinitperiod}}}%
+        {{hash=d23bdd5d18d8274250cab53cf50831fc}{%
+           family={Filipič},
+           familyi={F\bibinitperiod},
+           given={Bogdan},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{177a62290431c825fc4e34f0622a1683}
+      \strng{fullhash}{cceef5638a88638631f9ae67b3c1dce9}
+      \strng{fullhashraw}{cceef5638a88638631f9ae67b3c1dce9}
+      \strng{bibnamehash}{cceef5638a88638631f9ae67b3c1dce9}
+      \strng{authorbibnamehash}{cceef5638a88638631f9ae67b3c1dce9}
+      \strng{authornamehash}{177a62290431c825fc4e34f0622a1683}
+      \strng{authorfullhash}{cceef5638a88638631f9ae67b3c1dce9}
+      \strng{authorfullhashraw}{cceef5638a88638631f9ae67b3c1dce9}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Evolutionary Computation}
+      \field{number}{2}
+      \field{title}{Asynchronous master-slave parallelization of differential evolution for multiobjective optimization}
+      \field{volume}{21}
+      \field{year}{2013}
+      \true{nocite}
+      \field{pages}{261\bibrangedash 291}
+      \range{pages}{31}
+      \keyw{myarticle}
+    \endentry
+    \entry{dovgan14eng}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=2c5d7284a38e31e404380ca41de25875}{%
+           family={Dovgan},
+           familyi={D\bibinitperiod},
+           given={Erik},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Jožef Stefan International Postgraduate School}%
+      }
+      \list{location}{1}{%
+        {Ljubljana, Slovenia}%
+      }
+      \strng{namehash}{2c5d7284a38e31e404380ca41de25875}
+      \strng{fullhash}{2c5d7284a38e31e404380ca41de25875}
+      \strng{fullhashraw}{2c5d7284a38e31e404380ca41de25875}
+      \strng{bibnamehash}{2c5d7284a38e31e404380ca41de25875}
+      \strng{authorbibnamehash}{2c5d7284a38e31e404380ca41de25875}
+      \strng{authornamehash}{2c5d7284a38e31e404380ca41de25875}
+      \strng{authorfullhash}{2c5d7284a38e31e404380ca41de25875}
+      \strng{authorfullhashraw}{2c5d7284a38e31e404380ca41de25875}
+      \field{extraname}{1}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Multiobjective Discovery of Driving Strategies}
+      \field{type}{phdthesis}
+      \field{year}{2014}
+      \true{nocite}
+    \endentry
+    \entry{dovgan14slo}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=2c5d7284a38e31e404380ca41de25875}{%
+           family={Dovgan},
+           familyi={D\bibinitperiod},
+           given={Erik},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Mednarodna podiplomska šola Jožefa Stefana}%
+      }
+      \list{location}{1}{%
+        {Ljubljana, Slovenija}%
+      }
+      \strng{namehash}{2c5d7284a38e31e404380ca41de25875}
+      \strng{fullhash}{2c5d7284a38e31e404380ca41de25875}
+      \strng{fullhashraw}{2c5d7284a38e31e404380ca41de25875}
+      \strng{bibnamehash}{2c5d7284a38e31e404380ca41de25875}
+      \strng{authorbibnamehash}{2c5d7284a38e31e404380ca41de25875}
+      \strng{authornamehash}{2c5d7284a38e31e404380ca41de25875}
+      \strng{authorfullhash}{2c5d7284a38e31e404380ca41de25875}
+      \strng{authorfullhashraw}{2c5d7284a38e31e404380ca41de25875}
+      \field{extraname}{2}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Multiobjective Discovery of Driving Strategies}
+      \field{type}{phdthesis}
+      \field{year}{2014}
+      \true{nocite}
+    \endentry
+    \entry{grace10}{book}{}{}
+      \name{author}{7}{}{%
+        {{hash=cf05b25d45dd98a47002f789c95c9f56}{%
+           family={Grace},
+           familyi={G\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=457c38bbf67271f3d02218c3352fff1e}{%
+           family={Mohorčič},
+           familyi={M\bibinitperiod},
+           given={Mihael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4e406e22f7f5e9e47a3cee40698c5770}{%
+           family={Kedhar},
+           familyi={K\bibinitperiod},
+           given={Debbie},
+           giveni={D\bibinitperiod}}}%
+        {{hash=deff38b3f2a543d7745a0b04b8d1f0b8}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Guanhua},
+           giveni={G\bibinitperiod}}}%
+        {{hash=2a6f9831acc71a340d75d076f700ec72}{%
+           family={Likitthanasate},
+           familyi={L\bibinitperiod},
+           given={Pairoj},
+           giveni={P\bibinitperiod}}}%
+        {{hash=a465198fcf16f7c553299d4eaadd2086}{%
+           family={Novak},
+           familyi={N\bibinitperiod},
+           given={Roman},
+           giveni={R\bibinitperiod}}}%
+        {{hash=671541cf00fef91b6e9285e97a54f26b}{%
+           family={Javornik},
+           familyi={J\bibinitperiod},
+           given={Tomaž},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Chichester}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{649eb84289ca254f54815b4486825e15}
+      \strng{fullhash}{3914846708891f8f57de2f63f8da013a}
+      \strng{fullhashraw}{3914846708891f8f57de2f63f8da013a}
+      \strng{bibnamehash}{649eb84289ca254f54815b4486825e15}
+      \strng{authorbibnamehash}{649eb84289ca254f54815b4486825e15}
+      \strng{authornamehash}{649eb84289ca254f54815b4486825e15}
+      \strng{authorfullhash}{3914846708891f8f57de2f63f8da013a}
+      \strng{authorfullhashraw}{3914846708891f8f57de2f63f8da013a}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Broadband Communications via High-Altitude Platforms}
+      \field{year}{2010}
+      \true{nocite}
+    \endentry
+    \entry{ivekovic13eng}{report}{}{}
+      \name{author}{3}{}{%
+        {{hash=6e7bc06dedc721b2b630e15e3c853df7}{%
+           family={Iveković},
+           familyi={I\bibinitperiod},
+           given={Aljaž},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b4a17ed32c2a79f0ba344948b4c580c4}{%
+           family={Novak},
+           familyi={N\bibinitperiod},
+           given={Saša},
+           giveni={S\bibinitperiod}}}%
+        {{hash=a2bfb01f30d0c569b271fb4ac277836b}{%
+           family={Dražić},
+           familyi={D\bibinitperiod},
+           given={Goran},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {{Jožef Stefan} Institute}%
+      }
+      \strng{namehash}{d7a51e35205e6435efa96e15d7c1ddd4}
+      \strng{fullhash}{8a31a07ac7d7f9f21eb99afa39c3f74d}
+      \strng{fullhashraw}{8a31a07ac7d7f9f21eb99afa39c3f74d}
+      \strng{bibnamehash}{8a31a07ac7d7f9f21eb99afa39c3f74d}
+      \strng{authorbibnamehash}{8a31a07ac7d7f9f21eb99afa39c3f74d}
+      \strng{authornamehash}{d7a51e35205e6435efa96e15d7c1ddd4}
+      \strng{authorfullhash}{8a31a07ac7d7f9f21eb99afa39c3f74d}
+      \strng{authorfullhashraw}{8a31a07ac7d7f9f21eb99afa39c3f74d}
+      \field{extraname}{1}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{{IJS-DP} 11281}
+      \field{title}{Definition of a fabrication route for an optimised {SiC}-based composite: {A}nnual report on {EFDA} task activities in 2011}
+      \field{type}{Technical report}
+      \field{year}{2013}
+      \true{nocite}
+    \endentry
+    \entry{ivekovic13slo}{report}{}{}
+      \name{author}{3}{}{%
+        {{hash=6e7bc06dedc721b2b630e15e3c853df7}{%
+           family={Iveković},
+           familyi={I\bibinitperiod},
+           given={Aljaž},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b4a17ed32c2a79f0ba344948b4c580c4}{%
+           family={Novak},
+           familyi={N\bibinitperiod},
+           given={Saša},
+           giveni={S\bibinitperiod}}}%
+        {{hash=a2bfb01f30d0c569b271fb4ac277836b}{%
+           family={Dražić},
+           familyi={D\bibinitperiod},
+           given={Goran},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Institut ``Jožef Stefan''}%
+      }
+      \strng{namehash}{d7a51e35205e6435efa96e15d7c1ddd4}
+      \strng{fullhash}{8a31a07ac7d7f9f21eb99afa39c3f74d}
+      \strng{fullhashraw}{8a31a07ac7d7f9f21eb99afa39c3f74d}
+      \strng{bibnamehash}{8a31a07ac7d7f9f21eb99afa39c3f74d}
+      \strng{authorbibnamehash}{8a31a07ac7d7f9f21eb99afa39c3f74d}
+      \strng{authornamehash}{d7a51e35205e6435efa96e15d7c1ddd4}
+      \strng{authorfullhash}{8a31a07ac7d7f9f21eb99afa39c3f74d}
+      \strng{authorfullhashraw}{8a31a07ac7d7f9f21eb99afa39c3f74d}
+      \field{extraname}{2}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{{IJS-DP} 11281}
+      \field{title}{Definition of a fabrication route for an optimised {SiC}-based composite: {A}nnual report on {EFDA} task activities in 2011}
+      \field{type}{Tehnično poročilo}
+      \field{year}{2013}
+      \true{nocite}
+    \endentry
+    \entry{kobal04}{article}{}{}
+      \name{author}{12}{}{%
+        {{hash=66c79615822035b55754ca26259eaa97}{%
+           family={Kobal},
+           familyi={K\bibinitperiod},
+           given={Alfred\bibnamedelima Bogomir},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=cdf6ea7a3cab8298a462b98f22ef92c2}{%
+           family={Horvat},
+           familyi={H\bibinitperiod},
+           given={Milena},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0182782745ddb1c787521186c7802a9e}{%
+           family={Prezelj},
+           familyi={P\bibinitperiod},
+           given={Marija},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e941b9badded1f9d8a978cf661d8cdd7}{%
+           family={Sešek-Briški},
+           familyi={S\bibinithyphendelim B\bibinitperiod},
+           given={Alenka},
+           giveni={A\bibinitperiod}}}%
+        {{hash=7dc825a6e64d8679be3282e866455a8c}{%
+           family={Krsnik},
+           familyi={K\bibinitperiod},
+           given={Mladen},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d6ccf1a843c11218081d0d24fa87319a}{%
+           family={Dizdarevič},
+           familyi={D\bibinitperiod},
+           given={Tatjana},
+           giveni={T\bibinitperiod}}}%
+        {{hash=e26c95e8c517169e5dc0c0a90a8bb5ae}{%
+           family={Mazej},
+           familyi={M\bibinitperiod},
+           given={Darja},
+           giveni={D\bibinitperiod}}}%
+        {{hash=e7dd495bd4e47e33dd729035757f528e}{%
+           family={Falnoga},
+           familyi={F\bibinitperiod},
+           given={Ingrid},
+           giveni={I\bibinitperiod}}}%
+        {{hash=e38b32876a59e615ff6abdfbd4062dc0}{%
+           family={Stibilj},
+           familyi={S\bibinitperiod},
+           given={Vekoslava},
+           giveni={V\bibinitperiod}}}%
+        {{hash=ffe3d4c94c529b90bae04bcfb8b8abbf}{%
+           family={Arnerić},
+           familyi={A\bibinitperiod},
+           given={Niko},
+           giveni={N\bibinitperiod}}}%
+        {{hash=b79bccb46c008ce8b98fdf0fb815f5e4}{%
+           family={Grum},
+           familyi={G\bibinitperiod},
+           given={Darja\bibnamedelima Kobal},
+           giveni={D\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=2fbdfc0d1926def31d40b38fb1187a34}{%
+           family={Osredkar},
+           familyi={O\bibinitperiod},
+           given={Joško},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{67450614303a1b1ca3a8e30d1de20467}
+      \strng{fullhash}{bb220167db9f3c6f1da4d2e17e1ecea6}
+      \strng{fullhashraw}{bb220167db9f3c6f1da4d2e17e1ecea6}
+      \strng{bibnamehash}{67450614303a1b1ca3a8e30d1de20467}
+      \strng{authorbibnamehash}{67450614303a1b1ca3a8e30d1de20467}
+      \strng{authornamehash}{67450614303a1b1ca3a8e30d1de20467}
+      \strng{authorfullhash}{bb220167db9f3c6f1da4d2e17e1ecea6}
+      \strng{authorfullhashraw}{bb220167db9f3c6f1da4d2e17e1ecea6}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Trace Elements in Medicine and Biology}
+      \field{title}{The impact of long-term past exposure to elemental mercury on antioxidative capacity and lipid peroxidation in mercury miners}
+      \field{volume}{17}
+      \field{year}{2004}
+      \true{nocite}
+      \field{pages}{261\bibrangedash 274}
+      \range{pages}{14}
+    \endentry
+    \entry{mihailovic06}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=613f8a7b4ad50ea84aed827d05ceaa00}{%
+           family={Mihailović},
+           familyi={M\bibinitperiod},
+           given={Dragan},
+           giveni={D\bibinitperiod}}}%
+        {{hash=062e8a1a8d2d5afe24d56e26b6838808}{%
+           family={Kušar},
+           familyi={K\bibinitperiod},
+           given={Primož},
+           giveni={P\bibinitperiod}}}%
+        {{hash=c489291bcdb84ac06b51428b901dbc2d}{%
+           family={Demšar},
+           familyi={D\bibinitperiod},
+           given={Jure},
+           giveni={J\bibinitperiod}}}%
+        {{hash=83209b233156cbd6d12e1ecebe236b41}{%
+           family={Kabanov},
+           familyi={K\bibinitperiod},
+           given={Viktor\bibnamedelima V},
+           giveni={V\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{ea8fc7bb310a0af518e86adee766116c}
+      \strng{fullhash}{7d2b09e9104bec17a5c4066470b14433}
+      \strng{fullhashraw}{7d2b09e9104bec17a5c4066470b14433}
+      \strng{bibnamehash}{7d2b09e9104bec17a5c4066470b14433}
+      \strng{authorbibnamehash}{7d2b09e9104bec17a5c4066470b14433}
+      \strng{authornamehash}{ea8fc7bb310a0af518e86adee766116c}
+      \strng{authorfullhash}{7d2b09e9104bec17a5c4066470b14433}
+      \strng{authorfullhashraw}{7d2b09e9104bec17a5c4066470b14433}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Superconductivity}
+      \field{number}{1/2}
+      \field{title}{The determination of length scales associated with dynamic inhomogeneity in cuprate superconductors}
+      \field{volume}{19}
+      \field{year}{2006}
+      \true{nocite}
+      \field{pages}{43\bibrangedash 47}
+      \range{pages}{5}
+      \keyw{myarticle}
+    \endentry
+    \entry{novak12eng}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=35dcf90aec2637218134d357e76ad740}{%
+           family={Novak},
+           familyi={N\bibinitperiod},
+           given={Nikola},
+           giveni={N\bibinitperiod}}}%
+        {{hash=3d56b0649d65d8b14dbe660fa1832789}{%
+           family={Kutnjak},
+           familyi={K\bibinitperiod},
+           given={Zdravko},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \name{editor}{3}{}{%
+        {{hash=c7c74a1cc092e4123f4d78ab417b0c58}{%
+           family={Petelin},
+           familyi={P\bibinitperiod},
+           given={Dejan},
+           giveni={D\bibinitperiod}}}%
+        {{hash=3078ff4378fd834d829b013a0e567085}{%
+           family={Tavčar},
+           familyi={T\bibinitperiod},
+           given={Aleš},
+           giveni={A\bibinitperiod}}}%
+        {{hash=98aac9d40e82b77a2b68144a0aefa0cb}{%
+           family={Kaluža},
+           familyi={K\bibinitperiod},
+           given={Boštjan},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Ljubljana, Slovenia}%
+      }
+      \list{publisher}{1}{%
+        {Jožef Stefan International Postgraduate School}%
+      }
+      \strng{namehash}{1ae7e96483f114245610b83a8e2b8224}
+      \strng{fullhash}{1ae7e96483f114245610b83a8e2b8224}
+      \strng{fullhashraw}{1ae7e96483f114245610b83a8e2b8224}
+      \strng{bibnamehash}{1ae7e96483f114245610b83a8e2b8224}
+      \strng{authorbibnamehash}{1ae7e96483f114245610b83a8e2b8224}
+      \strng{authornamehash}{1ae7e96483f114245610b83a8e2b8224}
+      \strng{authorfullhash}{1ae7e96483f114245610b83a8e2b8224}
+      \strng{authorfullhashraw}{1ae7e96483f114245610b83a8e2b8224}
+      \strng{editorbibnamehash}{710899c552d55bbf104a654b4a493eb6}
+      \strng{editornamehash}{67f261d58ed3a4708ec28cdb5663f4ac}
+      \strng{editorfullhash}{710899c552d55bbf104a654b4a493eb6}
+      \strng{editorfullhashraw}{710899c552d55bbf104a654b4a493eb6}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 4th {Jožef Stefan International Postgraduate School} Students Conference}
+      \field{title}{Basic study of relaxors: materials for high technological devices}
+      \field{year}{2012}
+      \true{nocite}
+      \field{pages}{275\bibrangedash 280}
+      \range{pages}{6}
+    \endentry
+    \entry{novak12slo}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=35dcf90aec2637218134d357e76ad740}{%
+           family={Novak},
+           familyi={N\bibinitperiod},
+           given={Nikola},
+           giveni={N\bibinitperiod}}}%
+        {{hash=3d56b0649d65d8b14dbe660fa1832789}{%
+           family={Kutnjak},
+           familyi={K\bibinitperiod},
+           given={Zdravko},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \name{editor}{3}{}{%
+        {{hash=c7c74a1cc092e4123f4d78ab417b0c58}{%
+           family={Petelin},
+           familyi={P\bibinitperiod},
+           given={Dejan},
+           giveni={D\bibinitperiod}}}%
+        {{hash=3078ff4378fd834d829b013a0e567085}{%
+           family={Tavčar},
+           familyi={T\bibinitperiod},
+           given={Aleš},
+           giveni={A\bibinitperiod}}}%
+        {{hash=98aac9d40e82b77a2b68144a0aefa0cb}{%
+           family={Kaluža},
+           familyi={K\bibinitperiod},
+           given={Boštjan},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Ljubljana, Slovenija}%
+      }
+      \list{publisher}{1}{%
+        {Mednarodna podiplomska šola Jožefa Stefana}%
+      }
+      \strng{namehash}{1ae7e96483f114245610b83a8e2b8224}
+      \strng{fullhash}{1ae7e96483f114245610b83a8e2b8224}
+      \strng{fullhashraw}{1ae7e96483f114245610b83a8e2b8224}
+      \strng{bibnamehash}{1ae7e96483f114245610b83a8e2b8224}
+      \strng{authorbibnamehash}{1ae7e96483f114245610b83a8e2b8224}
+      \strng{authornamehash}{1ae7e96483f114245610b83a8e2b8224}
+      \strng{authorfullhash}{1ae7e96483f114245610b83a8e2b8224}
+      \strng{authorfullhashraw}{1ae7e96483f114245610b83a8e2b8224}
+      \strng{editorbibnamehash}{710899c552d55bbf104a654b4a493eb6}
+      \strng{editornamehash}{67f261d58ed3a4708ec28cdb5663f4ac}
+      \strng{editorfullhash}{710899c552d55bbf104a654b4a493eb6}
+      \strng{editorfullhashraw}{710899c552d55bbf104a654b4a493eb6}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Zbornik 4. {Š}tudentske konference {M}ednarodne podiplomske šole {Jožefa Stefana}}
+      \field{title}{Basic study of relaxors: materials for high technological devices}
+      \field{year}{2012}
+      \true{nocite}
+      \field{pages}{275\bibrangedash 280}
+      \range{pages}{6}
+    \endentry
+    \entry{smodis09}{incollection}{}{}
+      \name{author}{2}{}{%
+        {{hash=39f7456154f3ac71ce1de4d0255d65d8}{%
+           family={Smodiš},
+           familyi={S\bibinitperiod},
+           given={Borut},
+           giveni={B\bibinitperiod}}}%
+        {{hash=3492593f4b2002bfcc9ad06564247913}{%
+           family={Benedik},
+           familyi={B\bibinitperiod},
+           given={Ljudmila},
+           giveni={L\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=3b9c958c77390fa6fe4171ba6826b76e}{%
+           family={Aycik},
+           familyi={A\bibinitperiod},
+           given={Gul\bibnamedelima Asiye},
+           giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{205d7435e47318a6bc12fd253f020dad}
+      \strng{fullhash}{205d7435e47318a6bc12fd253f020dad}
+      \strng{fullhashraw}{205d7435e47318a6bc12fd253f020dad}
+      \strng{bibnamehash}{205d7435e47318a6bc12fd253f020dad}
+      \strng{authorbibnamehash}{205d7435e47318a6bc12fd253f020dad}
+      \strng{authornamehash}{205d7435e47318a6bc12fd253f020dad}
+      \strng{authorfullhash}{205d7435e47318a6bc12fd253f020dad}
+      \strng{authorfullhashraw}{205d7435e47318a6bc12fd253f020dad}
+      \strng{editorbibnamehash}{3b9c958c77390fa6fe4171ba6826b76e}
+      \strng{editornamehash}{3b9c958c77390fa6fe4171ba6826b76e}
+      \strng{editorfullhash}{3b9c958c77390fa6fe4171ba6826b76e}
+      \strng{editorfullhashraw}{3b9c958c77390fa6fe4171ba6826b76e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{New Techniques for the Detection of Nuclear and Radioactive Agents}
+      \field{title}{Combination of radiochemical and activation techniques for the detection of radionuclides}
+      \field{year}{2009}
+      \true{nocite}
+    \endentry
+    \entry{tusar07eng}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=08f03c75c9e9b5afea3b578b903ffc47}{%
+           family={Tušar},
+           familyi={T\bibinitperiod},
+           given={Tea},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {Faculty of Computer}%
+        {Information Science, University of {Ljubljana}}%
+      }
+      \list{location}{1}{%
+        {Ljubljana, Slovenia}%
+      }
+      \strng{namehash}{08f03c75c9e9b5afea3b578b903ffc47}
+      \strng{fullhash}{08f03c75c9e9b5afea3b578b903ffc47}
+      \strng{fullhashraw}{08f03c75c9e9b5afea3b578b903ffc47}
+      \strng{bibnamehash}{08f03c75c9e9b5afea3b578b903ffc47}
+      \strng{authorbibnamehash}{08f03c75c9e9b5afea3b578b903ffc47}
+      \strng{authornamehash}{08f03c75c9e9b5afea3b578b903ffc47}
+      \strng{authorfullhash}{08f03c75c9e9b5afea3b578b903ffc47}
+      \strng{authorfullhashraw}{08f03c75c9e9b5afea3b578b903ffc47}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Design of an Algorithm for Multiobjective Optimization with Differential Evolution}
+      \field{type}{mathesis}
+      \field{year}{2007}
+      \true{nocite}
+    \endentry
+    \entry{tusar07slo}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=08f03c75c9e9b5afea3b578b903ffc47}{%
+           family={Tušar},
+           familyi={T\bibinitperiod},
+           given={Tea},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Fakulteta za računalništvo in informatiko, {U}niverza v {L}jubljani}%
+      }
+      \list{location}{1}{%
+        {Ljubljana, Slovenija}%
+      }
+      \strng{namehash}{08f03c75c9e9b5afea3b578b903ffc47}
+      \strng{fullhash}{08f03c75c9e9b5afea3b578b903ffc47}
+      \strng{fullhashraw}{08f03c75c9e9b5afea3b578b903ffc47}
+      \strng{bibnamehash}{08f03c75c9e9b5afea3b578b903ffc47}
+      \strng{authorbibnamehash}{08f03c75c9e9b5afea3b578b903ffc47}
+      \strng{authornamehash}{08f03c75c9e9b5afea3b578b903ffc47}
+      \strng{authorfullhash}{08f03c75c9e9b5afea3b578b903ffc47}
+      \strng{authorfullhashraw}{08f03c75c9e9b5afea3b578b903ffc47}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Design of an Algorithm for Multiobjective Optimization with Differential Evolution}
+      \field{type}{mathesis}
+      \field{year}{2007}
+      \true{nocite}
+    \endentry
+    \entry{tusar14}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=08f03c75c9e9b5afea3b578b903ffc47}{%
+           family={Tušar},
+           familyi={T\bibinitperiod},
+           given={Tea},
+           giveni={T\bibinitperiod}}}%
+        {{hash=d23bdd5d18d8274250cab53cf50831fc}{%
+           family={Filipič},
+           familyi={F\bibinitperiod},
+           given={Bogdan},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{de67ffa9c228016172a250694193921c}
+      \strng{fullhash}{de67ffa9c228016172a250694193921c}
+      \strng{fullhashraw}{de67ffa9c228016172a250694193921c}
+      \strng{bibnamehash}{de67ffa9c228016172a250694193921c}
+      \strng{authorbibnamehash}{de67ffa9c228016172a250694193921c}
+      \strng{authornamehash}{de67ffa9c228016172a250694193921c}
+      \strng{authorfullhash}{de67ffa9c228016172a250694193921c}
+      \strng{authorfullhashraw}{de67ffa9c228016172a250694193921c}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Evolutionary Computation}
+      \field{note}{In press}
+      \field{title}{Visualization of {Pareto} Front Approximations in Evolutionary Multiobjective Optimization: {A} Critical Review and the Prosection Method}
+      \field{year}{2014}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.1109/TEVC.2014.2313407
+      \endverb
+      \keyw{myarticle}
+    \endentry
+    \entry{zupanc13}{inproceedings}{}{}
+      \name{author}{8}{}{%
+        {{hash=dfbfcb2eb8d2ff099e01cc6abf376926}{%
+           family={Zupanc},
+           familyi={Z\bibinitperiod},
+           given={Mojca},
+           giveni={M\bibinitperiod}}}%
+        {{hash=cf46ffc850d001c289e0db4f9daf43a2}{%
+           family={Kosjek},
+           familyi={K\bibinitperiod},
+           given={Tina},
+           giveni={T\bibinitperiod}}}%
+        {{hash=3d79338f6391c365eebf73a69aea2e61}{%
+           family={Petkovšek},
+           familyi={P\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b5ecd886969929adb879cfddbc89cce7}{%
+           family={Dular},
+           familyi={D\bibinitperiod},
+           given={Matevž},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e4b1435e87c6eef7190edc3d4121d255}{%
+           family={Kompare},
+           familyi={K\bibinitperiod},
+           given={Boris},
+           giveni={B\bibinitperiod}}}%
+        {{hash=0ab78480ebb204c221149e3a0cbaaa63}{%
+           family={Širok},
+           familyi={Š\bibinitperiod},
+           given={Brane},
+           giveni={B\bibinitperiod}}}%
+        {{hash=c3d3cb81cdfb1783cd6a425f76b49f6a}{%
+           family={Blažeka},
+           familyi={B\bibinitperiod},
+           given={Željko},
+           giveni={Ž\bibinitperiod}}}%
+        {{hash=f34545b3f9ab780fd5c85236c8da79b8}{%
+           family={Heath},
+           familyi={H\bibinitperiod},
+           given={Ester},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Paris, France}%
+      }
+      \list{publisher}{1}{%
+        {International Water Association}%
+      }
+      \strng{namehash}{5483ba6289d0d54dc30ae4fb7b76ae20}
+      \strng{fullhash}{1bc19a2978d557108a594ceb8274ac91}
+      \strng{fullhashraw}{1bc19a2978d557108a594ceb8274ac91}
+      \strng{bibnamehash}{5483ba6289d0d54dc30ae4fb7b76ae20}
+      \strng{authorbibnamehash}{5483ba6289d0d54dc30ae4fb7b76ae20}
+      \strng{authornamehash}{5483ba6289d0d54dc30ae4fb7b76ae20}
+      \strng{authorfullhash}{1bc19a2978d557108a594ceb8274ac91}
+      \strng{authorfullhashraw}{1bc19a2978d557108a594ceb8274ac91}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 9th International Conference on Biofilm Reactors}
+      \field{title}{Removal of micropollutants by suspended biomass and biofilm processes and their improved removal by coupling biofilm process with alternative treatments}
+      \field{year}{2012}
+      \true{nocite}
+      \keyw{myconf}
+    \endentry
+    \entry{pythagoras}{online}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{title}{Pythagorean Theorem}
+      \field{urlday}{1}
+      \field{urlmonth}{2}
+      \field{urlyear}{2014}
+      \field{year}{2014}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb http://en.wikipedia.org/wiki/Pythagorean_theorem
+      \endverb
+      \verb{url}
+      \verb http://en.wikipedia.org/wiki/Pythagorean_theorem
+      \endverb
+    \endentry
+    \entry{pitagora}{online}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{title}{Pitagorov izrek}
+      \field{urlday}{1}
+      \field{urlmonth}{2}
+      \field{urlyear}{2014}
+      \field{year}{2014}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb http://sl.wikipedia.org/wiki/Pitagorov_izrek
+      \endverb
+      \verb{url}
+      \verb http://sl.wikipedia.org/wiki/Pitagorov_izrek
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

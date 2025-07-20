@@ -1,0 +1,46 @@
+\babel@toc {american}{}\relax 
+\babel@toc {american}{}\relax 
+\babel@toc {slovene}{}\relax 
+\babel@toc {american}{}\relax 
+\vspace {-12pt}
+\contentsline {chapter}{List of Figures}{xv}{section*.4}%
+\contentsline {chapter}{List of Tables}{xvii}{section*.5}%
+\contentsline {chapter}{List of Algorithms}{xix}{section*.6}%
+\contentsline {chapter}{Abbreviations}{xxi}{chapter*.8}%
+\contentsline {chapter}{Symbols}{xxiii}{chapter*.9}%
+\contentsline {chapter}{Glossary}{xxv}{chapter*.10}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Thesis Structure}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Sectioning Example}{2}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Subsection}{2}{subsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.1.1}Subsubsection}{2}{subsubsection.1.2.1.1}%
+\contentsline {paragraph}{\numberline {1.2.1.1.1}Paragraph}{2}{paragraph.1.2.1.1.1}%
+\contentsline {subparagraph}{\numberline {1.2.1.1.1.1}Subparagraph}{3}{subparagraph.1.2.1.1.1.1}%
+\contentsline {subparagraph}{\numberline {1.2.1.1.1.2}Subparagraph}{3}{subparagraph.1.2.1.1.1.2}%
+\contentsline {paragraph}{\numberline {1.2.1.1.2}Paragraph}{3}{paragraph.1.2.1.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1.2}Subsubsection}{3}{subsubsection.1.2.1.2}%
+\contentsline {paragraph}{\numberline {1.2.1.2.1}Paragraph}{3}{paragraph.1.2.1.2.1}%
+\contentsline {paragraph}{\numberline {1.2.1.2.2}Paragraph}{3}{paragraph.1.2.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.2}Subsection}{3}{subsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.2.1}Subsubsection}{3}{subsubsection.1.2.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2.2}Subsubsection}{3}{subsubsection.1.2.2.2}%
+\contentsline {chapter}{\numberline {2}Floating Bodies}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Figures}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Tables}{6}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Algorithms}{6}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Equations and Measurement Units}{7}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Equations}{7}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Measurement Units}{7}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Definitions and Theorems}{9}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Definitions}{9}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Theorems}{9}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Reference Formatting}{11}{chapter.5}%
+\contentsline {section}{\numberline {5.1}IEEE}{11}{section.5.1}%
+\contentsline {section}{\numberline {5.2}APA 6th Edition}{11}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Conclusions}{13}{chapter.6}%
+\contentsline {chapter}{Appendix \numberline {A}Proofs of Theorems}{15}{appendix.1.A}%
+\contentsline {section}{\numberline {A.1}Proof of the Pythagorean Theorem}{15}{section.1.A.1}%
+\contentsline {chapter}{References}{17}{section*.11}%
+\contentsline {chapter}{Bibliography}{19}{appendix*.13}%
+\contentsline {chapter}{Biography}{21}{appendix*.18}%
+\contentsline {chapter}{Index}{23}{section*.19}%
