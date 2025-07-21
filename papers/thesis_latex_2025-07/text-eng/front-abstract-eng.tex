@@ -3,5 +3,12 @@
 \chapter*{Abstract}
 \pdfbookmark[0]{Abstract}{Abstract}
 %--------------------------------------------------------------------------------------------------
+Flooding is one of the most frequent and damaging natural hazards globally, and its risk is projected to increase due to climate change. Accurate flood risk assessments are essential for spatial planning, climate adaptation, and ESG-aligned financial decision-making. This thesis investigates physical flood risk by comparing global and local hazard models, evaluating standardized vulnerability functions, and quantifying financial implications for real estate assets in Slovenia.
 
-The English abstract should not take up more than one page.
+Two flood hazard models are assessed: the global WRI Aqueduct River Flood model and the high-resolution local model Integralna karta globin (IKG). A geospatial validation dataset comprising flood depth and damage records from four flood events in Slovenia (2010--2023) is used to evaluate model accuracy. Flood depths are analyzed using both regression and classification metrics, while vulnerability is assessed through comparison of observed damages against standardized depth--damage functions provided by the European Commission Joint Research Centre (JRC).
+
+A key technical contribution is the development of a data processing pipeline that harmonizes heterogeneous IKG hazard data and integrates it into the modular Physrisk platform using the Zarr data format. This enables scalable, scenario-based risk assessment and model intercomparison.
+
+Findings suggest that while local models offer improved accuracy for continuous flood depth prediction in regression tasks, the global model performs better in categorical classification. Proximity to water bodies was not found to significantly improve prediction accuracy. Depth--damage functions align well with observed damage distributions for residential properties, though segmentation by property type reveals variability in model performance.
+
+The thesis contributes to the validation and integration of physical climate risk models for real estate applications and supports the advancement of ESG-compliant climate risk disclosures.
