@@ -96,6 +96,38 @@
       \field{title}{Climate risk and response: Physical hazards and socioeconomic impacts}
       \field{year}{2020}
     \endentry
+    \entry{ecb2020}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=fc0835c66c6644c8a6ca0239bce9cc73}{%
+           family={{European Central Bank}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {European Central Bank}%
+      }
+      \strng{namehash}{fc0835c66c6644c8a6ca0239bce9cc73}
+      \strng{fullhash}{fc0835c66c6644c8a6ca0239bce9cc73}
+      \strng{fullhashraw}{fc0835c66c6644c8a6ca0239bce9cc73}
+      \strng{bibnamehash}{fc0835c66c6644c8a6ca0239bce9cc73}
+      \strng{authorbibnamehash}{fc0835c66c6644c8a6ca0239bce9cc73}
+      \strng{authornamehash}{fc0835c66c6644c8a6ca0239bce9cc73}
+      \strng{authorfullhash}{fc0835c66c6644c8a6ca0239bce9cc73}
+      \strng{authorfullhashraw}{fc0835c66c6644c8a6ca0239bce9cc73}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{Guide on climate-related and environmental risks: Supervisory expectations relating to risk management and disclosure}
+      \field{type}{techreport}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://www.bankingsupervision.europa.eu/ecb/pub/pdf/ssm.202011finalguideonclimate-relatedandenvironmentalrisks~58213f6564.en.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.bankingsupervision.europa.eu/ecb/pub/pdf/ssm.202011finalguideonclimate-relatedandenvironmentalrisks~58213f6564.en.pdf
+      \endverb
+    \endentry
     \entry{huizinga_global_2017}{article}{}{}
       \name{author}{3}{}{%
         {{hash=bc878487092e12efddf4e368b9f46eb5}{%
@@ -122,8 +154,8 @@
       \strng{authornamehash}{568c578ca38fc9f4ca5a2d5e23cc6548}
       \strng{authorfullhash}{804f24859db9acae7d958e294d6be371}
       \strng{authorfullhashraw}{804f24859db9acae7d958e294d6be371}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Assessing potential damage of flood events is an important component in flood risk management. Determining direct flood damage is commonly done using depth-damage curves, which denote the flood damage that would occur at specific water depths per asset or per land-use class. Many countries have developed flood damage models using depth-damage curves based on analysis of past flood events and on expert judgement. However, the fact that such damage curves are not available for all regions hampers damage assessments in some areas. Moreover, due to different methodologies employed for various damage models in different countries, damage assessments cannot be directly compared with each other, obstructing also supra-national flood damage assessments. To address these problems a globally consistent database of depth-damage curves has been developed. This dataset contains damage curves depicting fractional damage as a function of water depth as well as the relevant maximum damage values for a variety of assets and land use classes. Based on an extensive literature survey normalised damage curves have been developed for each continent, while differentiation in flood damage between countries is established by determining maximum damage values at the country scale. These maximum damage values are based on construction cost surveys from multinational construction companies, which provide a coherent set of detailed building cost data across dozens of countries. A consistent set of maximum flood damage values for all countries was computed using statistical regressions with socio-economic World Development Indicators. Further, based on insights from the literature survey, guidance is also given on how the damage curves and maximum damage values can be adjusted for specific local circumstances, such as urban vs. rural locations or use of specific building material. This dataset can be used for consistent supra-national scale flood damage assessments, and guide assessment in countries where no damage model is currently available.}
@@ -307,9 +339,42 @@
       \field{year}{2020}
       \true{nocite}
     \endentry
-    \entry{noauthor_impacts_nodate}{misc}{}{}
+    \entry{ecb2020}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=fc0835c66c6644c8a6ca0239bce9cc73}{%
+           family={{European Central Bank}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {European Central Bank}%
+      }
+      \strng{namehash}{fc0835c66c6644c8a6ca0239bce9cc73}
+      \strng{fullhash}{fc0835c66c6644c8a6ca0239bce9cc73}
+      \strng{fullhashraw}{fc0835c66c6644c8a6ca0239bce9cc73}
+      \strng{bibnamehash}{fc0835c66c6644c8a6ca0239bce9cc73}
+      \strng{authorbibnamehash}{fc0835c66c6644c8a6ca0239bce9cc73}
+      \strng{authornamehash}{fc0835c66c6644c8a6ca0239bce9cc73}
+      \strng{authorfullhash}{fc0835c66c6644c8a6ca0239bce9cc73}
+      \strng{authorfullhashraw}{fc0835c66c6644c8a6ca0239bce9cc73}
       \field{sortinit}{6}
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{Guide on climate-related and environmental risks: Supervisory expectations relating to risk management and disclosure}
+      \field{type}{techreport}
+      \field{year}{2020}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.bankingsupervision.europa.eu/ecb/pub/pdf/ssm.202011finalguideonclimate-relatedandenvironmentalrisks~58213f6564.en.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.bankingsupervision.europa.eu/ecb/pub/pdf/ssm.202011finalguideonclimate-relatedandenvironmentalrisks~58213f6564.en.pdf
+      \endverb
+    \endentry
+    \entry{noauthor_impacts_nodate}{misc}{}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labeltitlesource}{title}
       \field{title}{The impacts of climate change on river flood risk at the global scale {|} {Climatic} {Change}}
       \field{urlday}{24}
@@ -377,8 +442,8 @@
       \strng{authornamehash}{d1acfb68ece93882e9e15ef69062c21d}
       \strng{authorfullhash}{da8cf1094975e6390d66c663fd3f4674}
       \strng{authorfullhashraw}{da8cf1094975e6390d66c663fd3f4674}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{3}
@@ -405,8 +470,8 @@
       \keyw{notion}
     \endentry
     \entry{noauthor_future_nodate}{misc}{}{}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labeltitlesource}{title}
       \field{title}{The future of real estate valuations: the impact of {ESG}}
       \true{nocite}
@@ -470,8 +535,8 @@
       \strng{authorfullhash}{dc34490c2f434a52ad5bccd01861c89d}
       \strng{authorfullhashraw}{dc34490c2f434a52ad5bccd01861c89d}
       \field{extraname}{1}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Globally, economic losses from flooding exceeded 19 billion in 2012, and are rising rapidly. Hence, there is an increasing need for global-scale flood risk assessments, also within the context of integrated global assessments. We have developed and validated a model cascade for producing global flood risk maps, based on numerous flood return-periods. Validation results indicate that the model simulates interannual fluctuations in flood impacts well. The cascade involves: hydrological and hydraulic modelling; extreme value statistics; inundation modelling; flood impact modelling; and estimating annual expected impacts. The initial results estimate global impacts for several indicators, for example annual expected exposed population (169 million); and annual expected exposed GDP (1383 billion). These results are relatively insensitive to the extreme value distribution employed to estimate low frequency flood volumes. However, they are extremely sensitive to the assumed flood protection standard; developing a database of such standards should be a research priority. Also, results are sensitive to the use of two different climate forcing datasets. The impact model can easily accommodate new, user-defined, impact indicators. We envisage several applications, for example: identifying risk hotspots; calculating macro-scale risk for the insurance industry and large companies; and assessing potential benefits (and costs) of adaptation measures.}
@@ -1196,8 +1261,8 @@
       \strng{authorfullhash}{2aad3e27258b27f52ff0c8b83a75ac2b}
       \strng{authorfullhashraw}{2aad3e27258b27f52ff0c8b83a75ac2b}
       \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Compound weather and climate events describe combinations of multiple climate drivers and/or hazards that contribute to societal or environmental risk. Although many climate-related disasters are caused by compound events, the understanding, analysis, quantification and prediction of such events is still in its infancy. In this Review, we propose a typology of compound events and suggest analytical and modelling approaches to aid in their investigation. We organize the highly diverse compound event types according to four themes: preconditioned, where a weather-driven or climate-driven precondition aggravates the impacts of a hazard; multivariate, where multiple drivers and/or hazards lead to an impact; temporally compounding, where a succession of hazards leads to an impact; and spatially compounding, where hazards in multiple connected locations cause an aggregated impact. Through structuring compound events and their respective analysis tools, the typology offers an opportunity for deeper insight into their mechanisms and impacts, benefiting the development of effective adaptation strategies. However, the complex nature of compound events results in some cases inevitably fitting into more than one class, necessitating soft boundaries within the typology. Future work must homogenize the available analytical approaches into a robust toolset for compound-event analysis under present and future climate conditions.}
