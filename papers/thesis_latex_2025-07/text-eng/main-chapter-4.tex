@@ -24,7 +24,7 @@ Figure~\ref{fig:physrisk_architecture} illustrates the architecture of the flood
 
 The onboarded models are then encoded in Zarr format and stored in an AWS S3-compatible object storage. The Physrisk framework retrieves hazard indicators from this backend and combines them with vulnerability and exposure components to compute impact distributions. The resulting outputs can be accessed via the Physrisk API or used directly for ESG reporting and financial risk analysis through the \texttt{os-risk-financial} module.
 
-% \begin{figure}[H]
+% \begin{figure}[htb]
 %     \centering
 %     \includegraphics[width=\textwidth]{5d9e5739-4da0-461b-b1fb-dfb351b0ae04.png}
 %     \caption{Physrisk hazard integration architecture, showing onboarding of raw models (left), Zarr-based storage (center), and downstream applications via API (right).}
@@ -49,7 +49,7 @@ The locally developed IKG model, originally provided in shapefile and GeoPackage
 
 The unified model was then uploaded to AWS S3 and integrated into the Physrisk hazard module alongside WRI and TU Delft models. This enabled direct comparison and batch evaluation of global versus local model predictions, described further in Section~4.4.
 
-% \begin{figure}[H]
+% \begin{figure}[htb]
 %     \centering
 %     \includegraphics[width=0.9\textwidth]{00548351-a4bb-43ad-ae13-8315a1a15417.png}
 %     \caption{Processing pipeline for unifying and integrating the SI IKG flood model.}
@@ -67,7 +67,7 @@ The transformation from raw IKG data into a cloud-optimized flood hazard model i
 
 The final onboarded dataset can be queried via the Physrisk API or accessed directly for integration with ESG tools or batch model evaluation.
 
-% \begin{figure}[H]
+% \begin{figure}[htb]
 %     \centering
 %     \includegraphics[width=0.9\textwidth]{cd9b1828-382a-4dcb-9644-aef436dd1194.png}
 %     \caption{Physrisk hazard onboarding pipeline for IKG model.}
@@ -121,7 +121,7 @@ The final result of this pipeline is a unified flood hazard model for Slovenia c
 
 Figure~\ref{fig:ikg_processing_pipeline} provides a schematic representation of the transformation process, from raw shapefiles to a standardized hazard product.
 
-% \begin{figure}[H]
+% \begin{figure}[htb]
 %     \centering
 %     \includegraphics[width=0.95\textwidth]{00548351-a4bb-43ad-ae13-8315a1a15417.png}
 %     \caption{Pipeline for combining heterogeneous IKG flood models across 18 areas of importance.}
@@ -180,7 +180,7 @@ The onboarding process was implemented using the Physrisk hazard onboarding tool
     \item \textbf{Register the Model:} Add a model reference entry into the hazard configuration of Physrisk, enabling downstream access via API and batch processors.
 \end{enumerate}
 
-% \begin{figure}[H]
+% \begin{figure}[htb]
 %     \centering
 %     \includegraphics[width=0.95\textwidth]{cd9b1828-382a-4dcb-9644-aef436dd1194.png}
 %     \caption{Physrisk hazard onboarding pipeline for integrating the IKG model.}

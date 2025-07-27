@@ -1,0 +1,5 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'ips-msc-thesis-eng-ieee.blg'
+[40] biber-darwin:342> INFO - === Sun Jul 27, 2025, 13:13:21
+[59] Utils.pm:479> ERROR - Cannot find 'ips-msc-thesis-eng-ieee.bcf'!
+[59] Biber.pm:137> INFO - ERRORS: 1

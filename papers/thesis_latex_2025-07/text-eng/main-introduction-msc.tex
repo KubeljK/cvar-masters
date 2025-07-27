@@ -1,25 +1,41 @@
 %--------------------------------------------------------------------------------------------------
-% 
 \chapter{Introduction}
 %--------------------------------------------------------------------------------------------------
 
 \section{Background and Motivation}
 
-Flooding is a major natural hazard, responsible for substantial economic losses, social disruption, and loss of life across the globe. With increasing urbanization and changing climate conditions, flood risks are intensifying in both frequency and magnitude. The Intergovernmental Panel on Climate Change (IPCC) projects a rising likelihood of extreme hydrological events, including both pluvial and fluvial floods, due to higher precipitation variability and rising sea levels.
+Flooding is a major natural hazard, responsible for substantial economic losses, social disruption, and loss of life across the globe. With changing climate conditions, flood risks are intensifying in both frequency and magnitude. The Intergovernmental Panel on Climate Change (IPCC) projects a rising likelihood of extreme hydrological events, including both pluvial and fluvial floods, due to higher precipitation variability and rising sea levels.
 
-In Europe, and particularly in Central and Eastern regions such as Slovenia, recent flood events have exposed vulnerabilities in both infrastructure and institutional response systems. The need for robust flood risk models that can inform spatial planning, insurance pricing, and asset management is therefore more pressing than ever. This is especially relevant for stakeholders in the real estate and financial sectors, who must now account for physical climate risks as part of their environmental, social, and governance (ESG) reporting and compliance requirements.
+In Europe, and particularly in Central and Eastern regions such as Slovenia, recent flood events have exposed vulnerabilities in both infrastructure and institutional response systems. The need for robust flood risk models that can inform spatial planning, insurance pricing, and asset management is therefore more pressing than ever. This is especially relevant for stakeholders in the real estate and financial sectors, who must now account for climate-related risks as part of their environmental, social, and governance (ESG) reporting and compliance requirements.
+
+\section{Types of Climate Risk}
+
+In the context of climate-related financial disclosures and scenario analysis, climate risks are commonly categorized into three broad types: \textit{physical}, \textit{transition}, and \textit{liability} risks \cite{moorhouse2024}.
+
+\begin{itemize}
+    \item \textbf{Physical risks} arise from the direct consequences of climate variability and long-term climate change. These include acute hazards such as floods, storms, and wildfires, as well as chronic effects such as sea-level rise and shifting temperature regimes. These risks can cause immediate physical damage and long-term degradation of asset value.
+    
+    \item \textbf{Transition risks} arise from the transition to a low-carbon economy. They include policy changes (e.g., carbon pricing, emissions regulations), technology disruption, evolving market preferences, and reputational risks associated with inaction or misalignment.
+    
+    \item \textbf{Liability risks} are considered by some \cite{woetzel2020climate} and encapsulate risks arising when those affected by anthoropogenic climate change seek compensation.
+\end{itemize}
+
+These categories are increasingly embedded in supervisory and regulatory frameworks, including those developed by the Task Force on Climate-related Financial Disclosures (TCFD) and the Network for Greening the Financial System (NGFS). In the European context, the European Central Bank (ECB) requires significant institutions to assess and disclose their exposure to climate-related and environmental risks, including physical risks, as outlined in its \textit{Guide on climate-related and environmental risks} \cite{ecb2020}. Banks are expected to integrate these risks into their internal governance, risk management, and stress testing frameworks. This thesis focuses exclusively on \textbf{acute physical risks}, with a particular emphasis on riverine flooding and its financial impact on real estate assets.
+
 
 \section{Climate Risk and the ESG Framework}
 
-Climate-related physical risks, such as floods, heatwaves, and storms, are becoming a critical component of ESG disclosures. Investors and financial institutions are increasingly required to assess and report the exposure of their assets to climate hazards. In this context, the concept of physical risk is typically decomposed into three components:
+As institutional investors and financial regulators increasingly emphasize sustainability, the ESG framework has become a central tool for assessing climate-related risks. The environmental dimension of ESG includes metrics such as energy efficiency, greenhouse gas emissions, biodiversity impact, and—critically—exposure to climate-related hazards.
+
+To operationalize physical risk in quantitative models, it is commonly decomposed into three interacting components:
 
 \begin{itemize}
-    \item \textbf{Hazard} – the probability and intensity of the climate-related event (e.g., flood depth, wind speed).
-    \item \textbf{Vulnerability} – the expected damage to an asset given the intensity of the hazard.
-    \item \textbf{Exposure} – the value or presence of assets in harm’s way.
+    \item \textbf{Hazard} – the probability and intensity of a climate-related event (e.g., flood depth for a 100-year return period),
+    \item \textbf{Vulnerability} – the expected damage to an asset given the intensity of the hazard,
+    \item \textbf{Exposure} – the presence and value of assets located in potentially affected areas.
 \end{itemize}
 
-The combination of these three factors forms the basis of quantitative risk models that estimate potential economic losses due to climate events. Yet, despite the wide adoption of such frameworks, the underlying models are often poorly validated, especially at local or parcel-level scales relevant for property-level decision making.
+These components form the basis of scenario-based risk models that estimate potential losses under varying climate conditions. However, despite their theoretical appeal, such models often suffer from limited spatial precision, scarce validation against real-world observations, and inconsistent data integration across regions. These issues are particularly acute for flood modeling, where local hydrology and building typologies vary substantially across jurisdictions.
 
 \section{Problem Statement}
 
@@ -42,13 +58,9 @@ This thesis aims to evaluate the performance of global and local flood risk mode
 
 The thesis adopts a comparative modeling approach using geospatial and statistical techniques. A validation dataset, compiled from the records of the Slovenian Administration for Civil Protection and Disaster Relief, includes appraised damage and measured flood depths for selected events between 2010 and 2023.
 
-Flood hazard models are evaluated using both regression-based and classification-based metrics to assess depth prediction accuracy. Vulnerability models are tested by comparing observed versus predicted damages using segmented analysis by flood depth and real estate type. All data are processed and harmonized into a common geospatial reference system and stored in Zarr format, facilitating efficient access within the \textit{Physrisk} platform.
+Flood hazard models are evaluated using both regression-based and classification-based metrics to assess depth prediction accuracy. Vulnerability models are tested by comparing observed versus predicted damages using segmented analysis by flood depth and real estate type. All data are processed and harmonized into a common geospatial reference system and stored in Zarr format, enabling scalable access within the \textit{Physrisk} platform.
 
-\section{Scientific and Practical Relevance}
-
-From a scientific perspective, this work contributes to the ongoing effort of validating global hazard and vulnerability models in local contexts. By empirically assessing model accuracy, the thesis provides critical insight into where global models fall short and where local models offer meaningful advantages.
-
-Practically, the work supports the advancement of data-driven ESG disclosures by enhancing the interoperability and transparency of physical risk assessment tools. The technical contributions also provide a template for integrating fragmented local hazard datasets into scalable, modular frameworks like \textit{Physrisk}, which are increasingly used in institutional risk modeling and regulatory reporting.
+From a scientific perspective, this work contributes to the empirical validation of global flood hazard and vulnerability models in a local Central European context. From a practical standpoint, it improves the transparency and reusability of flood risk data pipelines, supporting efforts to build ESG-compliant risk disclosure tools.
 
 \section{Structure of the Thesis}
 
@@ -58,112 +70,8 @@ The remainder of the thesis is structured as follows:
     \item \textbf{Chapter 2} presents a review of relevant literature and related work on flood hazard modeling, vulnerability estimation, and ESG-aligned risk frameworks.
     \item \textbf{Chapter 3} describes the study area, datasets, and the methodological framework used for model evaluation and data processing.
     \item \textbf{Chapter 4} details the integration of the local IKG model into the Physrisk framework and presents the architecture of the comparison toolset.
-    \item \textbf{Chapter 5} provides experimental results, including quantitative evaluation of model performance, depth–damage function analysis, and financial impact estimates.
+    \item \textbf{Chapter 5} provides experimental results, including quantitative evaluation of model performance, depth--damage function analysis, and financial impact estimates.
     \item \textbf{Chapter 6} discusses the key findings, limitations, and possible future research directions, and concludes the thesis.
 \end{itemize}
 
-% \section{Thesis Structure}
 
-% The thesis should be structured as follows (note that while some parts are optional, their order is not):
-% \begin{itemize}
-% 	\item \emph{Front Matter}
-% 	\begin{itemize}
-% 		\item Title pages
-% 		\item Dedication (optional)
-% 		\item Acknowledgments
-% 		\item Abstract
-% 		\item Povzetek
-% 		\item Contents
-% 		\item List of Figures (required if the thesis contains figures)
-% 		\item List of Tables (required if the thesis contains tables)
-% 		\item List of Algorithms (required if the thesis contains algorithms)
-% 		\item Abbreviations (optional)
-% 		\item Symbols (optional)
-% 		\item Glossary (optional)
-% 	\end{itemize}
-% 	\item \emph{Main Matter}
-% 	\begin{itemize}
-% 		\item 1 Introduction
-% 		\item $2, \dots, n-1$ Chapters
-% 		\item $n$ Conclusions
-% 	\end{itemize}
-% 	The Introduction must clearly summarize the thesis from the topic application of the master thesis. The core text of the master thesis can be substituted by publications (or papers accepted for publication) in internationally recognized journals. In this case, the Introduction should clearly describe the scientific method and the candidate’s contribution to any publication which has been produced by several authors. In the Discussion or Conclusions, the candidate should summarize coherently the results of his/her thesis.
-% 	\item \emph{Appendices} (optional)
-% 	\begin{itemize}
-% 		\item Appendix A Title
-% 		\item Appendix B Title
-% 		\item \dots
-% 	\end{itemize}
-% 	If desired, the candidate can place some of his/her relevant papers in the appendices. In order to do so, he/she must obtain permissions from publishers.
-% 	\item \emph{Back Matter}
-% 	\begin{itemize}
-% 		\item References
-% 		\item Bibliography 
-% 		\item Biography
-% 		\item Index (optional)
-% 	\end{itemize}
-% \end{itemize}
-
-% In addition, each author must prepare the cover page and spine using the two \texttt{.doc} files provided by IPS.
-
-% \section{Sectioning Example}
-
-% This is a section. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. 
-
-% Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. 
-
-% \subsection{Subsection}
-
-% This is a subsection. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. 
-
-% Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. 
-
-% \subsubsection{Subsubsection}
-
-% This is a subsubsection. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. 
-
-% Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. 
-
-% \paragraph{Paragraph}
-
-% This is a paragraph. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text.  
-
-% Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. 
-
-% \subparagraph{Subparagraph}
-
-% This is a subparagraph. It is not possible to get deeper than this. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. 
-
-% Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. 
-
-% \subparagraph{Subparagraph}
-
-% This is a subparagraph. It is not possible to get deeper than this. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. 
-
-% \paragraph{Paragraph}
-
-% This is a paragraph. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. 
-
-% \subsubsection{Subsubsection}
-
-% This is a subsubsection. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text.  
-
-% \paragraph{Paragraph}
-
-% This is a paragraph. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text.  
-
-% \paragraph{Paragraph}
-
-% This is a paragraph. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. 
-
-% \subsection{Subsection}
-
-% This is a subsection. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. 
-
-% \subsubsection{Subsubsection}
-
-% This is a subsubsection. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. 
-
-% \subsubsection{Subsubsection}
-
-% This is a subsubsection. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. Some more text. 
