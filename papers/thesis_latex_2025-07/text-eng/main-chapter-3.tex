@@ -26,14 +26,14 @@ where:
 	\item \( h(x, y, T) \) is the flood depth (in meters) at location \( (x, y) \) for return period \( T \).
 \end{itemize}
 
-Return periods \( T \) are commonly used to express the frequency of extreme events. The corresponding annual exceedance probability \( p \) is given by:
+Return periods \( T \) express the average time between events of a given magnitude. The associated annual exceedance probability \( p \) is:
 
 \begin{equation}
 	p = \frac{1}{T}
 	\label{eq:return-period}
 \end{equation}
 
-Flood hazard models such as those used in this study estimate water depths \( h(x, y, T) \) based on hydrological and hydraulic simulations. In practice, these functions are discretized into raster data aligned to a grid. The continuous function \( h(x, y, T) \) is approximated by an array \( H_{i,j,k} \), where:
+Flood hazard models estimate water depths \( h(x, y, T) \) using hydrological and hydraulic simulations that account for catchment runoff, river dynamics, topography, and in some cases, climate change. In practice, these functions are discretized into raster data aligned to a grid. The continuous function \( h(x, y, T) \) is approximated by an array \( H_{i,j,k} \), where:
 \begin{itemize}
 	\item \( i, j \) index the spatial grid cells,
 	\item \( k \) indexes the return period \( T_k \in \mathcal{T} \).
@@ -46,18 +46,26 @@ Flood hazard models such as those used in this study estimate water depths \( h(
 	\label{fig:hazard-map-placeholder}
 \end{figure}
 
-
-\subsection{Hazard Data Sources}
+\subsection{Hazard Data Sources and Modeling Approach}
 
 Two flood hazard models are evaluated and compared in this thesis:
 
 \begin{itemize}
-	\item \textbf{WRI Aqueduct River Flood Model:} This is a global riverine flood hazard model developed by the World Resources Institute. It offers flood depth estimates at a resolution of approximately 1 km for a broad range of return periods (from 2 to 1000 years). The model integrates hydrological simulations with elevation data and accounts for future climate scenarios through Representative Concentration Pathways (RCP4.5 and RCP8.5). It is distributed in GeoTIFF raster format using EPSG:4326.
+	\item \textbf{WRI Aqueduct River Flood Model:} This is a global flood hazard dataset developed by the World Resources Institute. It estimates flood depths using hydrological and hydraulic simulations from global river basins, based on historical river discharge, elevation models (e.g., MERIT DEM), and land surface parameters. The model provides depth estimates for return periods ranging from 2 to 1000 years, with global coverage at ~1 km resolution. Critically, it supports multiple future climate scenarios via Representative Concentration Pathways (RCPs), specifically RCP4.5 and RCP8.5. These scenarios reflect moderate and high greenhouse gas emissions trajectories, respectively:
+		\begin{itemize}
+			\item \textbf{RCP4.5} assumes stabilization of radiative forcing at 4.5 W/m\textsuperscript{2} by 2100, representing moderate mitigation.
+			\item \textbf{RCP8.5} assumes continued high emissions, leading to >4°C global warming by 2100.
+		\end{itemize}
+		Climate scenarios affect rainfall intensities, runoff, and river discharge, which in turn affect simulated flood extents and depths. The outputs are published in GeoTIFF raster format, using EPSG:4326 (WGS84).
 
-	\item \textbf{Integralna karta globin (IKG):} This is a high-resolution local flood hazard dataset prepared by Slovenian authorities for selected municipalities. The model is based on hydraulic simulations of flood dynamics using fine-scale terrain data and site-specific conditions. IKG maps are originally provided as vector files (shapefiles or GeoPackages), categorized into three inundation classes—minor (0.5 m), significant (1.5 m), and severe (2.5 m)—and are available for return periods of 10, 100, and 500 years. The coordinate reference system is EPSG:3794.
+	\item \textbf{Integralna karta globin (IKG):} This high-resolution local hazard dataset is developed by Slovenian civil protection authorities and technical consultants. It includes flood hazard maps for selected municipalities based on detailed hydraulic modeling (1D/2D simulations) calibrated using historical events. Flood extents are modeled under synthetic return period scenarios (10, 100, 500 years) and expressed in three discrete flood depth classes:
+		\begin{itemize}
+			\item GM – minor inundation (up to 0.5 m),
+			\item GS – significant inundation (up to 1.5 m),
+			\item GB – severe inundation (up to 2.5 m).
+		\end{itemize}
+		IKG data are originally stored as vector polygons (shapefiles or GeoPackages) using the national coordinate system (EPSG:3794). For integration and analysis, they are rasterized to a 5 m grid, harmonized with other layers, and stored in Zarr format. Unlike WRI, IKG models do not include climate scenario adjustments.
 \end{itemize}
-
-For the purposes of this study, all hazard layers were harmonized into a common 5 m raster grid, reprojected into EPSG:3794, and stored in Zarr format to enable aligned processing and evaluation. The key differences between the WRI and IKG models are summarized in Table~\ref{tab:hazard_models}.
 
 \begin{table}[htb]
     \centering
@@ -69,7 +77,7 @@ For the purposes of this study, all hazard layers were harmonized into a common 
         \hline
         Spatial resolution & $\sim$1 km & 5 m \\
         Coverage & Global & 18 regions in Slovenia \\
-        Climate scenarios & RCP-aware (e.g., RCP4.5, RCP8.5) & Not scenario-aware \\
+        Climate scenarios & RCP-aware (RCP4.5, RCP8.5) & Not scenario-aware \\
         Depth type & Continuous (in meters) & Discrete classes (0.5, 1.5, 2.5 m) \\
         Return periods & 2 to 1000 years & 10, 100, 500 years \\
         File format & Raster (GeoTIFF) & Vector (shapefile, GPKG) \\
@@ -77,6 +85,8 @@ For the purposes of this study, all hazard layers were harmonized into a common 
         \hline
     \end{tabular}
 \end{table}
+
+Both datasets were transformed to a common 5 m grid and reference system to enable cell-wise comparisons of depth predictions and derived risk estimates.
 
 %--------------------------------------------------------------------------------------------------
 \section{Vulnerability and Damage Function}
