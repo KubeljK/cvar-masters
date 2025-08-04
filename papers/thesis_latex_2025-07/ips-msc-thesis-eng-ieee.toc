@@ -14,28 +14,19 @@
 \contentsline {section}{\numberline {1.2}Climate Risk and ESG Disclosure}{1}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Problem Statement}{2}{section.1.3}%
 \contentsline {section}{\numberline {1.4}Research Objectives}{2}{section.1.4}%
-\contentsline {section}{\numberline {1.5}Methodological Approach}{3}{section.1.5}%
-\contentsline {section}{\numberline {1.6}Structure of the Thesis}{3}{section.1.6}%
+\contentsline {section}{\numberline {1.5}Structure of the Thesis}{3}{section.1.5}%
 \contentsline {chapter}{\numberline {2}Literature Review \& Related Work}{5}{chapter.2}%
 \contentsline {chapter}{\numberline {3}Study Area, Data, and Methodology}{7}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Hazard and Depth}{7}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}WRI Aqueduct River Flood Model}{8}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Integralna karta globin (IKG)}{8}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Return Periods and Depth Representation}{8}{subsection.3.1.3}%
-\contentsline {subsection}{\numberline {3.1.4}Hazard Data Extraction}{9}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.1}Mathematical Definition of Flood Hazard}{7}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Hazard Data Sources}{8}{subsection.3.1.2}%
 \contentsline {section}{\numberline {3.2}Vulnerability and Damage Function}{9}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Depth--Damage Functions}{9}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Function Structure and Properties}{10}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Application to Slovenian Flood Events}{10}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Assumptions and Limitations}{10}{subsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.2.5}Link to Risk Estimation}{11}{subsection.3.2.5}%
-\contentsline {section}{\numberline {3.3}Flood Risk Modeling}{11}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Risk Definition}{11}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Hazard Component}{11}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Vulnerability Component}{12}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Exposure Component}{12}{subsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.3.5}Implementation Workflow}{12}{subsection.3.3.5}%
-\contentsline {subsection}{\numberline {3.3.6}Use Cases and Relevance}{12}{subsection.3.3.6}%
+\contentsline {subsection}{\numberline {3.2.1}Mathematical Definition}{9}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Vulnerability Data Source}{9}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Flood Risk Modeling}{9}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Risk Definition}{9}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Exposure Data}{10}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Use Cases}{11}{subsection.3.3.3}%
 \contentsline {chapter}{\numberline {4}Model Integration and Analysis Framework}{13}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Architectural Diagram}{13}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}System Overview}{14}{subsection.4.1.1}%

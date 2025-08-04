@@ -19,6 +19,131 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global/global}
+    \entry{ipcc2021}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=676f7b9b8e5bb30500c01e2385e59174}{%
+           family={{IPCC}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{676f7b9b8e5bb30500c01e2385e59174}
+      \strng{fullhash}{676f7b9b8e5bb30500c01e2385e59174}
+      \strng{fullhashraw}{676f7b9b8e5bb30500c01e2385e59174}
+      \strng{bibnamehash}{676f7b9b8e5bb30500c01e2385e59174}
+      \strng{authorbibnamehash}{676f7b9b8e5bb30500c01e2385e59174}
+      \strng{authornamehash}{676f7b9b8e5bb30500c01e2385e59174}
+      \strng{authorfullhash}{676f7b9b8e5bb30500c01e2385e59174}
+      \strng{authorfullhashraw}{676f7b9b8e5bb30500c01e2385e59174}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.ipcc.ch/report/ar6/wg1/
+      \endverb
+      \verb{url}
+      \verb https://www.ipcc.ch/report/ar6/wg1/
+      \endverb
+    \endentry
+    \entry{eea2020floods}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=9aa80cbd4e27fcec08519169fe921f57}{%
+           family={{European Environment Agency}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {European Environment Agency}%
+      }
+      \strng{namehash}{9aa80cbd4e27fcec08519169fe921f57}
+      \strng{fullhash}{9aa80cbd4e27fcec08519169fe921f57}
+      \strng{fullhashraw}{9aa80cbd4e27fcec08519169fe921f57}
+      \strng{bibnamehash}{9aa80cbd4e27fcec08519169fe921f57}
+      \strng{authorbibnamehash}{9aa80cbd4e27fcec08519169fe921f57}
+      \strng{authornamehash}{9aa80cbd4e27fcec08519169fe921f57}
+      \strng{authorfullhash}{9aa80cbd4e27fcec08519169fe921f57}
+      \strng{authorfullhashraw}{9aa80cbd4e27fcec08519169fe921f57}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Urban adaptation in Europe: How cities and towns respond to climate change}
+      \field{type}{techreport}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://www.eea.europa.eu/publications/urban-adaptation-in-europe
+      \endverb
+      \verb{url}
+      \verb https://www.eea.europa.eu/publications/urban-adaptation-in-europe
+      \endverb
+    \endentry
+    \entry{ecb2020}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=fc0835c66c6644c8a6ca0239bce9cc73}{%
+           family={{European Central Bank}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {European Central Bank}%
+      }
+      \strng{namehash}{fc0835c66c6644c8a6ca0239bce9cc73}
+      \strng{fullhash}{fc0835c66c6644c8a6ca0239bce9cc73}
+      \strng{fullhashraw}{fc0835c66c6644c8a6ca0239bce9cc73}
+      \strng{bibnamehash}{fc0835c66c6644c8a6ca0239bce9cc73}
+      \strng{authorbibnamehash}{fc0835c66c6644c8a6ca0239bce9cc73}
+      \strng{authornamehash}{fc0835c66c6644c8a6ca0239bce9cc73}
+      \strng{authorfullhash}{fc0835c66c6644c8a6ca0239bce9cc73}
+      \strng{authorfullhashraw}{fc0835c66c6644c8a6ca0239bce9cc73}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{Guide on climate-related and environmental risks: Supervisory expectations relating to risk management and disclosure}
+      \field{type}{techreport}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://www.bankingsupervision.europa.eu/ecb/pub/pdf/ssm.202011finalguideonclimate-relatedandenvironmentalrisks~58213f6564.en.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.bankingsupervision.europa.eu/ecb/pub/pdf/ssm.202011finalguideonclimate-relatedandenvironmentalrisks~58213f6564.en.pdf
+      \endverb
+    \endentry
+    \entry{tcfd2017}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=f74792fd51c5dcc51ee1b82a3b193916}{%
+           family={{Task Force on Climate-related Financial Disclosures}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Financial Stability Board}%
+      }
+      \strng{namehash}{f74792fd51c5dcc51ee1b82a3b193916}
+      \strng{fullhash}{f74792fd51c5dcc51ee1b82a3b193916}
+      \strng{fullhashraw}{f74792fd51c5dcc51ee1b82a3b193916}
+      \strng{bibnamehash}{f74792fd51c5dcc51ee1b82a3b193916}
+      \strng{authorbibnamehash}{f74792fd51c5dcc51ee1b82a3b193916}
+      \strng{authornamehash}{f74792fd51c5dcc51ee1b82a3b193916}
+      \strng{authorfullhash}{f74792fd51c5dcc51ee1b82a3b193916}
+      \strng{authorfullhashraw}{f74792fd51c5dcc51ee1b82a3b193916}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{6}
+      \field{title}{Final Report: Recommendations of the Task Force on Climate-related Financial Disclosures}
+      \field{type}{techreport}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://www.fsb-tcfd.org/publications/final-recommendations-report/
+      \endverb
+      \verb{url}
+      \verb https://www.fsb-tcfd.org/publications/final-recommendations-report/
+      \endverb
+    \endentry
     \entry{moorhouse2024}{article}{}{}
       \name{author}{4}{}{%
         {{hash=6d5dbb8f320dc246664061691bc801ff}{%
@@ -50,8 +175,8 @@
       \strng{authornamehash}{b8d1090131f716e3b2c646a962f36139}
       \strng{authorfullhash}{b2cd2408438458107996e51bb2a0557a}
       \strng{authorfullhashraw}{b2cd2408438458107996e51bb2a0557a}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{2}
@@ -89,44 +214,12 @@
       \strng{authornamehash}{3abf6f09a3b8a6989bd144a1c5a2b9c2}
       \strng{authorfullhash}{525b5c576cd969f5fb2189d252349b2a}
       \strng{authorfullhashraw}{525b5c576cd969f5fb2189d252349b2a}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Climate risk and response: Physical hazards and socioeconomic impacts}
       \field{year}{2020}
-    \endentry
-    \entry{ecb2020}{report}{}{}
-      \name{author}{1}{}{%
-        {{hash=fc0835c66c6644c8a6ca0239bce9cc73}{%
-           family={{European Central Bank}},
-           familyi={E\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {European Central Bank}%
-      }
-      \strng{namehash}{fc0835c66c6644c8a6ca0239bce9cc73}
-      \strng{fullhash}{fc0835c66c6644c8a6ca0239bce9cc73}
-      \strng{fullhashraw}{fc0835c66c6644c8a6ca0239bce9cc73}
-      \strng{bibnamehash}{fc0835c66c6644c8a6ca0239bce9cc73}
-      \strng{authorbibnamehash}{fc0835c66c6644c8a6ca0239bce9cc73}
-      \strng{authornamehash}{fc0835c66c6644c8a6ca0239bce9cc73}
-      \strng{authorfullhash}{fc0835c66c6644c8a6ca0239bce9cc73}
-      \strng{authorfullhashraw}{fc0835c66c6644c8a6ca0239bce9cc73}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{11}
-      \field{title}{Guide on climate-related and environmental risks: Supervisory expectations relating to risk management and disclosure}
-      \field{type}{techreport}
-      \field{year}{2020}
-      \verb{urlraw}
-      \verb https://www.bankingsupervision.europa.eu/ecb/pub/pdf/ssm.202011finalguideonclimate-relatedandenvironmentalrisks~58213f6564.en.pdf
-      \endverb
-      \verb{url}
-      \verb https://www.bankingsupervision.europa.eu/ecb/pub/pdf/ssm.202011finalguideonclimate-relatedandenvironmentalrisks~58213f6564.en.pdf
-      \endverb
     \endentry
     \entry{huizinga_global_2017}{article}{}{}
       \name{author}{3}{}{%
@@ -154,8 +247,8 @@
       \strng{authornamehash}{568c578ca38fc9f4ca5a2d5e23cc6548}
       \strng{authorfullhash}{804f24859db9acae7d958e294d6be371}
       \strng{authorfullhashraw}{804f24859db9acae7d958e294d6be371}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Assessing potential damage of flood events is an important component in flood risk management. Determining direct flood damage is commonly done using depth-damage curves, which denote the flood damage that would occur at specific water depths per asset or per land-use class. Many countries have developed flood damage models using depth-damage curves based on analysis of past flood events and on expert judgement. However, the fact that such damage curves are not available for all regions hampers damage assessments in some areas. Moreover, due to different methodologies employed for various damage models in different countries, damage assessments cannot be directly compared with each other, obstructing also supra-national flood damage assessments. To address these problems a globally consistent database of depth-damage curves has been developed. This dataset contains damage curves depicting fractional damage as a function of water depth as well as the relevant maximum damage values for a variety of assets and land use classes. Based on an extensive literature survey normalised damage curves have been developed for each continent, while differentiation in flood damage between countries is established by determining maximum damage values at the country scale. These maximum damage values are based on construction cost surveys from multinational construction companies, which provide a coherent set of detailed building cost data across dozens of countries. A consistent set of maximum flood damage values for all countries was computed using statistical regressions with socio-economic World Development Indicators. Further, based on insights from the literature survey, guidance is also given on how the damage curves and maximum damage values can be adjusted for specific local circumstances, such as urban vs. rural locations or use of specific building material. This dataset can be used for consistent supra-national scale flood damage assessments, and guide assessment in countries where no damage model is currently available.}
@@ -372,9 +465,105 @@
       \verb https://www.bankingsupervision.europa.eu/ecb/pub/pdf/ssm.202011finalguideonclimate-relatedandenvironmentalrisks~58213f6564.en.pdf
       \endverb
     \endentry
-    \entry{noauthor_impacts_nodate}{misc}{}{}
+    \entry{ipcc2021}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=676f7b9b8e5bb30500c01e2385e59174}{%
+           family={{IPCC}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{676f7b9b8e5bb30500c01e2385e59174}
+      \strng{fullhash}{676f7b9b8e5bb30500c01e2385e59174}
+      \strng{fullhashraw}{676f7b9b8e5bb30500c01e2385e59174}
+      \strng{bibnamehash}{676f7b9b8e5bb30500c01e2385e59174}
+      \strng{authorbibnamehash}{676f7b9b8e5bb30500c01e2385e59174}
+      \strng{authornamehash}{676f7b9b8e5bb30500c01e2385e59174}
+      \strng{authorfullhash}{676f7b9b8e5bb30500c01e2385e59174}
+      \strng{authorfullhashraw}{676f7b9b8e5bb30500c01e2385e59174}
       \field{sortinit}{7}
       \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change}
+      \field{year}{2021}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.ipcc.ch/report/ar6/wg1/
+      \endverb
+      \verb{url}
+      \verb https://www.ipcc.ch/report/ar6/wg1/
+      \endverb
+    \endentry
+    \entry{eea2020floods}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=9aa80cbd4e27fcec08519169fe921f57}{%
+           family={{European Environment Agency}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {European Environment Agency}%
+      }
+      \strng{namehash}{9aa80cbd4e27fcec08519169fe921f57}
+      \strng{fullhash}{9aa80cbd4e27fcec08519169fe921f57}
+      \strng{fullhashraw}{9aa80cbd4e27fcec08519169fe921f57}
+      \strng{bibnamehash}{9aa80cbd4e27fcec08519169fe921f57}
+      \strng{authorbibnamehash}{9aa80cbd4e27fcec08519169fe921f57}
+      \strng{authornamehash}{9aa80cbd4e27fcec08519169fe921f57}
+      \strng{authorfullhash}{9aa80cbd4e27fcec08519169fe921f57}
+      \strng{authorfullhashraw}{9aa80cbd4e27fcec08519169fe921f57}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Urban adaptation in Europe: How cities and towns respond to climate change}
+      \field{type}{techreport}
+      \field{year}{2020}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.eea.europa.eu/publications/urban-adaptation-in-europe
+      \endverb
+      \verb{url}
+      \verb https://www.eea.europa.eu/publications/urban-adaptation-in-europe
+      \endverb
+    \endentry
+    \entry{tcfd2017}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=f74792fd51c5dcc51ee1b82a3b193916}{%
+           family={{Task Force on Climate-related Financial Disclosures}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Financial Stability Board}%
+      }
+      \strng{namehash}{f74792fd51c5dcc51ee1b82a3b193916}
+      \strng{fullhash}{f74792fd51c5dcc51ee1b82a3b193916}
+      \strng{fullhashraw}{f74792fd51c5dcc51ee1b82a3b193916}
+      \strng{bibnamehash}{f74792fd51c5dcc51ee1b82a3b193916}
+      \strng{authorbibnamehash}{f74792fd51c5dcc51ee1b82a3b193916}
+      \strng{authornamehash}{f74792fd51c5dcc51ee1b82a3b193916}
+      \strng{authorfullhash}{f74792fd51c5dcc51ee1b82a3b193916}
+      \strng{authorfullhashraw}{f74792fd51c5dcc51ee1b82a3b193916}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{6}
+      \field{title}{Final Report: Recommendations of the Task Force on Climate-related Financial Disclosures}
+      \field{type}{techreport}
+      \field{year}{2017}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.fsb-tcfd.org/publications/final-recommendations-report/
+      \endverb
+      \verb{url}
+      \verb https://www.fsb-tcfd.org/publications/final-recommendations-report/
+      \endverb
+    \endentry
+    \entry{noauthor_impacts_nodate}{misc}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labeltitlesource}{title}
       \field{title}{The impacts of climate change on river flood risk at the global scale {|} {Climatic} {Change}}
       \field{urlday}{24}
@@ -442,8 +631,8 @@
       \strng{authornamehash}{d1acfb68ece93882e9e15ef69062c21d}
       \strng{authorfullhash}{da8cf1094975e6390d66c663fd3f4674}
       \strng{authorfullhashraw}{da8cf1094975e6390d66c663fd3f4674}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{3}
@@ -470,8 +659,8 @@
       \keyw{notion}
     \endentry
     \entry{noauthor_future_nodate}{misc}{}{}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labeltitlesource}{title}
       \field{title}{The future of real estate valuations: the impact of {ESG}}
       \true{nocite}
@@ -962,8 +1151,8 @@
       \strng{authornamehash}{670501941d0ccca04566e99a0a1c938d}
       \strng{authorfullhash}{649b00751e36ba8a4d8fb0ba13b24901}
       \strng{authorfullhashraw}{649b00751e36ba8a4d8fb0ba13b24901}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{2590-3330, 2590-3322}
@@ -1067,8 +1256,8 @@
       \strng{authorfullhash}{1cfc6a6dce8623d6e92f5f7b165ac5ec}
       \strng{authorfullhashraw}{1cfc6a6dce8623d6e92f5f7b165ac5ec}
       \field{extraname}{1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Floods, wildfires, heatwaves and droughts often result from a combination of interacting physical processes across multiple spatial and temporal scales. The combination of processes (climate drivers and hazards) leading to a significant impact is referred to as a ‘compound event’. Traditional risk assessment methods typically only consider one driver and/or hazard at a time, potentially leading to underestimation of risk, as the processes that cause extreme events often interact and are spatially and/or temporally dependent. Here we show how a better understanding of compound events may improve projections of potential high-impact events, and can provide a bridge between climate scientists, engineers, social scientists, impact modellers and decision-makers, who need to work closely together to understand these complex events.}
@@ -1135,8 +1324,8 @@
       \strng{authornamehash}{e914d1932e25a7222b0239f4408cc4da}
       \strng{authorfullhash}{f0a78ce97f44c5d31535aca0679f3375}
       \strng{authorfullhashraw}{f0a78ce97f44c5d31535aca0679f3375}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Climate physical risk assessment is crucial to inform adaptation policies and finance. However, science-based and transparent solutions to assess climate physical risks are limited, compounding the adaptation gap. This is a main limitation to fill the adaptation gap. We provide a methodology that quantifies physical risks on geolocalized productive assets, considering their exposure to chronic and acute impacts (hurricanes) across the scenarios of the Intergovernmental Panel on Climate Change. Then, we translate asset-level shocks into economic and financial losses. We apply the methodology to Mexico, a country highly exposed to physical risks, recipient of adaptation finance and foreign investments. We show that investor losses are underestimated up to 70\% when neglecting asset-level information, and up to 82\% when neglecting tail acute risks. Therefore, neglecting the asset-level and acute dimensions of physical risks leads to large errors in the identification of adaptation policy responses, investments and finance tools aimed to build resilience to climate change.}

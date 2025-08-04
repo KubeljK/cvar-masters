@@ -4,9 +4,12 @@
 
 \section{Background and Motivation}
 
-Flooding is a major natural hazard, responsible for substantial economic losses, social disruption, and loss of life across the globe. With changing climate conditions, flood risks are intensifying in both frequency and magnitude. The Intergovernmental Panel on Climate Change (IPCC) projects a rising likelihood of extreme hydrological events, including both pluvial and fluvial floods, due to higher precipitation variability and rising sea levels (TODO: REF).
+Flooding is one of the most frequent and damaging natural hazards globally, responsible for extensive economic losses, social disruption, and loss of life. Climate change is expected to further intensify these risks by increasing both the frequency and severity of hydrological extremes. The Intergovernmental Panel on Climate Change (IPCC) projects a growing incidence of intense precipitation events and flood-related disasters, particularly in regions affected by higher hydrological variability and sea-level rise \cite{ipcc2021}.
 
-In Europe, and particularly in Central and Eastern regions such as Slovenia, recent flood events have exposed vulnerabilities in both infrastructure and institutional response systems. The need for robust flood risk models that can inform spatial planning, insurance pricing, and asset management is therefore more pressing than ever. This is especially relevant for stakeholders in the real estate and financial sectors, who must now account for climate-related risks as part of their environmental, social, and governance (ESG) reporting and compliance requirements.
+In Europe, recent catastrophic flood events—such as those in Germany and Belgium in 2021, and in Slovenia in 2023—have exposed significant vulnerabilities in infrastructure, spatial planning, and emergency preparedness. According to the European Environment Agency (EEA), riverine and pluvial floods already account for more than one-third of total weather-related losses in Europe, a share that is projected to increase over coming decades without improved mitigation and adaptation measures \cite{eea2020floods}.
+
+These developments underscore the urgent need for robust and spatially detailed flood risk models that can support risk-sensitive decision-making in domains such as insurance pricing, urban planning, asset valuation, and regulatory compliance. This is particularly critical for stakeholders in the real estate and financial sectors, who are increasingly required to assess and disclose exposure to climate-related physical risks as part of their environmental, social, and governance (ESG) reporting obligations \cite{ecb2020, tcfd2017}.
+
 
 \section{Climate Risk and ESG Disclosure}
 
@@ -22,7 +25,7 @@ Climate risk refers to the potential adverse effects of climate change on econom
 
 These categories are increasingly embedded in ESG-aligned regulatory frameworks such as those developed by the Task Force on Climate-related Financial Disclosures (TCFD) and the Network for Greening the Financial System (NGFS). In the European context, the European Central Bank (ECB) requires significant institutions to assess, manage, and disclose climate-related and environmental risks, including physical risks. According to the ECB’s supervisory guidance, banks are expected to integrate these risks into their internal governance, risk management, stress testing, and disclosure practices \cite{ecb2020}.
 
-To operationalize physical risk in quantitative models, it is typically decomposed into three interacting components:
+Physical risk is typically modeled as the interaction of three fundamental components:
 
 \begin{itemize}
     \item \textbf{Hazard} – the probability and intensity of a climate-related event (e.g., flood depth for a 100-year return period),
@@ -45,7 +48,7 @@ Furthermore, flood vulnerability is typically modeled using generalized depth--d
 
 The purpose of this thesis is to evaluate how well existing flood models can represent real-world flood depths and damage outcomes in Slovenia. Specifically, it compares a global hazard model (WRI Aqueduct) and a high-resolution local model (IKG) to assess the accuracy of their flood depth predictions.
 
-Separately, the thesis tests global depth–damage functions, used to estimate flood-related property value loss, against reported damage data, with the goal of evaluating and potentially improving their performance. Together, these analyses aim to assess the reliability of current modeling tools for understanding physical climate risk and supporting property related decision making in the context of increasing flood exposure.
+Separately, the thesis tests global depth-damage functions, used to estimate flood-related property value loss, against reported damage data, with the goal of evaluating and potentially improving their performance. Together, these analyses aim to assess the reliability of current modeling tools for understanding physical climate risk and supporting property related decision making in the context of increasing flood exposure.
 
 The main goals of the research are:
 \begin{enumerate}

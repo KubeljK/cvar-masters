@@ -1,60 +1,67 @@
 %--------------------------------------------------------------------------------------------------
-% 
 \chapter{Study Area, Data, and Methodology}
 %--------------------------------------------------------------------------------------------------
-This chapter defines the geographic and empirical scope of the study and outlines the data sources and methodological approaches used to evaluate flood hazard and vulnerability models. The objective is to establish a clear foundation for the experimental work presented in later chapters by describing the spatial context, data quality, and analytical framework adopted in this thesis.
 
-First, the chapter introduces the two primary flood hazard models under investigation: the global WRI Aqueduct River Flood model and the local Slovenian Integralna karta globin (IKG) model. These models are compared in terms of resolution, coverage, return period granularity, and underlying assumptions.
-
-Second, the chapter presents the vulnerability component of the flood risk framework, focusing on standardized depth--damage functions developed by the European Commission Joint Research Centre (JRC). These functions are used to estimate expected economic damage from flooding based on inundation depth and building type.
-
-Lastly, the chapter describes the overall flood risk modeling approach, structured according to the widely adopted hazard--vulnerability--exposure paradigm. This includes the assumptions used for data transformation, the structure of the validation dataset, and the rationale behind the chosen evaluation metrics.
-
-The chapter is structured as follows:
-\begin{itemize}
-    \item Section~3.1 describes the hazard models and their flood depth data characteristics.
-    \item Section~3.2 presents the vulnerability modeling approach using depth--damage functions.
-    \item Section~3.3 integrates hazard, vulnerability, and exposure into a unified flood risk modeling framework.
-\end{itemize}
+This chapter introduces the data sources, mathematical models, and spatial context used to evaluate flood hazard and damage modeling in this thesis. The flood risk assessment is structured around three components: flood hazard (depth), vulnerability (damage functions), and exposure (property value). These components are defined both conceptually and mathematically, and are later integrated into a unified framework for risk estimation and validation.
 
 %--------------------------------------------------------------------------------------------------
 \section{Hazard and Depth}
 %--------------------------------------------------------------------------------------------------
 
-Flood hazard refers to the likelihood and severity of flooding at a specific location over a defined time horizon. In this thesis, hazard is represented by flood depth estimates associated with given return periods (e.g., 10-, 100-, or 500-year floods). These estimates form the input to downstream risk calculations and serve as the basis for comparing model performance.
+Flood hazard refers to the spatial distribution and intensity of flooding under different return periods. In this study, hazard is represented by flood depth, modeled as a spatial function for given exceedance scenarios.
 
-This section describes the two flood hazard models used in the study: the global WRI Aqueduct River Flood model and the local Slovenian Integralna karta globin (IKG) model. The models differ significantly in spatial resolution, geographic coverage, underlying hydrological assumptions, and treatment of climate scenarios. Their characteristics are summarized in Table~\ref{tab:hazard_models}.
+\subsection{Mathematical Definition of Flood Hazard}
 
-\subsection{WRI Aqueduct River Flood Model}
+Flood hazard is modeled as a spatially varying flood depth field:
 
-The \textit{World Resources Institute (WRI) Aqueduct River Flood} model is a publicly available global flood hazard dataset that provides inundation depth estimates at a spatial resolution of approximately 1 km. It is designed for large-scale screening of riverine flood risks and supports a wide range of return periods, typically including RP2, RP5, RP10, RP25, RP50, RP100, RP250, RP500, and RP1000.
+\begin{equation}
+	h : \Omega \times \mathcal{T} \rightarrow \mathbb{R}_{\geq 0}, \quad (x, y, T) \mapsto h(x, y, T)
+	\label{eq:hazard-map}
+\end{equation}
 
-The model incorporates climate scenario data by linking river discharge estimates to Representative Concentration Pathways (RCPs), particularly RCP4.5 and RCP8.5. It uses a combination of global hydrological models and digital elevation data to simulate flood extents and depths under historical and future climate conditions.
-
-In this thesis, the WRI model is used as a benchmark for evaluating local model performance under the 100-year return period (RP100). While it lacks the spatial granularity needed for parcel-level risk assessment, it offers consistent global coverage and climate-adjusted projections.
-
-\subsection{Integralna karta globin (IKG)}
-
-The \textit{Integralna karta globin (IKG)} is a collection of high-resolution flood hazard models developed for selected municipalities in Slovenia. Each model is based on detailed hydrological and hydraulic simulations conducted by local engineering firms, using fine-scale terrain data and historical flood records. The original data is stored in vector formats (e.g., shapefiles, GeoPackages), with flood depth zones categorized into three discrete classes:
+where:
 \begin{itemize}
-    \item GM: Minor inundation (0.5 m depth)
-    \item GS: Significant inundation (1.5 m depth)
-    \item GB: Severe inundation (2.5 m depth)
+	\item \( \Omega \subset \mathbb{R}^2 \) is the spatial domain of interest,
+	\item \( \mathcal{T} = \{ T_1, T_2, \dots, T_K \} \) is the set of return periods considered (e.g., 10, 100, 500 years),
+	\item \( h(x, y, T) \) is the flood depth (in meters) at location \( (x, y) \) for return period \( T \).
 \end{itemize}
 
-IKG models are available for return periods of 10, 100, and 500 years (RP10, RP100, RP500) and are typically generated in EPSG:3794 projection. For this thesis, the IKG layers from 18 areas of importance (\textit{Območja pomembnega vpliva}) were harmonized, rasterized into a 5×5 m grid, and integrated into a unified hazard layer (as described in Chapter~4).
+Return periods \( T \) are commonly used to express the frequency of extreme events. The corresponding annual exceedance probability \( p \) is given by:
 
-Although IKG models are not climate-scenario-aware, they are more spatially detailed than global models and are considered to better represent flood dynamics at the neighborhood or parcel level.
+\begin{equation}
+	p = \frac{1}{T}
+	\label{eq:return-period}
+\end{equation}
 
-\subsection{Return Periods and Depth Representation}
+Flood hazard models such as those used in this study estimate water depths \( h(x, y, T) \) based on hydrological and hydraulic simulations. In practice, these functions are discretized into raster data aligned to a grid. The continuous function \( h(x, y, T) \) is approximated by an array \( H_{i,j,k} \), where:
+\begin{itemize}
+	\item \( i, j \) index the spatial grid cells,
+	\item \( k \) indexes the return period \( T_k \in \mathcal{T} \).
+\end{itemize}
 
-Both hazard models use a return-period-based approach to represent flood hazard. A return period \( T \) indicates the average time between flood events of a given magnitude and is used to estimate the annual exceedance probability \( p = 1/T \).
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.75\textwidth]{figures/hazard_placeholder.pdf}
+	\caption{Example of a flood hazard depth map \( h(x, y, T) \) for return period \( T = 100 \) years.}
+	\label{fig:hazard-map-placeholder}
+\end{figure}
 
-Flood depths are modeled either as continuous variables (WRI) or discrete depth classes (IKG). For consistent comparison, the IKG model was converted into a raster with fixed depth values for each class. For WRI, continuous flood depths are directly extracted for the RP100 layer and compared against observed values.
+
+\subsection{Hazard Data Sources}
+
+Two flood hazard models are evaluated and compared in this thesis:
+
+\begin{itemize}
+	\item \textbf{WRI Aqueduct River Flood Model:} This is a global riverine flood hazard model developed by the World Resources Institute. It offers flood depth estimates at a resolution of approximately 1 km for a broad range of return periods (from 2 to 1000 years). The model integrates hydrological simulations with elevation data and accounts for future climate scenarios through Representative Concentration Pathways (RCP4.5 and RCP8.5). It is distributed in GeoTIFF raster format using EPSG:4326.
+
+	\item \textbf{Integralna karta globin (IKG):} This is a high-resolution local flood hazard dataset prepared by Slovenian authorities for selected municipalities. The model is based on hydraulic simulations of flood dynamics using fine-scale terrain data and site-specific conditions. IKG maps are originally provided as vector files (shapefiles or GeoPackages), categorized into three inundation classes—minor (0.5 m), significant (1.5 m), and severe (2.5 m)—and are available for return periods of 10, 100, and 500 years. The coordinate reference system is EPSG:3794.
+\end{itemize}
+
+For the purposes of this study, all hazard layers were harmonized into a common 5 m raster grid, reprojected into EPSG:3794, and stored in Zarr format to enable aligned processing and evaluation. The key differences between the WRI and IKG models are summarized in Table~\ref{tab:hazard_models}.
 
 \begin{table}[htb]
     \centering
-    \caption{Comparison of flood hazard models used in the study}
+    \caption{Comparison of flood hazard models used in the study.}
     \label{tab:hazard_models}
     \begin{tabular}{|p{4.2cm}|p{5.5cm}|p{5.5cm}|}
         \hline
@@ -71,146 +78,94 @@ Flood depths are modeled either as continuous variables (WRI) or discrete depth 
     \end{tabular}
 \end{table}
 
-\subsection{Hazard Data Extraction}
-
-For model comparison and validation, flood depth predictions from both WRI and IKG were extracted for each point in the validation dataset corresponding to flood events in Slovenia between 2010 and 2023. All extractions were performed for the 100-year return period (RP100) using the toolset described in Section~4.4. The extracted depths were then compared to observed values using regression and classification metrics, as discussed in Chapter~5.
-
-This dual-model approach enables an empirical assessment of the trade-offs between resolution and scalability and provides insight into the suitability of global models for local decision-making.
-
 %--------------------------------------------------------------------------------------------------
 \section{Vulnerability and Damage Function}
 %--------------------------------------------------------------------------------------------------
 
-Vulnerability in the context of flood risk refers to the degree of damage an asset is expected to incur when exposed to a flood of a given intensity. In quantitative flood risk models, vulnerability is typically represented by a \textit{depth--damage function} that expresses the expected percentage of asset damage as a function of inundation depth.
+Flood vulnerability quantifies the expected damage to an asset given the intensity of the flood at that location. This relationship is typically modeled via a depth--damage function.
 
-This section describes the vulnerability modeling approach adopted in this thesis. It focuses on the use of standardized global depth--damage functions, their assumptions, and how they are applied to the Slovenian flood impact dataset. The function used here originates from the Joint Research Centre (JRC) of the European Commission and is part of a global initiative to provide harmonized vulnerability data for risk assessment.
+\subsection{Mathematical Definition}
 
-TODO: dodaj formulo za funkcijo d(x, y): R -> [0, 1]
+A depth--damage function \( D(h) \) maps flood depth \( h \) to the expected fractional loss in asset value:
 
-\subsection{Depth--Damage Functions}
+\begin{equation}
+	D : \mathbb{R}_{\geq 0} \rightarrow [0, 1], \quad h \mapsto D(h)
+	\label{eq:damage-function}
+\end{equation}
 
-A depth--damage function (DDF) maps flood depth \( h \) (in meters) to expected relative damage \( D(h) \), typically expressed as a fraction or percentage of the total asset value. These functions are generally derived from empirical post-disaster surveys, insurance claims data, or synthetic modelling. They vary by asset type, construction material, country, and socio-economic context.
+The function \( D(h) \) is assumed to be monotonic and piecewise continuous. It starts at a nonzero depth threshold (typically 0.1–0.2 m), increases with water depth, and saturates at a maximum value (e.g., 0.7 to 0.9) depending on asset type.
 
-In this study, we use the depth--damage functions published by Huizinga et al.~\cite{huizinga_global_2017}, which are among the most widely used sources for flood damage estimation at the European level. These functions are defined for different building types (e.g., residential, commercial, industrial) and are based on a normalized building replacement value (BRV).
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.75\textwidth]{figures/vulnerability_placeholder.pdf}
+	\caption{Example depth--damage function \( D(h) \) for a residential building.}
+	\label{fig:vulnerability-curve-placeholder}
+\end{figure}
 
-\subsection{Function Structure and Properties}
+\subsection{Vulnerability Data Source}
 
-The JRC functions have the following properties:
-\begin{itemize}
-    \item They are monotonic and piecewise continuous,
-    \item Damage begins at a threshold of approximately 0.1–0.2 m and increases with depth,
-    \item Maximum damage is capped between 70\% and 90\% depending on asset type,
-    \item Uncertainty is not explicitly modeled, but curves represent expected mean damage.
-\end{itemize}
+This thesis uses standardized global depth--damage functions published by Huizinga et al.~\cite{huizinga_global_2017}, developed under the auspices of the European Commission Joint Research Centre (JRC). These functions are stratified by building type (e.g., residential, commercial, industrial) and were applied based on available metadata in the Slovenian dataset.
 
-An example residential depth--damage function is illustrated in Figure~\ref{fig:ddf_example}. In this model, a 0.5 m flood may cause damage equivalent to 15–25\% of the building's replacement value, while a 2.5 m flood could exceed 70\%.
+Damage reports from the Administration for Civil Protection and Disaster Relief of Slovenia serve as the primary reference for validation. These records include georeferenced flood locations, reported water depths, and economic losses. When available, building classifications were matched to appropriate JRC vulnerability curves.
 
-% \begin{figure}[htb]
-%     \centering
-%     \includegraphics[width=0.75\textwidth]{example_ddf_plot.pdf} % Placeholder, replace with your actual figure
-%     \caption{Example of a standardized residential depth--damage function (JRC, 2017).}
-%     \label{fig:ddf_example}
-% \end{figure}
-
-\subsection{Application to Slovenian Flood Events}
-
-To evaluate the applicability of global depth--damage functions in a local context, we apply the JRC DDFs to a dataset of reported flood damages in Slovenia. This dataset, obtained from the Administration for Civil Protection and Disaster Relief, contains:
-\begin{itemize}
-    \item Georeferenced flood locations,
-    \item Reported flood depths (rounded or estimated by appraisal),
-    \item Reported economic damage (in EUR),
-    \item Property classification (e.g., residential, commercial, public use).
-\end{itemize}
-
-The reported damages are normalized by the building replacement value (when available or estimated), resulting in a relative damage metric. Predicted damage from the DDF is then compared to observed relative damage to assess model performance. The comparison is segmented by property type and flood depth category.
-
-\subsection{Assumptions and Limitations}
-
-While the JRC depth--damage functions offer a standardized approach, several assumptions and limitations must be noted:
-\begin{itemize}
-    \item \textbf{Transferability:} The functions are designed for generalized application and may not reflect local building codes, materials, or insurance systems in Slovenia.
-    \item \textbf{No uncertainty modeling:} The functions provide point estimates of expected damage, not distributions. However, empirical data show that actual damages are often bimodal or skewed.
-    \item \textbf{Property segmentation:} Limited metadata in the Slovenian dataset constrains the ability to differentiate vulnerability by building age, elevation, or structural resilience.
-\end{itemize}
-
-Despite these limitations, the DDFs serve as a useful benchmark for evaluating vulnerability model performance. Further improvements are discussed in Section~5.4 and Chapter~6.
-
-\subsection{Link to Risk Estimation}
-
-The vulnerability model is used in conjunction with flood depth predictions from hazard models to compute expected damage at each location:
-\[
-\text{Expected Damage} = D(h) \times \text{Asset Value}
-\]
-This formulation assumes deterministic vulnerability, where the same flood depth always results in the same relative damage. This simplification facilitates large-scale analysis but may under-represent epistemic and aleatory uncertainty. These limitations are acknowledged in the discussion.
-
-In the next section, we present the overall structure of the flood risk model used in this study and describe how hazard, vulnerability, and exposure components are integrated.
-
-
+%--------------------------------------------------------------------------------------------------
 \section{Flood Risk Modeling}
+%--------------------------------------------------------------------------------------------------
 
-Flood risk is commonly conceptualized as the intersection of three key components: hazard, vulnerability, and exposure. This approach is consistent with methodologies used in climate risk disclosure frameworks such as the Network for Greening the Financial System (NGFS), the EU Taxonomy, and the OS-Climate Physrisk platform. In this section, we formalize how these components are operationalized in this thesis to estimate physical flood risk at the property level.
+Flood risk is the expected monetary loss resulting from a flood event. It is computed as the product of hazard, vulnerability, and exposure. This section formalizes how these components are combined.
 
 \subsection{Risk Definition}
 
-Following the standard formulation, flood risk \( R \) is defined as:
-\[
-R = H \times V \times E
-\]
+The expected loss at a location \( (x, y) \) for return period \( T \) is given by:
+
+\begin{equation}
+	R(x, y; T) = D(h(x, y, T)) \cdot E(x, y)
+	\label{eq:local-risk}
+\end{equation}
+
 where:
 \begin{itemize}
-    \item \( H \) is the hazard, represented by the probability and intensity (depth) of flooding for a given return period,
-    \item \( V \) is the vulnerability, expressed as a depth--damage function mapping flood depth to expected relative damage,
-    \item \( E \) is the exposure, typically the asset value (e.g., building replacement value) at the location in question.
+	\item \( h(x, y, T) \) is the modeled flood depth (hazard),
+	\item \( D(h) \) is the depth--damage function (vulnerability),
+	\item \( E(x, y) \) is the value of the asset located at \( (x, y) \) (exposure).
 \end{itemize}
 
-In this formulation, risk can be expressed in monetary terms as the expected annual damage (EAD) or scenario-specific loss (e.g., loss under a 100-year flood). This thesis focuses on evaluating model performance for the RP100 return period.
+To compute the total loss across the study area \( \Omega \), the pointwise losses are integrated:
 
-\subsection{Hazard Component}
+\begin{equation}
+	R_{\text{total}}(T) = \int_{\Omega} D(h(x, y, T)) \cdot E(x, y) \, dx \, dy
+	\label{eq:total-risk}
+\end{equation}
 
-As described in Section~3.1, the hazard component is derived from either the global WRI Aqueduct River Flood model or the local IKG model. For each validation point, flood depth predictions are extracted at RP100 and used as input to the vulnerability function.
+For rasterized data indexed by \( (i, j) \), this becomes:
 
-In areas where both models are available, their predictions are compared side-by-side using observed flood depths from past events as a reference. The evaluation metrics include regression error, classification accuracy across depth bands, and distance from reported measurements.
+\begin{equation}
+	R_{\text{total}}(T_k) \approx \sum_{i=1}^{N_x} \sum_{j=1}^{N_y} D(H_{i,j,k}) \cdot E_{i,j}
+	\label{eq:total-risk-discrete}
+\end{equation}
 
-\subsection{Vulnerability Component}
+This formulation aligns with the Physrisk framework, where hazard, vulnerability, and exposure are collocated in gridded format and combined cell-by-cell.
 
-As detailed in Section~3.2, the vulnerability component uses standardized depth--damage functions developed by the JRC. These functions convert predicted flood depths into expected relative damage fractions. The predicted damage values are then compared against reported economic losses in Slovenia, normalized by estimated asset values.
+\subsection{Exposure Data}
 
-\subsection{Exposure Component}
-
-The exposure term \( E \) is represented by the estimated or reported value of the affected asset. In the validation dataset, appraised building values are used when available; otherwise, standardized assumptions based on national averages are applied. While this introduces potential error, the relative damage metric allows for comparison independent of absolute valuation accuracy.
-
-\subsection{Implementation Workflow}
-
-The computational steps for flood risk estimation are as follows:
-
-\begin{enumerate}
-    \item For each point in the validation dataset:
-    \begin{itemize}
-        \item Extract flood depth from WRI and IKG models for RP100,
-        \item Apply the JRC depth--damage function to compute expected relative damage,
-        \item Multiply by estimated asset value to obtain monetary loss estimate (if applicable).
-    \end{itemize}
-    \item Compare model predictions (depth and damage) with observed values from reported flood events.
-    \item Segment results by model type, proximity to water bodies, and property classification.
-\end{enumerate}
-
-This workflow is visualized in Figure~\ref{fig:risk_model_framework}, illustrating the flow from geospatial hazard data to quantitative risk outputs.
-
-% \begin{figure}[htb]
-%     \centering
-%     \includegraphics[width=0.95\textwidth]{flood_risk_model_framework.png} % Replace with actual diagram if available
-%     \caption{Flood risk modeling framework used in this thesis.}
-%     \label{fig:risk_model_framework}
-% \end{figure}
-
-\subsection{Use Cases and Relevance}
-
-The flood risk modeling framework developed in this thesis supports a range of applications, including:
+Exposure refers to the monetary value of buildings and other structures in the floodplain. For the Slovenian study area, exposure estimates were derived from:
 \begin{itemize}
-    \item Empirical evaluation of model accuracy for flood depth and damage estimation,
-    \item Validation of global vulnerability functions in local contexts,
-    \item Comparative analysis between coarse-resolution and high-resolution hazard models,
-    \item Integration into ESG-aligned climate risk disclosure pipelines.
+	\item Appraised property values from reported flood events,
+	\item Official tax assessment records (when available),
+	\item Synthetic estimates based on average construction cost per square meter and building type.
 \end{itemize}
 
-This model architecture is aligned with the structure of the Physrisk platform and is used in subsequent chapters to evaluate the performance of hazard and vulnerability models on observed flood events in Slovenia.
+All exposure data were harmonized onto the same grid as the hazard and vulnerability layers. Where possible, exposure was normalized to match valuation baselines used in the vulnerability function calibration (e.g., building replacement value).
+
+\subsection{Use Cases}
+
+This modeling framework supports the following analyses:
+
+\begin{itemize}
+	\item \textbf{Model comparison:} Side-by-side evaluation of WRI vs IKG predictions.
+	\item \textbf{Vulnerability validation:} Testing how well JRC depth--damage functions explain observed flood damages in Slovenia.
+	\item \textbf{Sensitivity analysis:} Exploring how proximity to water bodies and spatial resolution affect predicted damages.
+	\item \textbf{Integration into platforms:} Documenting data onboarding pipelines for use in Physrisk and ESG disclosure workflows.
+\end{itemize}
+
+The implementation and experimental evaluation based on this framework are presented in Chapters~4 and 5.
