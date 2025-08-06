@@ -41,9 +41,9 @@ Flood hazard models estimate water depths \( h(x, y, T) \) using hydrological an
 
 \begin{figure}[htb]
 	\centering
-	\includegraphics[width=0.75\textwidth]{figures/hazard_placeholder.pdf}
-	\caption{Example of a flood hazard depth map \( h(x, y, T) \) for return period \( T = 100 \) years.}
-	\label{fig:hazard-map-placeholder}
+	\includegraphics[width=0.85\textwidth]{figures/03/hazard_map_returnperiod.png}
+	\caption[Example hazard map and depth–return period curve.]{Flood hazard illustration for a location in Slovenia (Litija). The top panel shows the spatial extent of riverine flood modeling; the bottom panel plots flood depth \( h(x, y, T) \) as a function of return period \( T \), demonstrating the monotonic growth of hazard with increasing return period.}
+	\label{fig:hazard-return-curve}
 \end{figure}
 
 \subsection{Hazard Data Sources and Modeling Approach}
@@ -94,7 +94,7 @@ Both datasets were transformed to a common 5 m grid and reference system to enab
 
 Flood vulnerability quantifies the expected damage to an asset given the intensity of the flood at that location. This relationship is typically modeled via a depth--damage function.
 
-\subsection{Mathematical Definition}
+\subsection{Mathematical Definition of Flood Vulnerability}
 
 A depth--damage function \( D(h) \) maps flood depth \( h \) to the expected fractional loss in asset value:
 
@@ -107,9 +107,9 @@ The function \( D(h) \) is assumed to be monotonic and piecewise continuous. It 
 
 \begin{figure}[htb]
 	\centering
-	\includegraphics[width=0.75\textwidth]{figures/vulnerability_placeholder.pdf}
-	\caption{Example depth--damage function \( D(h) \) for a residential building.}
-	\label{fig:vulnerability-curve-placeholder}
+	\includegraphics[width=0.75\textwidth]{figures/03/vulnerability_curve_europe.png}
+	\caption[Depth--damage function for residential buildings.]{Standardized depth--damage function for residential buildings in Europe, as published by the Joint Research Centre (Huizinga et al., 2017). The curve shows how expected damage increases with flood depth \( h \), up to a saturation point near total loss.}
+	\label{fig:ddf-jrc-europe}
 \end{figure}
 
 \subsection{Vulnerability Data Source}
@@ -122,11 +122,11 @@ Damage reports from the Administration for Civil Protection and Disaster Relief 
 \section{Flood Risk Modeling}
 %--------------------------------------------------------------------------------------------------
 
-Flood risk is the expected monetary loss resulting from a flood event. It is computed as the product of hazard, vulnerability, and exposure. This section formalizes how these components are combined.
+Flood risk refers to the expected financial loss due to flooding and is commonly expressed as a function of three interacting components: hazard, vulnerability, and exposure. This section presents a mathematical framework for calculating risk at the asset level and aggregating it across space and probability. It distinguishes between loss for a specific return period and Expected Annual Damage (EAD), which aggregates over all relevant scenarios.
 
-\subsection{Risk Definition}
+\subsection{Risk for a Single Return Period}
 
-The expected loss at a location \( (x, y) \) for return period \( T \) is given by:
+For a given return period \( T \), the expected loss at a spatial location \( (x, y) \) is defined as:
 
 \begin{equation}
 	R(x, y; T) = D(h(x, y, T)) \cdot E(x, y)
@@ -137,45 +137,75 @@ where:
 \begin{itemize}
 	\item \( h(x, y, T) \) is the modeled flood depth (hazard),
 	\item \( D(h) \) is the depth--damage function (vulnerability),
-	\item \( E(x, y) \) is the value of the asset located at \( (x, y) \) (exposure).
+	\item \( E(x, y) \) is the value of the asset at location \( (x, y) \) (exposure).
 \end{itemize}
 
-To compute the total loss across the study area \( \Omega \), the pointwise losses are integrated:
+This formulation reflects a scenario-based approach. For example, consider a property valued at €100,000. If the hazard model estimates a flood depth of \( h = 0.31 \, \mathrm{m} \) for the 100-year return period (\( T = 100 \)), and the damage function gives \( D(0.31) = 0.17 \), then the expected loss is:
+
+\[
+R(x, y; 100) = 0.17 \cdot 100{,}000 \, \text{€} = 17{,}000 \, \text{€}
+\]
+
+This estimate represents the expected damage conditional on a specific flood event.
+
+To obtain total loss across a spatial region \( \Omega \), the losses are integrated (or summed for raster data):
 
 \begin{equation}
 	R_{\text{total}}(T) = \int_{\Omega} D(h(x, y, T)) \cdot E(x, y) \, dx \, dy
 	\label{eq:total-risk}
 \end{equation}
 
-For rasterized data indexed by \( (i, j) \), this becomes:
-
 \begin{equation}
 	R_{\text{total}}(T_k) \approx \sum_{i=1}^{N_x} \sum_{j=1}^{N_y} D(H_{i,j,k}) \cdot E_{i,j}
 	\label{eq:total-risk-discrete}
 \end{equation}
 
-This formulation aligns with the Physrisk framework, where hazard, vulnerability, and exposure are collocated in gridded format and combined cell-by-cell.
+This discretized version is applied in this thesis to compare risk under different hazard models (WRI vs IKG) at specific return periods.
+
+\subsection{Expected Annual Damage (EAD)}
+
+While scenario-based losses (e.g., for RP100) are useful, they do not fully describe the stochastic nature of flood risk. A more comprehensive measure is the \textbf{Expected Annual Damage (EAD)}, which integrates risk across the full distribution of return periods or annual exceedance probabilities (AEPs).
+
+Let \( p \in (0, 1] \) denote the AEP corresponding to return period \( T = 1/p \). Then the EAD at location \( (x, y) \) is given by:
+
+\begin{equation}
+	\text{EAD}(x, y) = \int_0^1 D(h(p)) \cdot E(x, y) \, dp
+	\label{eq:ead-definition}
+\end{equation}
+
+In practice, this is approximated using trapezoidal integration over a discrete set of modeled return periods:
+
+\[
+\text{EAD}(x, y) \approx \sum_{k=1}^{K-1} \frac{p_k - p_{k+1}}{2} \cdot \left[ R(x, y; T_k) + R(x, y; T_{k+1}) \right]
+\]
+
+where \( \{T_k\} \) are the available return periods and \( p_k = 1/T_k \). This method captures both frequent and rare events in a single, annualized indicator.
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.7\textwidth]{figures/03/ead_plot_example.png}
+	\caption[Expected Annual Damage from flood risk.]{Illustration of Expected Annual Damage (EAD) calculation. The curve plots flood damage against annual exceedance probability; the shaded area under the curve represents the EAD for a given asset.}
+	\label{fig:ead-example}
+\end{figure}
 
 \subsection{Exposure Data}
 
-Exposure refers to the monetary value of buildings and other structures in the floodplain. For the Slovenian study area, exposure estimates were derived from:
+Exposure refers to the monetary value of physical assets potentially affected by flooding. For the Slovenian case study, the exposure values were derived from:
 \begin{itemize}
-	\item Appraised property values from reported flood events,
-	\item Official tax assessment records (when available),
-	\item Synthetic estimates based on average construction cost per square meter and building type.
+	\item Appraised damage reports submitted to civil protection authorities,
+	\item Official cadastral or tax-assessed values (when available),
+	\item Synthetic estimates based on building typology and floor area.
 \end{itemize}
 
-All exposure data were harmonized onto the same grid as the hazard and vulnerability layers. Where possible, exposure was normalized to match valuation baselines used in the vulnerability function calibration (e.g., building replacement value).
+All exposure estimates were spatially harmonized with hazard and vulnerability layers and aligned to a common grid. Values were normalized where necessary to match the assumptions of the damage function calibration (e.g., replacement cost basis).
 
 \subsection{Use Cases}
 
-This modeling framework supports the following analyses:
-
+This risk modeling framework supports multiple analytical and practical applications:
 \begin{itemize}
-	\item \textbf{Model comparison:} Side-by-side evaluation of WRI vs IKG predictions.
-	\item \textbf{Vulnerability validation:} Testing how well JRC depth--damage functions explain observed flood damages in Slovenia.
-	\item \textbf{Sensitivity analysis:} Exploring how proximity to water bodies and spatial resolution affect predicted damages.
-	\item \textbf{Integration into platforms:} Documenting data onboarding pipelines for use in Physrisk and ESG disclosure workflows.
+	\item \textbf{Model comparison:} Evaluate spatial accuracy of WRI vs IKG hazard inputs.
+	\item \textbf{Vulnerability validation:} Assess the applicability of global depth--damage functions using local empirical data.
+	\item \textbf{EAD calculation:} Derive annualized loss estimates for integration into financial and regulatory workflows.
+	\item \textbf{Sensitivity analysis:} Examine the influence of spatial resolution and waterbody proximity on model performance.
+	\item \textbf{Platform integration:} Enable modular onboarding into the Physrisk API and ESG disclosure platforms.
 \end{itemize}
-
-The implementation and experimental evaluation based on this framework are presented in Chapters~4 and 5.

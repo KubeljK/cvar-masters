@@ -21,12 +21,13 @@
 \contentsline {subsection}{\numberline {3.1.1}Mathematical Definition of Flood Hazard}{7}{subsection.3.1.1}%
 \contentsline {subsection}{\numberline {3.1.2}Hazard Data Sources and Modeling Approach}{8}{subsection.3.1.2}%
 \contentsline {section}{\numberline {3.2}Vulnerability and Damage Function}{9}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Mathematical Definition}{9}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.1}Mathematical Definition of Flood Vulnerability}{9}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Vulnerability Data Source}{10}{subsection.3.2.2}%
 \contentsline {section}{\numberline {3.3}Flood Risk Modeling}{10}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Risk Definition}{10}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Exposure Data}{11}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Use Cases}{11}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Risk for a Single Return Period}{10}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Expected Annual Damage (EAD)}{11}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Exposure Data}{11}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Use Cases}{12}{subsection.3.3.4}%
 \contentsline {chapter}{\numberline {4}Model Integration and Analysis Framework}{13}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Architectural Diagram}{13}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}System Overview}{14}{subsection.4.1.1}%

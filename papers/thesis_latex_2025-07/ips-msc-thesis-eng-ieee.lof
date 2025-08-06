@@ -9,8 +9,9 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Example of a flood hazard depth map \( h(x, y, T) \) for return period \( T = 100 \) years.}}{8}{figure.3.1}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Example depth--damage function \( D(h) \) for a residential building.}}{10}{figure.3.2}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Example hazard map and depth–return period curve.}}{8}{figure.3.1}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Depth--damage function for residential buildings.}}{10}{figure.3.2}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Expected Annual Damage from flood risk.}}{12}{figure.3.3}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
