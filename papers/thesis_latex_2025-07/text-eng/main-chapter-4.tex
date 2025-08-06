@@ -24,12 +24,13 @@ Figure~\ref{fig:physrisk_architecture} illustrates the architecture of the flood
 
 The onboarded models are then encoded in Zarr format and stored in an AWS S3-compatible object storage. The Physrisk framework retrieves hazard indicators from this backend and combines them with vulnerability and exposure components to compute impact distributions. The resulting outputs can be accessed via the Physrisk API or used directly for ESG reporting and financial risk analysis through the \texttt{os-risk-financial} module.
 
-% \begin{figure}[htb]
-%     \centering
-%     \includegraphics[width=\textwidth]{5d9e5739-4da0-461b-b1fb-dfb351b0ae04.png}
-%     \caption{Physrisk hazard integration architecture, showing onboarding of raw models (left), Zarr-based storage (center), and downstream applications via API (right).}
-%     \label{fig:physrisk_architecture}
-% \end{figure}
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/04/onboarding_pipeline.png}
+    \caption[Physrisk hazard onboarding pipeline.]{The onboarding pipeline for flood depth models into Physrisk. The process begins with vector data (e.g., shapefiles), rasterizes them into a 5x5 m resolution grid, converts to cloud-optimized Zarr format using the Physrisk onboarding tool, and uploads to AWS S3 for programmatic use.}
+    \label{fig:onboarding_pipeline}
+\end{figure}
+
 
 \subsection{Data Flow and Model Interoperability}
 
