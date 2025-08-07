@@ -3,12 +3,12 @@
 \babel@toc {slovene}{}\relax 
 \babel@toc {american}{}\relax 
 \vspace {-12pt}
-\contentsline {chapter}{List of Figures}{xiii}{section*.4}%
-\contentsline {chapter}{List of Tables}{xv}{section*.5}%
-\contentsline {chapter}{List of Algorithms}{xvii}{section*.6}%
-\contentsline {chapter}{Abbreviations}{xix}{chapter*.8}%
-\contentsline {chapter}{Symbols}{xxi}{chapter*.9}%
-\contentsline {chapter}{Glossary}{xxiii}{chapter*.10}%
+\contentsline {chapter}{List of Figures}{xv}{section*.4}%
+\contentsline {chapter}{List of Tables}{xvii}{section*.5}%
+\contentsline {chapter}{List of Algorithms}{xix}{section*.6}%
+\contentsline {chapter}{Abbreviations}{xxi}{chapter*.8}%
+\contentsline {chapter}{Symbols}{xxiii}{chapter*.9}%
+\contentsline {chapter}{Glossary}{xxv}{chapter*.10}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Background and Motivation}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Climate Risk and ESG Disclosure}{1}{section.1.2}%
@@ -53,17 +53,39 @@
 \contentsline {subsection}{\numberline {4.4.5}Reproducibility and Extensibility}{22}{subsection.4.4.5}%
 \contentsline {chapter}{\numberline {5}Experimental Design and Evaluation}{23}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Experimental Goals}{23}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Experimental Setup}{23}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Experimental Results: Flood Depth}{23}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Experimental Results: Damage Functions}{23}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Analysis of Impact on Total Exposed Property Value}{23}{section.5.5}%
-\contentsline {chapter}{\numberline {6}Conclusions \& Discussion}{25}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Conclusion \& Interpretation of Results}{25}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Limitations of This Work}{25}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Future Work}{25}{section.6.3}%
-\contentsline {chapter}{Appendix \numberline {A}Proofs of Theorems}{27}{appendix.1.A}%
-\contentsline {section}{\numberline {A.1}Proof of the Pythagorean Theorem}{27}{section.1.A.1}%
-\contentsline {chapter}{References}{29}{section*.11}%
-\contentsline {chapter}{Bibliography}{31}{appendix*.13}%
-\contentsline {chapter}{Biography}{33}{appendix*.16}%
-\contentsline {chapter}{Index}{35}{section*.17}%
+\contentsline {section}{\numberline {5.2}Experimental Setup}{24}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Validation Dataset}{24}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Hazard Model Inputs}{25}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Vulnerability Function}{25}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Evaluation Metrics}{25}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}Assumptions and Limitations}{26}{subsection.5.2.5}%
+\contentsline {section}{\numberline {5.3}Experimental Results: Flood Depth}{26}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Observed vs Predicted Depth Distributions}{26}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Error Metrics by Model}{26}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Spatial Error Analysis}{27}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Depth Classification Accuracy}{27}{subsection.5.3.4}%
+\contentsline {subsection}{\numberline {5.3.5}Visual Examples}{28}{subsection.5.3.5}%
+\contentsline {subsection}{\numberline {5.3.6}Summary}{28}{subsection.5.3.6}%
+\contentsline {section}{\numberline {5.4}Experimental Results: Damage Functions}{28}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Observed Damage and Normalization}{29}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Predicted vs Observed Relative Damage}{30}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Error Metrics}{30}{subsection.5.4.3}%
+\contentsline {subsection}{\numberline {5.4.4}Stratified Analysis by Depth Band}{31}{subsection.5.4.4}%
+\contentsline {subsection}{\numberline {5.4.5}Interpretation and Limitations}{31}{subsection.5.4.5}%
+\contentsline {subsection}{\numberline {5.4.6}Summary}{31}{subsection.5.4.6}%
+\contentsline {section}{\numberline {5.5}Analysis of Impact on Total Exposed Property Value}{32}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Methodology}{32}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Total Damage Estimates}{33}{subsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.5.3}Relative Loss per Exposed Value}{33}{subsection.5.5.3}%
+\contentsline {subsection}{\numberline {5.5.4}Geographic Distribution of Risk}{33}{subsection.5.5.4}%
+\contentsline {subsection}{\numberline {5.5.5}Implications for ESG and Decision-Making}{34}{subsection.5.5.5}%
+\contentsline {chapter}{\numberline {6}Conclusions \& Discussion}{35}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Conclusion \& Interpretation of Results}{35}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Limitations of This Work}{35}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Future Work}{35}{section.6.3}%
+\contentsline {chapter}{Appendix \numberline {A}Proofs of Theorems}{37}{appendix.1.A}%
+\contentsline {section}{\numberline {A.1}Proof of the Pythagorean Theorem}{37}{section.1.A.1}%
+\contentsline {chapter}{References}{39}{section*.14}%
+\contentsline {chapter}{Bibliography}{41}{appendix*.16}%
+\contentsline {chapter}{Biography}{43}{appendix*.19}%
+\contentsline {chapter}{Index}{45}{section*.20}%
