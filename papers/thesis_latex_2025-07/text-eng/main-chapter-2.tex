@@ -1,6 +1,274 @@
 %--------------------------------------------------------------------------------------------------
-% 
-\chapter{Literature Review \& Related Work}
+\chapter{Literature Review and Related Work}
 %--------------------------------------------------------------------------------------------------
 
-TBD
+This chapter reviews key research and frameworks related to flood risk modeling, with a focus on hazard modeling, vulnerability assessment, exposure estimation, and regulatory context. The literature spans hydrology, geospatial modeling, and financial risk assessment, with special emphasis on tools applicable to European and Slovenian contexts.
+
+%----------------------------------------------------------------------------------------
+\section{Flood Hazard Modeling}
+%----------------------------------------------------------------------------------------
+
+Flood hazard modeling involves estimating the spatial extent and intensity of flood events for given probabilities or return periods. It forms the foundational input to any flood risk assessment, determining where and how deep flooding occurs under specific scenarios. Two main categories of models are commonly used: global models and high-resolution local hydraulic models.
+
+\subsection{Global Flood Models}
+
+Global flood models are designed for scalability and global coverage. They typically simulate flood hazard using simplified hydrological and hydraulic models driven by global datasets such as digital elevation models, river discharge records, and climate projections. A widely used example is the \textbf{WRI Aqueduct River Flood model}, which provides fluvial flood depth maps for return periods ranging from 2 to 1000 years, with a spatial resolution of ~1 km and support for climate change scenarios such as RCP4.5 and RCP8.5 \cite{wri_aqueduct_floods, ward_aqueduct_2020}.
+
+These models are designed to support large-scale comparisons, stress testing, and financial disclosures. However, their coarse spatial resolution limits their application in local-level asset risk estimation or infrastructure planning \cite{woetzel2020climate, ipcc2021}.
+
+\subsection{Local Hydraulic Models}
+
+In contrast, local hydraulic models such as Slovenia’s \textbf{Integralna karta globin (IKG)} are developed with detailed topography, land use, and hydraulic calibration. These models often rely on 1D or 2D hydraulic simulations and historical flood data to generate detailed flood hazard maps for selected municipalities. In the case of IKG, flood depth is categorized into discrete classes (GM, GS, GB), corresponding to increasing flood severity, and available for return periods of 10, 100, and 500 years \cite{ikg_slovenia_2023, noauthor_karte_nodate}.
+
+While local models lack global coverage and scenario flexibility, they provide high spatial precision (typically 5–10 m resolution) that is critical for building-level flood risk modeling and regulatory planning.
+
+\subsection{Return Periods and Exceedance Probabilities}
+
+Both global and local models represent flood hazard as a function of return period \( T \), which reflects the average time between flood events of a given magnitude. The annual exceedance probability (AEP) is defined as:
+
+\[
+p = \frac{1}{T}
+\]
+
+This mathematical formulation allows different hazard layers to be harmonized and aggregated in subsequent risk calculations \cite{ward_how_2011}.
+
+Recent studies show that the choice and granularity of return periods significantly affect total risk estimates—especially for metrics like Expected Annual Damage (EAD)—emphasizing the importance of high return-period resolution \cite{ward_how_2011}.
+
+\subsection{Climate Scenarios and Hazard Projections}
+
+Flood models increasingly integrate climate scenarios to account for the effects of climate change on future flood hazard. The Representative Concentration Pathways (RCPs) developed by the IPCC serve as standardized radiative forcing trajectories:
+
+\begin{itemize}
+    \item \textbf{RCP4.5} assumes stabilization of greenhouse gas emissions, leading to approximately 2.4–3.2\textdegree C warming by 2100.
+    \item \textbf{RCP8.5} reflects continued high emissions, potentially leading to >4\textdegree C warming \cite{ipcc2021}.
+\end{itemize}
+
+Models like WRI Aqueduct simulate future flood depths under both RCP scenarios, allowing risk analysts to quantify how increasing precipitation, runoff, and sea level may affect hazard exposure in coming decades \cite{bavandi_physical_2022, ipcc2021}.
+
+\subsection{Summary}
+
+Global models offer scalability and scenario coverage but often lack spatial detail. Local models, like Slovenia’s IKG, offer high resolution and contextual accuracy but lack global comparability and scenario flexibility. The choice of model depends on the application—portfolio stress testing may prefer global models, while asset-level analysis or planning benefits from detailed local models \cite{huizinga_global_2017, ipcc2021}.
+
+
+%----------------------------------------------------------------------------------------
+\section{Vulnerability Modeling}
+%----------------------------------------------------------------------------------------
+
+Flood vulnerability quantifies the relationship between hazard intensity (typically flood depth) and the resulting damage to physical assets. It is commonly modeled using \textbf{depth--damage functions} (DDFs), which map flood depth to fractional loss of asset value.
+
+\subsection{Types of Depth--Damage Functions}
+
+Depth--damage functions can be derived through various approaches:
+
+\begin{itemize}
+    \item \textbf{Empirical DDFs} are constructed from post-disaster damage surveys and insurance claims. While highly context-specific, their availability is often limited due to data confidentiality and geographic constraints.
+    
+    \item \textbf{Synthetic DDFs} are developed via expert judgment, simulations, or engineering heuristics. These are common in regions without historical damage data and are often used in regulatory frameworks (e.g., HAZUS in the U.S.) \cite{scawthorn_hazus-mh_2006}.
+    
+    \item \textbf{Standardized global DDFs} offer harmonized vulnerability curves across countries and building types. A notable example is the dataset by the Joint Research Centre (JRC), which includes normalized depth--damage functions and maximum damage values for various assets globally \cite{huizinga_global_2017}.
+\end{itemize}
+
+These functions typically start at a threshold depth (e.g., 0.1 m), increase with rising floodwater, and saturate at a maximum loss value (e.g., 70--90\% of replacement value for residential buildings). An example is shown in Figure~\ref{fig:ddf-jrc-europe} in Chapter~3.
+
+\subsection{Use of JRC Vulnerability Curves}
+
+This thesis uses JRC standardized vulnerability functions due to their consistency and availability for European countries. The curves are calibrated to represent fractional damage relative to building replacement value (BRV), making them suitable for property-level assessments across regions \cite{huizinga_global_2017}.
+
+JRC functions are stratified by asset type (residential, commercial, industrial) and were assigned to Slovenian buildings based on available metadata or assumed building usage types in the damage reports.
+
+\subsection{Validation and Regional Applicability}
+
+While standardized functions facilitate large-scale modeling, their accuracy at local levels is not guaranteed. Validation with empirical data is essential.
+
+In this thesis, local flood damage reports from Slovenia (2010--2023) were used to test the applicability of JRC curves \cite{urszr_damage_data}. Reported flood depths and damage amounts were compared to DDF-predicted losses to assess:
+
+\begin{itemize}
+    \item The bias and variance of model predictions,
+    \item Whether adjustments are needed for specific building types or flood classes,
+    \item How well the JRC curves transfer to Central European urban and rural contexts.
+\end{itemize}
+
+This approach aligns with recent recommendations on validating vulnerability models using locally observed events and supports adaptation of standardized curves to regional contexts \cite{gentile_scoring_2022}.
+
+\subsection{Uncertainty and Transferability}
+
+One of the key limitations in flood vulnerability modeling is the uncertainty in applying DDFs across different geographies and asset types. Factors such as building materials, maintenance standards, and floor elevation significantly influence damage outcomes but are rarely captured in standardized functions \cite{bressan_asset-level_2024}.
+
+This thesis adopts a conservative approach by applying DDFs to estimate relative (not absolute) damage and focuses primarily on model comparison and validation, rather than financial forecasting. This helps reduce the impact of scale errors and exposure inaccuracies.
+
+
+%----------------------------------------------------------------------------------------
+\section{Exposure Modeling and Financial Risk Metrics}
+%----------------------------------------------------------------------------------------
+
+Flood exposure refers to the value and spatial distribution of assets that are potentially affected by flooding. In the context of physical climate risk, it typically denotes buildings, infrastructure, or other economic assets located in flood-prone areas.
+
+\subsection{Asset-Level Exposure Estimation}
+
+Accurate exposure estimation is essential for risk quantification. Methods vary based on data availability and spatial resolution:
+
+\begin{itemize}
+    \item \textbf{Cadastral or administrative data} include tax records, property registries, or insurance databases that provide building location and value. These offer the most accurate source of asset-level exposure, but are often limited due to privacy or accessibility constraints.
+
+    \item \textbf{Proxy-based estimates} use geospatial data (e.g., building footprints, land use maps) and assign average values per m\textsuperscript{2} based on construction type or region. These are useful for large-scale or cross-country modeling where granular data is unavailable.
+
+    \item \textbf{Synthetic approaches} simulate building distribution and value using statistical models calibrated on available reference areas. These are common in flood modeling platforms such as HAZUS or GLOFRIS \cite{scawthorn_hazus-mh_2006, ward_assessing_2013}.
+\end{itemize}
+
+For this thesis, property values are estimated based on building location and typology, harmonized with the vulnerability curves from JRC \cite{huizinga_global_2017}. Exposure is expressed in relative terms (percentage damage), reducing dependence on exact monetary valuations.
+
+\subsection{Building Replacement Value (BRV) as Exposure Metric}
+
+Many flood loss models define damage relative to the \textbf{Building Replacement Value} (BRV), i.e., the cost to fully rebuild the structure. This standardization allows for comparability across countries and buildings of different ages or materials \cite{huizinga_global_2017, bressan_asset-level_2024}.
+
+BRV-based modeling simplifies vulnerability assignment and integrates well with DDFs. However, it requires assumptions about construction costs and asset characteristics, which introduces uncertainty when applied at national or continental scales.
+
+\subsection{Financial Risk Metrics: Expected Annual Damage (EAD)}
+
+Expected Annual Damage (EAD) is a commonly used financial risk indicator that captures long-term expected flood losses by integrating damage across all modeled return periods.
+
+EAD is computed as the area under the exceedance probability-loss curve (risk curve):
+
+\[
+\text{EAD} = \int_0^1 D(h(p)) \cdot E \, dp
+\]
+
+This approach is widely recommended in regulatory and scientific literature as it accounts for both frequent low-intensity floods and rare extreme events \cite{ward_how_2011, bavandi_physical_2022}.
+
+EAD is used by:
+\begin{itemize}
+    \item \textbf{Banks and insurers} to quantify flood exposure in portfolios,
+    \item \textbf{ESG reporting platforms} (e.g., OS-Climate Physrisk) to assess asset-level physical risk,
+    \item \textbf{Regulators} such as the ECB, EBA, and NGFS as part of climate stress testing frameworks \cite{ecb2020, tcfd2017}.
+\end{itemize}
+
+\subsection{Relevance for ESG and Climate Stress Testing}
+
+Financial institutions are increasingly required to disclose physical climate risk under TCFD, ECB, and NGFS guidelines \cite{tcfd2017, ecb2020}. EAD and related metrics are key components of these frameworks.
+
+The Physrisk platform used in this thesis supports standardized EAD estimation at asset-level scale and facilitates integration with broader ESG and financial systems \cite{moorhouse2024}. This aligns with emerging best practices in climate risk management and scenario analysis.
+
+
+%----------------------------------------------------------------------------------------
+\section{Model Integration and Comparison Frameworks}
+%----------------------------------------------------------------------------------------
+
+Integrating hazard, vulnerability, and exposure components into a unified flood risk framework requires both conceptual alignment and technical infrastructure. In recent years, several open-source and proprietary platforms have emerged to address this challenge by providing modular systems for flood risk modeling, evaluation, and disclosure.
+
+\subsection{Integration of Heterogeneous Data Sources}
+
+Flood risk assessments often rely on heterogeneous data inputs, including:
+
+\begin{itemize}
+    \item Rasterized flood hazard models with different resolutions and coordinate systems (e.g., WRI Aqueduct in EPSG:4326 vs. IKG in EPSG:3794).
+    \item Depth–damage functions from standardized or region-specific sources (e.g., JRC \cite{huizinga_global_2017}, HAZUS \cite{scawthorn_hazus-mh_2006}).
+    \item Asset-level exposure layers with variable spatial precision and metadata completeness.
+\end{itemize}
+
+Standardizing these inputs requires preprocessing pipelines to harmonize coordinate systems, spatial resolution, and return period semantics. The use of intermediate formats such as \textbf{Zarr} (cloud-native chunked arrays) and \textbf{GeoTIFF} enables efficient storage, access, and cross-model evaluation, as demonstrated in the OS-Climate Physrisk platform \cite{moorhouse2024}.
+
+\subsection{Physrisk Platform Architecture}
+
+Physrisk is an open-source framework developed under the OS-Climate initiative. It enables modular evaluation of physical climate risks by separating the hazard, vulnerability, and financial impact components into composable modules. Hazard indicators are ingested via the \texttt{os-risk-hazard} pipeline, standardized as Zarr arrays indexed by latitude, longitude, and return period.
+
+Once onboarded, hazard layers can be combined with vulnerability functions and exposure estimates to compute risk indicators like Expected Annual Damage (EAD). The outputs are accessible through a dedicated API and used in ESG disclosure tools and scenario analysis workflows \cite{moorhouse2024}.
+
+\subsection{Model Comparison Methodologies}
+
+As flood hazard models vary widely in resolution, methodology, and assumptions, comparison frameworks are essential to evaluate:
+
+\begin{itemize}
+    \item \textbf{Prediction accuracy} of flood depths and damage estimates,
+    \item \textbf{Model bias} due to resolution or proximity to water bodies,
+    \item \textbf{Robustness} under different climate scenarios or return period resolutions.
+\end{itemize}
+
+Model comparison studies often use regression metrics (e.g., RMSE, MAE) or classification accuracy across hazard classes (e.g., <0.5 m, 0.5–1.5 m, >1.5 m). Local validation datasets—such as flood damage reports collected by civil protection agencies—enable empirical benchmarking \cite{urszr_damage_data, ward_assessing_2013}.
+
+Studies such as \cite{ward_how_2011} have emphasized the importance of consistent return period selection and integration ranges when comparing EAD across models. Uncertainty from different modeling assumptions can be bounded using ensemble approaches or sensitivity analysis \cite{bressan_asset-level_2024}.
+
+\subsection{Model Portability and ESG Integration}
+
+The use of open, modular architectures like Physrisk enables integration of regionally calibrated models (e.g., IKG) alongside global datasets (e.g., WRI Aqueduct \cite{wri_aqueduct_floods}). This flexibility is increasingly important for:
+
+\begin{itemize}
+    \item \textbf{Financial institutions} performing climate scenario analysis at portfolio scale,
+    \item \textbf{Developers} building ESG platforms with physical risk indicators,
+    \item \textbf{Regulators} requiring harmonized risk evaluation under stress testing frameworks \cite{ecb2020, tcfd2017}.
+\end{itemize}
+
+Comparison-ready architectures support repeatable workflows and transparency, both of which are emphasized in regulatory guidance and scientific literature \cite{bavandi_physical_2022}.
+
+
+%----------------------------------------------------------------------------------------
+\section{Regulatory and Institutional Context}
+%----------------------------------------------------------------------------------------
+
+Flood risk is not only a scientific and technical issue but also a key component of financial regulation, urban planning, and climate adaptation policy. In recent years, regulatory bodies and international institutions have increasingly mandated the integration of physical climate risk—especially flood risk—into financial disclosures, risk management processes, and stress testing exercises.
+
+\subsection{Climate Risk Disclosure Frameworks}
+
+A major milestone in climate risk governance was the establishment of the \textbf{Task Force on Climate-related Financial Disclosures (TCFD)} in 2015. Its final recommendations, published in 2017, laid the foundation for disclosing physical and transition risks under four pillars: governance, strategy, risk management, and metrics \& targets \cite{tcfd2017}. TCFD recommends scenario-based assessments of physical risks such as river flooding under different Representative Concentration Pathways (RCPs).
+
+In Europe, the TCFD framework has been integrated into supervisory expectations issued by the \textbf{European Central Bank (ECB)}. Its 2020 guide outlines how banks are expected to identify, assess, and disclose climate-related and environmental risks in their portfolios, including physical hazards such as floods \cite{ecb2020}. Institutions are encouraged to develop internal methodologies for quantifying risk exposure and potential financial loss under climate scenarios.
+
+\subsection{Stress Testing and Portfolio-Level Risk}
+
+The ECB, European Banking Authority (EBA), and Network for Greening the Financial System (NGFS) have launched climate stress tests to assess how banks and insurers would be affected by physical risks under both baseline and extreme climate trajectories. These stress tests require:
+
+\begin{itemize}
+    \item Detailed spatial modeling of physical hazards (e.g., flood depth),
+    \item Scenario-aware risk metrics (e.g., Expected Annual Damage),
+    \item Asset-level exposure and vulnerability mapping.
+\end{itemize}
+
+The ECB’s 2022 Climate Stress Test highlighted limitations in banks’ ability to assess physical risks due to a lack of granular hazard data and standardized methodologies. This finding reinforces the need for transparent and reproducible frameworks such as OS-Climate’s Physrisk, which allow banks and ESG platforms to onboard regional hazard datasets and harmonize them with portfolio data.
+
+\subsection{Guidance from Research Institutions and Think Tanks}
+
+Reports from international research groups and climate-finance think tanks have emphasized the importance of integrating asset-level physical climate risk into investment and adaptation planning. For instance, Bavandi et al.~\cite{bavandi_physical_2022} outline lessons for modeling extreme weather scenarios in emerging markets, emphasizing the need for detailed spatial data and alignment with RCP-based climate pathways.
+
+Similarly, the European Environment Agency (EEA) encourages cities and regions to adopt evidence-based approaches to climate adaptation and flood risk management, including geospatial risk mapping and local vulnerability modeling \cite{eea2020floods}.
+
+\subsection{Role of National Authorities}
+
+At the national level, ministries of the environment and civil protection agencies—such as the \textbf{Uprava RS za zaščito in reševanje} in Slovenia—are responsible for developing flood hazard maps, collecting damage reports, and designating flood risk zones under the EU Floods Directive. These data and designations serve as critical inputs for both public and private sector climate risk assessments \cite{ikg_slovenia_2023, urszr_damage_data}.
+
+Moreover, national legislation (e.g., the Slovenian regulation on flood zones \cite{noauthor_pravilnik_nodate}) defines how land parcels are classified into flood hazard classes, affecting insurance premiums, development rights, and adaptation investment decisions.
+
+\subsection{Implications for Flood Risk Modeling}
+
+The convergence of scientific, regulatory, and financial perspectives has made it essential to develop flood risk models that are:
+
+\begin{itemize}
+    \item Technically rigorous and scenario-aware,
+    \item Spatially granular and asset-level,
+    \item Interoperable with disclosure and stress-testing platforms.
+\end{itemize}
+
+These requirements motivate the work presented in this thesis, which aims to harmonize local hazard data, validate vulnerability assumptions, and support risk quantification workflows consistent with regulatory expectations and institutional best practices.
+
+\section{Summary}
+
+This chapter reviewed the academic literature and institutional context surrounding flood risk modeling, with a focus on four core components: flood hazard simulation, vulnerability assessment, exposure estimation, and model integration within financial and regulatory frameworks.
+
+Flood hazard modeling has progressed from detailed, site-specific hydraulic simulations to global, scenario-aware datasets such as Aqueduct and JRC river flood models, which enable spatially explicit assessments across a range of return periods and climate scenarios \cite{ward_assessing_2013, ward_aqueduct_2020, baugh_river_2024}. While global models offer coverage and consistency, they trade off spatial resolution and local accuracy—an issue addressed by high-resolution national models such as Slovenia's \textit{Integralna karta globin} (IKG).
+
+Vulnerability assessment remains centered on depth--damage functions, notably those developed by the Joint Research Centre (JRC) \cite{huizinga_global_2017}. These functions offer global standardization, but their regional transferability and calibration to local damage patterns are ongoing concerns. Few studies systematically validate these functions using empirical data.
+
+Exposure modeling is often constrained by limited access to high-resolution property datasets. Nevertheless, recent studies demonstrate the feasibility of using cadastral records, insurance values, or proxy-based building valuations to estimate monetary exposure. The integration of hazard, vulnerability, and exposure allows for the calculation of physical climate risk indicators such as Expected Annual Damage (EAD), which are increasingly adopted in financial risk disclosure and adaptation planning \cite{woetzel2020climate, bressan_asset-level_2024}.
+
+Technical advances—such as the use of Zarr-encoded hazard layers, geospatial raster harmonization, and open-source APIs like those from the Physrisk platform—have enabled the integration of heterogeneous data sources into unified risk modeling pipelines. This infrastructure supports scalable evaluation of model accuracy and spatial variability across regions and scenarios.
+
+At the institutional level, regulators such as the ECB, NGFS, and TCFD are raising expectations for climate-related risk disclosure and stress testing. Their guidelines emphasize asset-level assessments, forward-looking metrics (e.g., EAD under RCP scenarios), and integration with existing risk management systems \cite{ecb2020, tcfd2017, bavandi_physical_2022}.
+
+\vspace{1em}
+\noindent\textbf{Identified Research Gaps:}
+\begin{itemize}
+    \item \textbf{Model comparison:} There is a lack of empirical comparisons between global and high-resolution local flood hazard models, particularly for Central and Eastern Europe.
+    \item \textbf{Data harmonization:} Few studies document how heterogeneous flood hazard models can be standardized and onboarded into modular risk analysis frameworks.
+    \item \textbf{Validation:} Vulnerability models are often applied without testing against observed flood depths or reported damages at the asset level.
+    \item \textbf{Granular risk metrics:} Most literature focuses on aggregate risk; fewer studies compute EAD at building-level resolution across multiple scenarios.
+\end{itemize}
+
+These gaps motivate the methodology presented in Chapter~3 and are directly addressed through model integration (Chapter~4) and empirical evaluation (Chapter~5), including high-resolution flood hazard validation and sensitivity analysis of model assumptions.

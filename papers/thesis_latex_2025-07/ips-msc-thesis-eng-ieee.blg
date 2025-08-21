@@ -1,23 +1,23 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'ips-msc-thesis-eng-ieee.blg'
-[37] biber-darwin:342> INFO - === Sat Aug  2, 2025, 15:54:25
-[45] Biber.pm:421> INFO - Reading 'ips-msc-thesis-eng-ieee.bcf'
-[92] Biber.pm:1002> INFO - Found 7 citekeys in bib section 0
-[92] Biber.pm:999> INFO - Using all citekeys in bib section 1
-[92] Biber.pm:1002> INFO - Found 0 citekeys in bib section 0
-[102] Biber.pm:4487> INFO - Processing section 0
-[108] Biber.pm:4678> INFO - Looking for bibtex file 'references.bib' for section 0
-[110] bibtex.pm:1713> INFO - LaTeX decoding ...
-[130] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
-[166] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[166] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[166] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
-[166] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
-[170] Biber.pm:4487> INFO - Processing section 1
-[171] Biber.pm:4678> INFO - Looking for bibtex file 'references.bib' for section 1
-[297] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[297] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[297] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
-[297] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
-[307] bbl.pm:676> INFO - Writing 'ips-msc-thesis-eng-ieee.bbl' with encoding 'UTF-8'
-[320] bbl.pm:779> INFO - Output to ips-msc-thesis-eng-ieee.bbl
+[39] biber-darwin:342> INFO - === Thu Aug 21, 2025, 22:08:09
+[48] Biber.pm:421> INFO - Reading 'ips-msc-thesis-eng-ieee.bcf'
+[99] Biber.pm:1002> INFO - Found 20 citekeys in bib section 0
+[99] Biber.pm:999> INFO - Using all citekeys in bib section 1
+[99] Biber.pm:1002> INFO - Found 0 citekeys in bib section 0
+[110] Biber.pm:4487> INFO - Processing section 0
+[115] Biber.pm:4678> INFO - Looking for bibtex file 'references.bib' for section 0
+[117] bibtex.pm:1713> INFO - LaTeX decoding ...
+[139] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[234] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[234] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[234] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
+[234] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[244] Biber.pm:4487> INFO - Processing section 1
+[244] Biber.pm:4678> INFO - Looking for bibtex file 'references.bib' for section 1
+[391] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[391] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[391] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
+[391] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[404] bbl.pm:676> INFO - Writing 'ips-msc-thesis-eng-ieee.bbl' with encoding 'UTF-8'
+[426] bbl.pm:779> INFO - Output to ips-msc-thesis-eng-ieee.bbl

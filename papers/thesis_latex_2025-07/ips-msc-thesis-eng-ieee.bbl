@@ -221,6 +221,363 @@
       \field{title}{Climate risk and response: Physical hazards and socioeconomic impacts}
       \field{year}{2020}
     \endentry
+    \entry{wri_aqueduct_floods}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=588d0384dc141b94237bcf015f46ceb2}{%
+           family={{World Resources Institute}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{588d0384dc141b94237bcf015f46ceb2}
+      \strng{fullhash}{588d0384dc141b94237bcf015f46ceb2}
+      \strng{fullhashraw}{588d0384dc141b94237bcf015f46ceb2}
+      \strng{bibnamehash}{588d0384dc141b94237bcf015f46ceb2}
+      \strng{authorbibnamehash}{588d0384dc141b94237bcf015f46ceb2}
+      \strng{authornamehash}{588d0384dc141b94237bcf015f46ceb2}
+      \strng{authorfullhash}{588d0384dc141b94237bcf015f46ceb2}
+      \strng{authorfullhashraw}{588d0384dc141b94237bcf015f46ceb2}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.wri.org/data/aqueduct-global-flood-risk-data}}
+      \field{note}{Accessed: 2025-08-04}
+      \field{title}{Aqueduct Global Flood Risk Data}
+      \field{year}{2020}
+    \endentry
+    \entry{ward_aqueduct_2020}{article}{}{}
+      \name{author}{26}{}{%
+        {{hash=79421061b75bc28b04966da486d75310}{%
+           family={Ward},
+           familyi={W\bibinitperiod},
+           given={Philip\bibnamedelima J.},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=e6b513db15269078dc6d4961f183cfac}{%
+           family={Winsemius},
+           familyi={W\bibinitperiod},
+           given={Hessel\bibnamedelima C.},
+           giveni={H\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=37f584c529393aa1c877f929aa5c0c9a}{%
+           family={Kuzma},
+           familyi={K\bibinitperiod},
+           given={Samantha},
+           giveni={S\bibinitperiod}}}%
+        {{hash=917b3a1d0253a66cb37c7fe61c26d9a9}{%
+           family={Bierkens},
+           familyi={B\bibinitperiod},
+           given={Marc\bibnamedelimb F.\bibnamedelimi P.},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=686cc038b73e97d86e196a4df2caffce}{%
+           family={Bouwman},
+           familyi={B\bibinitperiod},
+           given={Arno},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d0736e662b962dab9424c65616f16161}{%
+           family={Moel},
+           familyi={M\bibinitperiod},
+           given={Hans\bibnamedelima De},
+           giveni={H\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=07160a62f718ba0c22b06a0d3f02f796}{%
+           family={Loaiza},
+           familyi={L\bibinitperiod},
+           given={Andrés\bibnamedelima Díaz},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=a9c6c783736762cb344c6c5187c3b99b}{%
+           family={Eilander},
+           familyi={E\bibinitperiod},
+           given={Dirk},
+           giveni={D\bibinitperiod}}}%
+        {{hash=3f1d4e2aea43b3811f04cf89e5f70b17}{%
+           family={Englhardt},
+           familyi={E\bibinitperiod},
+           given={Johanna},
+           giveni={J\bibinitperiod}}}%
+        {{hash=a48ca74c1e0a3b1a6c53c9e405d40a48}{%
+           family={Erkens},
+           familyi={E\bibinitperiod},
+           given={Gilles},
+           giveni={G\bibinitperiod}}}%
+        {{hash=d75a5411a50ab92cae3254d07b6465a4}{%
+           family={Gebremedhin},
+           familyi={G\bibinitperiod},
+           given={Eskedar\bibnamedelima Tafete},
+           giveni={E\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=634f0e1dc91694db447353a8d471e00a}{%
+           family={Iceland},
+           familyi={I\bibinitperiod},
+           given={Charles},
+           giveni={C\bibinitperiod}}}%
+        {{hash=529934e6e1b0f9bf8f9526f6a2345a8f}{%
+           family={Kooi},
+           familyi={K\bibinitperiod},
+           given={Henk},
+           giveni={H\bibinitperiod}}}%
+        {{hash=ed09898deaaff5df4ee95c6036418f68}{%
+           family={Ligtvoet},
+           familyi={L\bibinitperiod},
+           given={Willem},
+           giveni={W\bibinitperiod}}}%
+        {{hash=d382652ab54735c68219cf1e8b2f51d0}{%
+           family={Muis},
+           familyi={M\bibinitperiod},
+           given={Sanne},
+           giveni={S\bibinitperiod}}}%
+        {{hash=853562ca9e42cf483f7e634f2f737c2e}{%
+           family={Scussolini},
+           familyi={S\bibinitperiod},
+           given={Paolo},
+           giveni={P\bibinitperiod}}}%
+        {{hash=d46559b697a35ca1928b11e8b604792c}{%
+           family={Sutanudjaja},
+           familyi={S\bibinitperiod},
+           given={Edwin\bibnamedelima H.},
+           giveni={E\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=a7943badb97de874cd0dbdb7d28ac500}{%
+           family={Beek},
+           familyi={B\bibinitperiod},
+           given={Rens\bibnamedelima Van},
+           giveni={R\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=91b9859aaebe8d7e141aaff887af733f}{%
+           family={Bemmel},
+           familyi={B\bibinitperiod},
+           given={Bas\bibnamedelima Van},
+           giveni={B\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=98a9c695e23bf836de1f0ea0235696ec}{%
+           family={Huijstee},
+           familyi={H\bibinitperiod},
+           given={Jolien\bibnamedelima Van},
+           giveni={J\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=3de841c50acd81b43bc1323fc049b5a1}{%
+           family={Rijn},
+           familyi={R\bibinitperiod},
+           given={Frank\bibnamedelima Van},
+           giveni={F\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=5a609297ce186e50b926ccb12eb5e96a}{%
+           family={Wesenbeeck},
+           familyi={W\bibinitperiod},
+           given={Bregje\bibnamedelima Van},
+           giveni={B\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=67b98248f16502d8b096562d28140593}{%
+           family={Vatvani},
+           familyi={V\bibinitperiod},
+           given={Deepak},
+           giveni={D\bibinitperiod}}}%
+        {{hash=5d98de41b32dcc3caf27ffc2948a8dad}{%
+           family={Verlaan},
+           familyi={V\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c7acf751d7cc1b251156ccab1865c4c0}{%
+           family={Tiggeloven},
+           familyi={T\bibinitperiod},
+           given={Timothy},
+           giveni={T\bibinitperiod}}}%
+        {{hash=f9459d2b716e875e38d6e899f45e1cbd}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Tianyi},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{337457674e168a7ab2098834ba179c60}
+      \strng{fullhash}{0c9be7ccd81d257d3448d47fb0aee8de}
+      \strng{fullhashraw}{0c9be7ccd81d257d3448d47fb0aee8de}
+      \strng{bibnamehash}{337457674e168a7ab2098834ba179c60}
+      \strng{authorbibnamehash}{337457674e168a7ab2098834ba179c60}
+      \strng{authornamehash}{337457674e168a7ab2098834ba179c60}
+      \strng{authorfullhash}{0c9be7ccd81d257d3448d47fb0aee8de}
+      \strng{authorfullhashraw}{0c9be7ccd81d257d3448d47fb0aee8de}
+      \field{extraname}{1}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{SynopsisAccording to new data from WRI's Aqueduct Floods Tool, by 2030 the number of people impacted by floods will double worldwide — from 65 million to 132 million due to riverine flooding and from 7 million to 15 million due to coastal flooding. The amount of urban property damaged by riverine floods will increase threefold — from \$157 billion to \$535 billion, while it will increase tenfold due to coastal storm surge and sea level rise — from \$17 billion to \$177 billion.}
+      \field{month}{4}
+      \field{title}{Aqueduct {Floods} {Methodology}}
+      \field{urlday}{2}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb CVAR-aqueduct-methodology.pdf:/Users/klemenkubelj/Documents/school/graduate/masters/literature/CVAR-aqueduct-methodology.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.wri.org/research/aqueduct-floods-methodology
+      \endverb
+      \verb{url}
+      \verb https://www.wri.org/research/aqueduct-floods-methodology
+      \endverb
+      \keyw{notion}
+    \endentry
+    \entry{ikg_slovenia_2023}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=968c4853f160a336340a8b3d9448e01e}{%
+           family={{Uprava Republike Slovenije za zaščito in reševanje}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{968c4853f160a336340a8b3d9448e01e}
+      \strng{fullhash}{968c4853f160a336340a8b3d9448e01e}
+      \strng{fullhashraw}{968c4853f160a336340a8b3d9448e01e}
+      \strng{bibnamehash}{968c4853f160a336340a8b3d9448e01e}
+      \strng{authorbibnamehash}{968c4853f160a336340a8b3d9448e01e}
+      \strng{authornamehash}{968c4853f160a336340a8b3d9448e01e}
+      \strng{authorfullhash}{968c4853f160a336340a8b3d9448e01e}
+      \strng{authorfullhashraw}{968c4853f160a336340a8b3d9448e01e}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Access via official municipal or geoportal services}
+      \field{note}{Vector flood depth datasets by municipality}
+      \field{title}{Integralna karta globin (IKG): Slovenska karta poplavne ogroženosti}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://gisportal.gov.si/
+      \endverb
+      \verb{url}
+      \verb https://gisportal.gov.si/
+      \endverb
+    \endentry
+    \entry{noauthor_karte_nodate}{misc}{}{}
+      \list{language}{1}{%
+        {sl}%
+      }
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Karte poplavne nevarnost in karte poplavne ogroženosti za območja pomembnega vpliva poplav so pripravljene v skladu s slovenskim in EU pravnim redom (EU poplavna direktiva).}
+      \field{journaltitle}{Portal GOV.SI}
+      \field{title}{Karte poplavne nevarnosti in karte poplavne ogroženosti za območja pomembnega vpliva poplav {|} {GOV}.{SI}}
+      \field{urlday}{28}
+      \field{urlmonth}{11}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb CVAR_SI-Posodobitev_in_izdelava_kart_poplavne_nevarnosti_in_ogrozenosti.pdf:/Users/klemenkubelj/Documents/school/graduate/masters/literature/CVAR_SI-Posodobitev_in_izdelava_kart_poplavne_nevarnosti_in_ogrozenosti.pdf:application/pdf;Snapshot:/Users/klemenkubelj/Zotero/storage/LISYD6X8/karte-poplavne-nevarnosti-in-karte-poplavne-ogrozenosti-za-obmocja-pomembnega-vpliva-poplav.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.gov.si/teme/karte-poplavne-nevarnosti-in-karte-poplavne-ogrozenosti-za-obmocja-pomembnega-vpliva-poplav/
+      \endverb
+      \verb{url}
+      \verb https://www.gov.si/teme/karte-poplavne-nevarnosti-in-karte-poplavne-ogrozenosti-za-obmocja-pomembnega-vpliva-poplav/
+      \endverb
+      \keyw{notion}
+    \endentry
+    \entry{ward_how_2011}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=82553ccf3a971bf9260411ef68a093bb}{%
+           family={Ward},
+           familyi={W\bibinitperiod},
+           given={P.\bibnamedelimi J.},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=951be08635f313d582184369448c905e}{%
+           family={Moel},
+           familyi={M\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=96c5bcac30db7b715758d434c59c0e94}{%
+           family={Aerts},
+           familyi={A\bibinitperiod},
+           given={J.\bibnamedelimi C.\bibnamedelimi J.\bibnamedelimi H.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \strng{namehash}{2dd226c6a6467acf715f797fe1c8f036}
+      \strng{fullhash}{6eb6b8852527f9eb2a4ae1bc7cd9dd2e}
+      \strng{fullhashraw}{6eb6b8852527f9eb2a4ae1bc7cd9dd2e}
+      \strng{bibnamehash}{6eb6b8852527f9eb2a4ae1bc7cd9dd2e}
+      \strng{authorbibnamehash}{6eb6b8852527f9eb2a4ae1bc7cd9dd2e}
+      \strng{authornamehash}{2dd226c6a6467acf715f797fe1c8f036}
+      \strng{authorfullhash}{6eb6b8852527f9eb2a4ae1bc7cd9dd2e}
+      \strng{authorfullhashraw}{6eb6b8852527f9eb2a4ae1bc7cd9dd2e}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Flood management is more and more adopting a risk based approach, whereby flood risk is the product of the probability and consequences of flooding. One of the most common approaches in flood risk assessment is to estimate the damage that would occur for floods of several exceedance probabilities (or return periods), to plot these on an exceedance probability-loss curve (risk curve) and to estimate risk as the area under the curve. However, there is little insight into how the selection of the return-periods (which ones and how many) used to calculate risk actually affects the final risk calculation. To gain such insights, we developed and validated an inundation model capable of rapidly simulating inundation extent and depth, and dynamically coupled this to an existing damage model. The method was applied to a section of the River Meuse in the southeast of the Netherlands. Firstly, we estimated risk based on a risk curve using yearly return periods from 2 to 10 000 yr (€ 34 million p.a.). We found that the overall risk is greatly affected by the number of return periods used to construct the risk curve, with over-estimations of annual risk between 33\% and 100\% when only three return periods are used. In addition, binary assumptions on dike failure can have a large effect (a factor two difference) on risk estimates. Also, the minimum and maximum return period considered in the curve affects the risk estimate considerably. The results suggest that more research is needed to develop relatively simple inundation models that can be used to produce large numbers of inundation maps, complementary to more complex 2-D–3-D hydrodynamic models. It also suggests that research into flood risk could benefit by paying more attention to the damage caused by relatively high probability floods.}
+      \field{issn}{1561-8633}
+      \field{journaltitle}{Natural Hazards and Earth System Sciences}
+      \field{month}{12}
+      \field{note}{Publisher: Copernicus GmbH}
+      \field{number}{12}
+      \field{title}{How are flood risk estimates affected by the choice of return-periods?}
+      \field{urlday}{28}
+      \field{urlmonth}{11}
+      \field{urlyear}{2024}
+      \field{volume}{11}
+      \field{year}{2011}
+      \field{urldateera}{ce}
+      \field{pages}{3181\bibrangedash 3195}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.5194/nhess-11-3181-2011
+      \endverb
+      \verb{file}
+      \verb CVAR-How are flood risk RP.pdf:/Users/klemenkubelj/Documents/school/graduate/masters/literature/CVAR-How are flood risk RP.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://nhess.copernicus.org/articles/11/3181/2011/
+      \endverb
+      \verb{url}
+      \verb https://nhess.copernicus.org/articles/11/3181/2011/
+      \endverb
+      \keyw{notion}
+    \endentry
+    \entry{bavandi_physical_2022}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=a2d7859bb4572fb8d9a3c1e1fabc191d}{%
+           family={Bavandi},
+           familyi={B\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod}}}%
+        {{hash=aa6fdd184d8703dfe845c87aa764543b}{%
+           family={Berrais},
+           familyi={B\bibinitperiod},
+           given={D},
+           giveni={D\bibinitperiod}}}%
+        {{hash=35053c291e62bb40fb348cc66b47add9}{%
+           family={Dolk},
+           familyi={D\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{c98597f343a73a26a366983fc970adc2}
+      \strng{fullhash}{683fbe0340fc2e680b5595cd0a07b104}
+      \strng{fullhashraw}{683fbe0340fc2e680b5595cd0a07b104}
+      \strng{bibnamehash}{683fbe0340fc2e680b5595cd0a07b104}
+      \strng{authorbibnamehash}{683fbe0340fc2e680b5595cd0a07b104}
+      \strng{authornamehash}{c98597f343a73a26a366983fc970adc2}
+      \strng{authorfullhash}{683fbe0340fc2e680b5595cd0a07b104}
+      \strng{authorfullhashraw}{683fbe0340fc2e680b5595cd0a07b104}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Physical {Climate} {Risk} {Assessment}: {Practical} {Lessons} for the {Development} of {Climate} {Scenarios} with {Extreme} {Weather} {Events} from {Emerging} {Markets} and {Developing} {Economies}}
+      \field{urlday}{20}
+      \field{urlmonth}{11}
+      \field{urlyear}{2024}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb CVAR-ngfs_physical_climate_risk_assessment.pdf:/Users/klemenkubelj/Documents/school/graduate/masters/literature/CVAR-ngfs_physical_climate_risk_assessment.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.ngfs.net/sites/default/files/media/2022/09/02/ngfs_physical_climate_risk_assessment.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.ngfs.net/sites/default/files/media/2022/09/02/ngfs_physical_climate_risk_assessment.pdf
+      \endverb
+      \keyw{notion}
+    \endentry
     \entry{huizinga_global_2017}{article}{}{}
       \name{author}{3}{}{%
         {{hash=bc878487092e12efddf4e368b9f46eb5}{%
@@ -247,8 +604,8 @@
       \strng{authornamehash}{568c578ca38fc9f4ca5a2d5e23cc6548}
       \strng{authorfullhash}{804f24859db9acae7d958e294d6be371}
       \strng{authorfullhashraw}{804f24859db9acae7d958e294d6be371}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Assessing potential damage of flood events is an important component in flood risk management. Determining direct flood damage is commonly done using depth-damage curves, which denote the flood damage that would occur at specific water depths per asset or per land-use class. Many countries have developed flood damage models using depth-damage curves based on analysis of past flood events and on expert judgement. However, the fact that such damage curves are not available for all regions hampers damage assessments in some areas. Moreover, due to different methodologies employed for various damage models in different countries, damage assessments cannot be directly compared with each other, obstructing also supra-national flood damage assessments. To address these problems a globally consistent database of depth-damage curves has been developed. This dataset contains damage curves depicting fractional damage as a function of water depth as well as the relevant maximum damage values for a variety of assets and land use classes. Based on an extensive literature survey normalised damage curves have been developed for each continent, while differentiation in flood damage between countries is established by determining maximum damage values at the country scale. These maximum damage values are based on construction cost surveys from multinational construction companies, which provide a coherent set of detailed building cost data across dozens of countries. A consistent set of maximum flood damage values for all countries was computed using statistical regressions with socio-economic World Development Indicators. Further, based on insights from the literature survey, guidance is also given on how the damage curves and maximum damage values can be adjusted for specific local circumstances, such as urban vs. rural locations or use of specific building material. This dataset can be used for consistent supra-national scale flood damage assessments, and guide assessment in countries where no damage model is currently available.}
@@ -259,6 +616,450 @@
       \field{title}{Global flood depth-damage functions: {Methodology} and the database with guidelines}
       \field{year}{2017}
       \keyw{Floods,notion,damage functions,global,inundation}
+    \endentry
+    \entry{scawthorn_hazus-mh_2006}{article}{}{}
+      \name{author}{8}{}{%
+        {{hash=6f67569264422dbabf0cdec618e97c10}{%
+           family={Scawthorn},
+           familyi={S\bibinitperiod},
+           given={Charles},
+           giveni={C\bibinitperiod}}}%
+        {{hash=930ea7e5939e97be7883c1c7948427fc}{%
+           family={Blais},
+           familyi={B\bibinitperiod},
+           given={Neil},
+           giveni={N\bibinitperiod}}}%
+        {{hash=a14372987c2f82d96b50177aaea32066}{%
+           family={Seligson},
+           familyi={S\bibinitperiod},
+           given={Hope},
+           giveni={H\bibinitperiod}}}%
+        {{hash=f3610259d0dd00087b85b1f8eabd54bd}{%
+           family={Tate},
+           familyi={T\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=18e30e4fd4124dcccc82d7f6ea0358f3}{%
+           family={Mifflin},
+           familyi={M\bibinitperiod},
+           given={Edward},
+           giveni={E\bibinitperiod}}}%
+        {{hash=ebbd1b482ffb2a11d471a320acabeeb3}{%
+           family={Thomas},
+           familyi={T\bibinitperiod},
+           given={Will},
+           giveni={W\bibinitperiod}}}%
+        {{hash=95faf65031cfcd72f59cc3829cb17727}{%
+           family={Murphy},
+           familyi={M\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{hash=d43f7eab4b625cffd243b3f2141e092c}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {EN}%
+      }
+      \strng{namehash}{95da3164c248f925b5eec5d7ecfc5858}
+      \strng{fullhash}{26f5025677103f77ad5304ee930b62a4}
+      \strng{fullhashraw}{26f5025677103f77ad5304ee930b62a4}
+      \strng{bibnamehash}{95da3164c248f925b5eec5d7ecfc5858}
+      \strng{authorbibnamehash}{95da3164c248f925b5eec5d7ecfc5858}
+      \strng{authornamehash}{95da3164c248f925b5eec5d7ecfc5858}
+      \strng{authorfullhash}{26f5025677103f77ad5304ee930b62a4}
+      \strng{authorfullhashraw}{26f5025677103f77ad5304ee930b62a4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Part I of this two-part paper provides an overview of the HAZUS-MH Flood Model and a discussion of its capabilities for characterizing riverine and coastal flooding hazard. Included is a discussion of the Flood Information Tool, which permits rapid ...}
+      \field{issn}{1527-6988}
+      \field{journaltitle}{Natural Hazards Review}
+      \field{month}{5}
+      \field{note}{Publisher: American Society of Civil Engineers}
+      \field{number}{2}
+      \field{shorttitle}{{HAZUS}-{MH} {Flood} {Loss} {Estimation} {Methodology}. {I}}
+      \field{title}{{HAZUS}-{MH} {Flood} {Loss} {Estimation} {Methodology}. {I}: {Overview} and {Flood} {Hazard} {Characterization}}
+      \field{urlday}{28}
+      \field{urlmonth}{11}
+      \field{urlyear}{2024}
+      \field{volume}{7}
+      \field{year}{2006}
+      \field{urldateera}{ce}
+      \field{pages}{60\bibrangedash 71}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1061/(ASCE)1527-6988(2006)7:2(60)
+      \endverb
+      \verb{file}
+      \verb CVAR_hazus-hm-flood-loss-1-Overview and Flood Hazard Characterization.pdf:/Users/klemenkubelj/Documents/school/graduate/masters/literature/CVAR_hazus-hm-flood-loss-1-Overview and Flood Hazard Characterization.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ascelibrary.org/doi/10.1061/%28ASCE%291527-6988%282006%297%3A2%2860%29
+      \endverb
+      \verb{url}
+      \verb https://ascelibrary.org/doi/10.1061/%28ASCE%291527-6988%282006%297%3A2%2860%29
+      \endverb
+      \keyw{Floods,notion,Damage,Estimation,Mapping,Models}
+    \endentry
+    \entry{urszr_damage_data}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=84ec18b1a100b6b73e5a89653edc158d}{%
+           family={{Uprava RS za zaščito in reševanje}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{84ec18b1a100b6b73e5a89653edc158d}
+      \strng{fullhash}{84ec18b1a100b6b73e5a89653edc158d}
+      \strng{fullhashraw}{84ec18b1a100b6b73e5a89653edc158d}
+      \strng{bibnamehash}{84ec18b1a100b6b73e5a89653edc158d}
+      \strng{authorbibnamehash}{84ec18b1a100b6b73e5a89653edc158d}
+      \strng{authornamehash}{84ec18b1a100b6b73e5a89653edc158d}
+      \strng{authorfullhash}{84ec18b1a100b6b73e5a89653edc158d}
+      \strng{authorfullhashraw}{84ec18b1a100b6b73e5a89653edc158d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Internal dataset obtained via collaboration or public request}
+      \field{note}{Damage reports and appraisals collected by Slovenian Civil Protection Administration}
+      \field{title}{Poročila o oceni škode po naravnih nesrečah 2010--2023}
+      \field{year}{2023}
+    \endentry
+    \entry{gentile_scoring_2022}{article}{}{}
+      \name{author}{8}{}{%
+        {{hash=085dd187c51569ccf520eea60f2a3d48}{%
+           family={Gentile},
+           familyi={G\bibinitperiod},
+           given={Roberto},
+           giveni={R\bibinitperiod}}}%
+        {{hash=97338d3c56c7e032d4ce9ef36956b7bb}{%
+           family={Cremen},
+           familyi={C\bibinitperiod},
+           given={Gemma},
+           giveni={G\bibinitperiod}}}%
+        {{hash=839576978647823eb9ba7ddb8db1d669}{%
+           family={Galasso},
+           familyi={G\bibinitperiod},
+           given={Carmine},
+           giveni={C\bibinitperiod}}}%
+        {{hash=0b8f7079c6f1b9f7c00a904c44d32d46}{%
+           family={Jenkins},
+           familyi={J\bibinitperiod},
+           given={Luke\bibnamedelima T.},
+           giveni={L\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=32eb0345771c77ca7e1d4fb192929037}{%
+           family={Manandhar},
+           familyi={M\bibinitperiod},
+           given={Vibek},
+           giveni={V\bibinitperiod}}}%
+        {{hash=53ca1d96b1e7981eb69ca9bc24855cf1}{%
+           family={Menteşe},
+           familyi={M\bibinitperiod},
+           given={Emin\bibnamedelima Yahya},
+           giveni={E\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=c898bbe9c7d483ec741844dec33f2a86}{%
+           family={Guragain},
+           familyi={G\bibinitperiod},
+           given={Ramesh},
+           giveni={R\bibinitperiod}}}%
+        {{hash=51214f93b6a8328c8cb3ba5bbed38ca7}{%
+           family={McCloskey},
+           familyi={M\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{50cccdb4722f51e1305129bdfc529f76}
+      \strng{fullhash}{e92b6e465260dd201400f0cdbac7387e}
+      \strng{fullhashraw}{e92b6e465260dd201400f0cdbac7387e}
+      \strng{bibnamehash}{50cccdb4722f51e1305129bdfc529f76}
+      \strng{authorbibnamehash}{50cccdb4722f51e1305129bdfc529f76}
+      \strng{authornamehash}{50cccdb4722f51e1305129bdfc529f76}
+      \strng{authorfullhash}{e92b6e465260dd201400f0cdbac7387e}
+      \strng{authorfullhashraw}{e92b6e465260dd201400f0cdbac7387e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This study focuses on scoring, selecting, and developing physical fragility (i.e., the probability of reaching or exceeding a certain damage state given a specific hazard intensity) and/or vulnerability (i.e., the probability of impact - or consequence - given a specific hazard intensity) models for assets of interest, with particular emphasis on buildings. Given a set of multiple relevant hazards for a selected case-study region, the proposed procedure involves 1) mapping the relevant asset classes (i.e., construction types for a given occupancy) in the region to a set of existing candidate fragility, vulnerability and/or damage-to-impact models, also accounting for specific modelling requirements (e.g., time dependency due to ageing/deterioration, multi-hazard interactions); 2) scoring the candidate models according to relevant criteria to select the most suitable models for a given application; or 3) using state-of-the-art numerical or empirical methods to develop fragility/vulnerability models not already available. The approach is demonstrated for the buildings of the virtual urban testbed “Tomorrowville”, considering earthquakes, floods, and debris flows as case-study hazards.}
+      \field{issn}{2212-4209}
+      \field{journaltitle}{International Journal of Disaster Risk Reduction}
+      \field{month}{11}
+      \field{title}{Scoring, selecting, and developing physical impact models for multi-hazard risk assessment}
+      \field{urlday}{2}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{volume}{82}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \field{pages}{103365}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.ijdrr.2022.103365
+      \endverb
+      \verb{file}
+      \verb CVAR-compound-scoring.pdf:/Users/klemenkubelj/Documents/school/graduate/masters/literature/CVAR-compound-scoring.pdf:application/pdf;ScienceDirect Snapshot:/Users/klemenkubelj/Zotero/storage/48RZLL62/S2212420922005842.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S2212420922005842
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S2212420922005842
+      \endverb
+      \keyw{notion,Dynamic risk,Fragility modelling,Impact metrics,Multiple hazards,Vulnerability modelling}
+    \endentry
+    \entry{bressan_asset-level_2024}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=ec7446186e3c171c0dc2d5c8e9e918ce}{%
+           family={Bressan},
+           familyi={B\bibinitperiod},
+           given={Giacomo},
+           giveni={G\bibinitperiod}}}%
+        {{hash=7a2cecaaaca72ef9a1e6abea574f7a14}{%
+           family={Đuranović},
+           familyi={Đ\bibinitperiod},
+           given={Anja},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ab5ec62604b99daf05d39f5974dc2bb7}{%
+           family={Monasterolo},
+           familyi={M\bibinitperiod},
+           given={Irene},
+           giveni={I\bibinitperiod}}}%
+        {{hash=e16a33f0b88b28bf78bd9d1d94a27c82}{%
+           family={Battiston},
+           familyi={B\bibinitperiod},
+           given={Stefano},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{e914d1932e25a7222b0239f4408cc4da}
+      \strng{fullhash}{f0a78ce97f44c5d31535aca0679f3375}
+      \strng{fullhashraw}{f0a78ce97f44c5d31535aca0679f3375}
+      \strng{bibnamehash}{f0a78ce97f44c5d31535aca0679f3375}
+      \strng{authorbibnamehash}{f0a78ce97f44c5d31535aca0679f3375}
+      \strng{authornamehash}{e914d1932e25a7222b0239f4408cc4da}
+      \strng{authorfullhash}{f0a78ce97f44c5d31535aca0679f3375}
+      \strng{authorfullhashraw}{f0a78ce97f44c5d31535aca0679f3375}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Climate physical risk assessment is crucial to inform adaptation policies and finance. However, science-based and transparent solutions to assess climate physical risks are limited, compounding the adaptation gap. This is a main limitation to fill the adaptation gap. We provide a methodology that quantifies physical risks on geolocalized productive assets, considering their exposure to chronic and acute impacts (hurricanes) across the scenarios of the Intergovernmental Panel on Climate Change. Then, we translate asset-level shocks into economic and financial losses. We apply the methodology to Mexico, a country highly exposed to physical risks, recipient of adaptation finance and foreign investments. We show that investor losses are underestimated up to 70\% when neglecting asset-level information, and up to 82\% when neglecting tail acute risks. Therefore, neglecting the asset-level and acute dimensions of physical risks leads to large errors in the identification of adaptation policy responses, investments and finance tools aimed to build resilience to climate change.}
+      \field{issn}{2041-1723}
+      \field{journaltitle}{Nature Communications}
+      \field{month}{7}
+      \field{note}{Publisher: Nature Publishing Group}
+      \field{number}{1}
+      \field{title}{Asset-level assessment of climate physical risk matters for adaptation finance}
+      \field{urlday}{29}
+      \field{urlmonth}{11}
+      \field{urlyear}{2024}
+      \field{volume}{15}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \field{pages}{5371}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/s41467-024-48820-1
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/Users/klemenkubelj/Zotero/storage/9SBNJZWH/Bressan et al. - 2024 - Asset-level assessment of climate physical risk ma.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/s41467-024-48820-1
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/s41467-024-48820-1
+      \endverb
+      \keyw{notion,Climate-change impacts,Climate-change adaptation,Economics}
+    \endentry
+    \entry{ward_assessing_2013}{article}{}{}
+      \name{author}{8}{}{%
+        {{hash=79421061b75bc28b04966da486d75310}{%
+           family={Ward},
+           familyi={W\bibinitperiod},
+           given={Philip\bibnamedelima J.},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=3a277ac962de267f8e0a9b895cb98971}{%
+           family={Jongman},
+           familyi={J\bibinitperiod},
+           given={Brenden},
+           giveni={B\bibinitperiod}}}%
+        {{hash=0bf62b4d446d7ee016b9a085850e9d33}{%
+           family={Weiland},
+           familyi={W\bibinitperiod},
+           given={Frederiek\bibnamedelima Sperna},
+           giveni={F\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=686cc038b73e97d86e196a4df2caffce}{%
+           family={Bouwman},
+           familyi={B\bibinitperiod},
+           given={Arno},
+           giveni={A\bibinitperiod}}}%
+        {{hash=708155b4d96520ff497c9ebd3660c04b}{%
+           family={Beek},
+           familyi={B\bibinitperiod},
+           given={Rens\bibnamedelima van},
+           giveni={R\bibinitperiod\bibinitdelim v\bibinitperiod}}}%
+        {{hash=917b3a1d0253a66cb37c7fe61c26d9a9}{%
+           family={Bierkens},
+           familyi={B\bibinitperiod},
+           given={Marc\bibnamedelimb F.\bibnamedelimi P.},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=ed09898deaaff5df4ee95c6036418f68}{%
+           family={Ligtvoet},
+           familyi={L\bibinitperiod},
+           given={Willem},
+           giveni={W\bibinitperiod}}}%
+        {{hash=e6b513db15269078dc6d4961f183cfac}{%
+           family={Winsemius},
+           familyi={W\bibinitperiod},
+           given={Hessel\bibnamedelima C.},
+           giveni={H\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{337457674e168a7ab2098834ba179c60}
+      \strng{fullhash}{dc34490c2f434a52ad5bccd01861c89d}
+      \strng{fullhashraw}{dc34490c2f434a52ad5bccd01861c89d}
+      \strng{bibnamehash}{337457674e168a7ab2098834ba179c60}
+      \strng{authorbibnamehash}{337457674e168a7ab2098834ba179c60}
+      \strng{authornamehash}{337457674e168a7ab2098834ba179c60}
+      \strng{authorfullhash}{dc34490c2f434a52ad5bccd01861c89d}
+      \strng{authorfullhashraw}{dc34490c2f434a52ad5bccd01861c89d}
+      \field{extraname}{3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Globally, economic losses from flooding exceeded 19 billion in 2012, and are rising rapidly. Hence, there is an increasing need for global-scale flood risk assessments, also within the context of integrated global assessments. We have developed and validated a model cascade for producing global flood risk maps, based on numerous flood return-periods. Validation results indicate that the model simulates interannual fluctuations in flood impacts well. The cascade involves: hydrological and hydraulic modelling; extreme value statistics; inundation modelling; flood impact modelling; and estimating annual expected impacts. The initial results estimate global impacts for several indicators, for example annual expected exposed population (169 million); and annual expected exposed GDP (1383 billion). These results are relatively insensitive to the extreme value distribution employed to estimate low frequency flood volumes. However, they are extremely sensitive to the assumed flood protection standard; developing a database of such standards should be a research priority. Also, results are sensitive to the use of two different climate forcing datasets. The impact model can easily accommodate new, user-defined, impact indicators. We envisage several applications, for example: identifying risk hotspots; calculating macro-scale risk for the insurance industry and large companies; and assessing potential benefits (and costs) of adaptation measures.}
+      \field{issn}{1748-9326}
+      \field{journaltitle}{Environmental Research Letters}
+      \field{month}{10}
+      \field{note}{Publisher: IOP Publishing}
+      \field{number}{4}
+      \field{shorttitle}{Assessing flood risk at the global scale}
+      \field{title}{Assessing flood risk at the global scale: model setup, results, and sensitivity}
+      \field{urlday}{25}
+      \field{urlmonth}{11}
+      \field{urlyear}{2024}
+      \field{volume}{8}
+      \field{year}{2013}
+      \field{urldateera}{ce}
+      \field{pages}{044019}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1748-9326/8/4/044019
+      \endverb
+      \verb{file}
+      \verb CVAR-Assessing-flood-risk-at-the-global-scale-model.pdf:/Users/klemenkubelj/Documents/school/graduate/masters/literature/CVAR-Assessing-flood-risk-at-the-global-scale-model.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://dx.doi.org/10.1088/1748-9326/8/4/044019
+      \endverb
+      \verb{url}
+      \verb https://dx.doi.org/10.1088/1748-9326/8/4/044019
+      \endverb
+      \keyw{notion}
+    \endentry
+    \entry{noauthor_pravilnik_nodate}{misc}{}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{title}{Pravilnik o metodologiji za določanje območij, ogroženih zaradi poplav in z njimi povezane erozije celinskih voda in morja, ter o načinu razvrščanja zemljišč v razrede ogroženosti ({PISRS})}
+      \field{urlday}{28}
+      \field{urlmonth}{11}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb CVAR_SI-poplave_PRAV8318_NPB0.pdf:/Users/klemenkubelj/Documents/school/graduate/masters/literature/CVAR_SI-poplave_PRAV8318_NPB0.pdf:application/pdf;Pravilnik o metodologiji za določanje območij, ogroženih zaradi poplav in z njimi povezane erozije celinskih voda in morja, ter o načinu razvrščanja zemljišč v razrede ogroženosti (PISRS):/Users/klemenkubelj/Zotero/storage/4UWIFK6Z/pregledPredpisa.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://pisrs.si/pregledPredpisa?sop=2007-01-3216
+      \endverb
+      \verb{url}
+      \verb https://pisrs.si/pregledPredpisa?sop=2007-01-3216
+      \endverb
+      \keyw{notion}
+    \endentry
+    \entry{baugh_river_2024}{article}{}{}
+      \name{author}{7}{}{%
+        {{hash=c079ac03ceee2e38f96963492a267a23}{%
+           family={Baugh},
+           familyi={B\bibinitperiod},
+           given={Calum},
+           giveni={C\bibinitperiod}}}%
+        {{hash=eba31d68cb74c42a7ddc7a0f5e6a1cb9}{%
+           family={Colonese},
+           familyi={C\bibinitperiod},
+           given={Juan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=207b82e447106c8e5c89fb64eba9fa54}{%
+           family={D'Angelo},
+           familyi={D\bibinitperiod},
+           given={Claudia},
+           giveni={C\bibinitperiod}}}%
+        {{hash=156e11386a1c1e337e145fc96a65d9ab}{%
+           family={Dottori},
+           familyi={D\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod}}}%
+        {{hash=1f1fa1b9463e19f3ef50b179b523bf02}{%
+           family={Neal},
+           familyi={N\bibinitperiod},
+           given={Jeffrey},
+           giveni={J\bibinitperiod}}}%
+        {{hash=5eb02e47b58782667d86ef770925ddd8}{%
+           family={Prudhomme},
+           familyi={P\bibinitperiod},
+           given={Christel},
+           giveni={C\bibinitperiod}}}%
+        {{hash=96b82dd7a74330735a89c5392d2ba0d8}{%
+           family={Salamon},
+           familyi={S\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{d1acfb68ece93882e9e15ef69062c21d}
+      \strng{fullhash}{da8cf1094975e6390d66c663fd3f4674}
+      \strng{fullhashraw}{da8cf1094975e6390d66c663fd3f4674}
+      \strng{bibnamehash}{d1acfb68ece93882e9e15ef69062c21d}
+      \strng{authorbibnamehash}{d1acfb68ece93882e9e15ef69062c21d}
+      \strng{authornamehash}{d1acfb68ece93882e9e15ef69062c21d}
+      \strng{authorfullhash}{da8cf1094975e6390d66c663fd3f4674}
+      \strng{authorfullhashraw}{da8cf1094975e6390d66c663fd3f4674}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{3}
+      \field{note}{Publisher: European Commission, Joint Research Centre (JRC)}
+      \field{title}{River flood hazard maps for {Europe} and the {Mediterranean} {Basin} region}
+      \field{urlday}{24}
+      \field{urlmonth}{8}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.2905/1D128B6C-A4EE-4858-9E34-6210707F3C81
+      \endverb
+      \verb{file}
+      \verb Snapshot:/Users/klemenkubelj/Zotero/storage/NAB75Y39/1d128b6c-a4ee-4858-9e34-6210707f3c81.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb http://data.europa.eu/89h/1d128b6c-a4ee-4858-9e34-6210707f3c81
+      \endverb
+      \verb{url}
+      \verb http://data.europa.eu/89h/1d128b6c-a4ee-4858-9e34-6210707f3c81
+      \endverb
+      \keyw{notion}
     \endentry
   \enddatalist
 \endrefsection
@@ -561,6 +1362,273 @@
       \verb https://www.fsb-tcfd.org/publications/final-recommendations-report/
       \endverb
     \endentry
+    \entry{wri_aqueduct_floods}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=588d0384dc141b94237bcf015f46ceb2}{%
+           family={{World Resources Institute}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{588d0384dc141b94237bcf015f46ceb2}
+      \strng{fullhash}{588d0384dc141b94237bcf015f46ceb2}
+      \strng{fullhashraw}{588d0384dc141b94237bcf015f46ceb2}
+      \strng{bibnamehash}{588d0384dc141b94237bcf015f46ceb2}
+      \strng{authorbibnamehash}{588d0384dc141b94237bcf015f46ceb2}
+      \strng{authornamehash}{588d0384dc141b94237bcf015f46ceb2}
+      \strng{authorfullhash}{588d0384dc141b94237bcf015f46ceb2}
+      \strng{authorfullhashraw}{588d0384dc141b94237bcf015f46ceb2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.wri.org/data/aqueduct-global-flood-risk-data}}
+      \field{note}{Accessed: 2025-08-04}
+      \field{title}{Aqueduct Global Flood Risk Data}
+      \field{year}{2020}
+      \true{nocite}
+    \endentry
+    \entry{ikg_slovenia_2023}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=968c4853f160a336340a8b3d9448e01e}{%
+           family={{Uprava Republike Slovenije za zaščito in reševanje}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{968c4853f160a336340a8b3d9448e01e}
+      \strng{fullhash}{968c4853f160a336340a8b3d9448e01e}
+      \strng{fullhashraw}{968c4853f160a336340a8b3d9448e01e}
+      \strng{bibnamehash}{968c4853f160a336340a8b3d9448e01e}
+      \strng{authorbibnamehash}{968c4853f160a336340a8b3d9448e01e}
+      \strng{authornamehash}{968c4853f160a336340a8b3d9448e01e}
+      \strng{authorfullhash}{968c4853f160a336340a8b3d9448e01e}
+      \strng{authorfullhashraw}{968c4853f160a336340a8b3d9448e01e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Access via official municipal or geoportal services}
+      \field{note}{Vector flood depth datasets by municipality}
+      \field{title}{Integralna karta globin (IKG): Slovenska karta poplavne ogroženosti}
+      \field{year}{2023}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://gisportal.gov.si/
+      \endverb
+      \verb{url}
+      \verb https://gisportal.gov.si/
+      \endverb
+    \endentry
+    \entry{urszr_damage_data}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=84ec18b1a100b6b73e5a89653edc158d}{%
+           family={{Uprava RS za zaščito in reševanje}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{84ec18b1a100b6b73e5a89653edc158d}
+      \strng{fullhash}{84ec18b1a100b6b73e5a89653edc158d}
+      \strng{fullhashraw}{84ec18b1a100b6b73e5a89653edc158d}
+      \strng{bibnamehash}{84ec18b1a100b6b73e5a89653edc158d}
+      \strng{authorbibnamehash}{84ec18b1a100b6b73e5a89653edc158d}
+      \strng{authornamehash}{84ec18b1a100b6b73e5a89653edc158d}
+      \strng{authorfullhash}{84ec18b1a100b6b73e5a89653edc158d}
+      \strng{authorfullhashraw}{84ec18b1a100b6b73e5a89653edc158d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Internal dataset obtained via collaboration or public request}
+      \field{note}{Damage reports and appraisals collected by Slovenian Civil Protection Administration}
+      \field{title}{Poročila o oceni škode po naravnih nesrečah 2010--2023}
+      \field{year}{2023}
+      \true{nocite}
+    \endentry
+    \entry{willner2018floods}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=d6a45d11e4896bcd13716fec10774db9}{%
+           family={Willner},
+           familyi={W\bibinitperiod},
+           given={Sven\bibnamedelima N.},
+           giveni={S\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=d1dc78c6f6524f281ef0f7648f28cb00}{%
+           family={Levermann},
+           familyi={L\bibinitperiod},
+           given={Anders},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1b432640b6383e3708f6025e3f46234a}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Fang},
+           giveni={F\bibinitperiod}}}%
+        {{hash=05315ac79677cd23f2ebab5ab31ee4e0}{%
+           family={Frieler},
+           familyi={F\bibinitperiod},
+           given={Katja},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{207563c68199ed50404e39967ce0cb09}
+      \strng{fullhash}{174b6b3de57506b004b0a9a7b96ebe37}
+      \strng{fullhashraw}{174b6b3de57506b004b0a9a7b96ebe37}
+      \strng{bibnamehash}{174b6b3de57506b004b0a9a7b96ebe37}
+      \strng{authorbibnamehash}{174b6b3de57506b004b0a9a7b96ebe37}
+      \strng{authornamehash}{207563c68199ed50404e39967ce0cb09}
+      \strng{authorfullhash}{174b6b3de57506b004b0a9a7b96ebe37}
+      \strng{authorfullhashraw}{174b6b3de57506b004b0a9a7b96ebe37}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Science Advances}
+      \field{note}{Scenario-aware global flood modeling under RCP scenarios}
+      \field{number}{1}
+      \field{title}{Adaptation required to preserve future high-end river flood risk at present levels}
+      \field{volume}{4}
+      \field{year}{2018}
+      \true{nocite}
+      \field{pages}{eaao1914}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1126/sciadv.aao1914
+      \endverb
+      \verb{urlraw}
+      \verb https://www.science.org/doi/10.1126/sciadv.aao1914
+      \endverb
+      \verb{url}
+      \verb https://www.science.org/doi/10.1126/sciadv.aao1914
+      \endverb
+    \endentry
+    \entry{sampson2015continental}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=9e6839fd76678e2e41083b3e524f7116}{%
+           family={Sampson},
+           familyi={S\bibinitperiod},
+           given={Chris\bibnamedelima C.},
+           giveni={C\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=1815efaad80dac5c431f55ee38cdacb9}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Andrew\bibnamedelima M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=1c1efaa4c03b3529af2139d7307b415a}{%
+           family={Bates},
+           familyi={B\bibinitperiod},
+           given={Paul\bibnamedelima D.},
+           giveni={P\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=d322dc510e55c54b7f259aee8b4b1cf4}{%
+           family={Neal},
+           familyi={N\bibinitperiod},
+           given={Jeffrey\bibnamedelima C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=8a420bbead14a5c14ffb3d31afd0c493}{%
+           family={Alfieri},
+           familyi={A\bibinitperiod},
+           given={Lorenzo},
+           giveni={L\bibinitperiod}}}%
+        {{hash=d276ef2d213903a99217b280ae7740a8}{%
+           family={Freer},
+           familyi={F\bibinitperiod},
+           given={Jim\bibnamedelima E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{402832684e035a462f8850ae98b3bac2}
+      \strng{fullhash}{8453baa23f1b1e542c2760782b430359}
+      \strng{fullhashraw}{8453baa23f1b1e542c2760782b430359}
+      \strng{bibnamehash}{8453baa23f1b1e542c2760782b430359}
+      \strng{authorbibnamehash}{8453baa23f1b1e542c2760782b430359}
+      \strng{authornamehash}{402832684e035a462f8850ae98b3bac2}
+      \strng{authorfullhash}{8453baa23f1b1e542c2760782b430359}
+      \strng{authorfullhashraw}{8453baa23f1b1e542c2760782b430359}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Water Resources Research}
+      \field{number}{9}
+      \field{title}{A high‐resolution global flood hazard model}
+      \field{volume}{51}
+      \field{year}{2015}
+      \true{nocite}
+      \field{pages}{7358\bibrangedash 7381}
+      \range{pages}{24}
+      \verb{doi}
+      \verb 10.1002/2015WR016954
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1002/2015WR016954
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1002/2015WR016954
+      \endverb
+    \endentry
+    \entry{dottori2022eucopernicus}{article}{}{}
+      \name{author}{8}{}{%
+        {{hash=156e11386a1c1e337e145fc96a65d9ab}{%
+           family={Dottori},
+           familyi={D\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod}}}%
+        {{hash=740327139ddbe936aa87e749e2f5d8ef}{%
+           family={Szewczyk},
+           familyi={S\bibinitperiod},
+           given={Wojtek},
+           giveni={W\bibinitperiod}}}%
+        {{hash=eb0708d86c6343caac59482e04f4154c}{%
+           family={Ciscar},
+           familyi={C\bibinitperiod},
+           given={Juan-Carlos},
+           giveni={J\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=1b432640b6383e3708f6025e3f46234a}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Fang},
+           giveni={F\bibinitperiod}}}%
+        {{hash=8a420bbead14a5c14ffb3d31afd0c493}{%
+           family={Alfieri},
+           familyi={A\bibinitperiod},
+           given={Lorenzo},
+           giveni={L\bibinitperiod}}}%
+        {{hash=8a9690213f2f28d8f6dedef51ce1b151}{%
+           family={Hirabayashi},
+           familyi={H\bibinitperiod},
+           given={Yukiko},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=2491328d698adb05ca409e84892da770}{%
+           family={Bianchi},
+           familyi={B\bibinitperiod},
+           given={Alessandra},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1ada9fc566bfba2310a806906cecac40}{%
+           family={Mongelli},
+           familyi={M\bibinitperiod},
+           given={Ignazio},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{82dcb4e739583218e894f1de6e0d5959}
+      \strng{fullhash}{6584d76ed4aa5cb996984c00d62114c7}
+      \strng{fullhashraw}{6584d76ed4aa5cb996984c00d62114c7}
+      \strng{bibnamehash}{82dcb4e739583218e894f1de6e0d5959}
+      \strng{authorbibnamehash}{82dcb4e739583218e894f1de6e0d5959}
+      \strng{authornamehash}{82dcb4e739583218e894f1de6e0d5959}
+      \strng{authorfullhash}{6584d76ed4aa5cb996984c00d62114c7}
+      \strng{authorfullhashraw}{6584d76ed4aa5cb996984c00d62114c7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Climate Change}
+      \field{title}{Increased human and economic losses from river flooding with anthropogenic warming}
+      \field{volume}{12}
+      \field{year}{2022}
+      \true{nocite}
+      \field{pages}{568\bibrangedash 573}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1038/s41558-022-01327-6
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/s41558-022-01327-6
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/s41558-022-01327-6
+      \endverb
+    \endentry
     \entry{noauthor_impacts_nodate}{misc}{}{}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
@@ -760,8 +1828,8 @@
       \keyw{notion}
     \endentry
     \entry{noauthor_pravilnik_nodate}{misc}{}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{title}{Pravilnik o metodologiji za določanje območij, ogroženih zaradi poplav in z njimi povezane erozije celinskih voda in morja, ter o načinu razvrščanja zemljišč v razrede ogroženosti ({PISRS})}
       \field{urlday}{28}
@@ -784,8 +1852,8 @@
       \list{language}{1}{%
         {sl}%
       }
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{abstract}{Karte poplavne nevarnost in karte poplavne ogroženosti za območja pomembnega vpliva poplav so pripravljene v skladu s slovenskim in EU pravnim redom (EU poplavna direktiva).}
       \field{journaltitle}{Portal GOV.SI}
@@ -832,8 +1900,8 @@
       \strng{authornamehash}{6f8d9ff08df499a705a2d54f8ecf0a27}
       \strng{authorfullhash}{02d95e49c088d4af0a69420e3273b373}
       \strng{authorfullhashraw}{02d95e49c088d4af0a69420e3273b373}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Posodabljanje integralnih poplavnih kart}
@@ -875,8 +1943,8 @@
       \strng{authorfullhash}{6eb6b8852527f9eb2a4ae1bc7cd9dd2e}
       \strng{authorfullhashraw}{6eb6b8852527f9eb2a4ae1bc7cd9dd2e}
       \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Flood management is more and more adopting a risk based approach, whereby flood risk is the product of the probability and consequences of flooding. One of the most common approaches in flood risk assessment is to estimate the damage that would occur for floods of several exceedance probabilities (or return periods), to plot these on an exceedance probability-loss curve (risk curve) and to estimate risk as the area under the curve. However, there is little insight into how the selection of the return-periods (which ones and how many) used to calculate risk actually affects the final risk calculation. To gain such insights, we developed and validated an inundation model capable of rapidly simulating inundation extent and depth, and dynamically coupled this to an existing damage model. The method was applied to a section of the River Meuse in the southeast of the Netherlands. Firstly, we estimated risk based on a risk curve using yearly return periods from 2 to 10 000 yr (€ 34 million p.a.). We found that the overall risk is greatly affected by the number of return periods used to construct the risk curve, with over-estimations of annual risk between 33\% and 100\% when only three return periods are used. In addition, binary assumptions on dike failure can have a large effect (a factor two difference) on risk estimates. Also, the minimum and maximum return period considered in the curve affects the risk estimate considerably. The results suggest that more research is needed to develop relatively simple inundation models that can be used to produce large numbers of inundation maps, complementary to more complex 2-D–3-D hydrodynamic models. It also suggests that research into flood risk could benefit by paying more attention to the damage caused by relatively high probability floods.}
@@ -913,8 +1981,8 @@
       \list{language}{1}{%
         {en}%
       }
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{abstract}{PDF {|} Part I of this two-part paper provided an overview of the HAZUS-MH Flood Model and a discussion of its capabilities for characterizing riverine... {|} Find, read and cite all the research you need on ResearchGate}
       \field{issn}{1527-6988}
@@ -992,8 +2060,8 @@
       \strng{authornamehash}{95da3164c248f925b5eec5d7ecfc5858}
       \strng{authorfullhash}{26f5025677103f77ad5304ee930b62a4}
       \strng{authorfullhashraw}{26f5025677103f77ad5304ee930b62a4}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Part I of this two-part paper provides an overview of the HAZUS-MH Flood Model and a discussion of its capabilities for characterizing riverine and coastal flooding hazard. Included is a discussion of the Flood Information Tool, which permits rapid ...}
@@ -1548,8 +2616,8 @@
       \strng{authornamehash}{ad5705a7f0152649b822bb6a0a696894}
       \strng{authorfullhash}{6ba955585b9e2fcdf7a2b806bcf0dc6d}
       \strng{authorfullhashraw}{6ba955585b9e2fcdf7a2b806bcf0dc6d}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Climate extremes threaten human health, economic stability, and the well-being of natural and built environments (e.g., 2003 European heat wave). As the world continues to warm, climate hazards are expected to increase in frequency and intensity. The impacts of extreme events will also be more severe due to the increased exposure (growing population and development) and vulnerability (aging infrastructure) of human settlements. Climate models attribute part of the projected increases in the intensity and frequency of natural disasters to anthropogenic emissions and changes in land use and land cover. Here, we review the impacts, historical and projected changes,and theoretical research gaps of key extreme events (heat waves, droughts, wildfires, precipitation, and flooding). We also highlight the need to improve our understanding of the dependence between individual and interrelated climate extremes because anthropogenic-induced warming increases the risk of not only individual climate extremes but also compound (co-occurring) and cascading hazards. ▪ Climate hazards are expected to increase in frequency and intensity in a warming world. ▪ Anthropogenic-induced warming increases the risk of compound and cascading hazards. ▪ We need to improve our understanding of causes and drivers of compound and cascading hazards.}
@@ -1633,8 +2701,8 @@
       \strng{authornamehash}{50cccdb4722f51e1305129bdfc529f76}
       \strng{authorfullhash}{e92b6e465260dd201400f0cdbac7387e}
       \strng{authorfullhashraw}{e92b6e465260dd201400f0cdbac7387e}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This study focuses on scoring, selecting, and developing physical fragility (i.e., the probability of reaching or exceeding a certain damage state given a specific hazard intensity) and/or vulnerability (i.e., the probability of impact - or consequence - given a specific hazard intensity) models for assets of interest, with particular emphasis on buildings. Given a set of multiple relevant hazards for a selected case-study region, the proposed procedure involves 1) mapping the relevant asset classes (i.e., construction types for a given occupancy) in the region to a set of existing candidate fragility, vulnerability and/or damage-to-impact models, also accounting for specific modelling requirements (e.g., time dependency due to ageing/deterioration, multi-hazard interactions); 2) scoring the candidate models according to relevant criteria to select the most suitable models for a given application; or 3) using state-of-the-art numerical or empirical methods to develop fragility/vulnerability models not already available. The approach is demonstrated for the buildings of the virtual urban testbed “Tomorrowville”, considering earthquakes, floods, and debris flows as case-study hazards.}
@@ -1810,8 +2878,8 @@
       \strng{authorfullhash}{0c9be7ccd81d257d3448d47fb0aee8de}
       \strng{authorfullhashraw}{0c9be7ccd81d257d3448d47fb0aee8de}
       \field{extraname}{3}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{SynopsisAccording to new data from WRI's Aqueduct Floods Tool, by 2030 the number of people impacted by floods will double worldwide — from 65 million to 132 million due to riverine flooding and from 7 million to 15 million due to coastal flooding. The amount of urban property damaged by riverine floods will increase threefold — from \$157 billion to \$535 billion, while it will increase tenfold due to coastal storm surge and sea level rise — from \$17 billion to \$177 billion.}
@@ -1883,8 +2951,8 @@
       \strng{authornamehash}{ea7477412b6f9b2221a9a6c153d96549}
       \strng{authorfullhash}{3296536291c7530df424d031aefe28a1}
       \strng{authorfullhashraw}{3296536291c7530df424d031aefe28a1}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{This technical note serves as the main reference for the updated Aqueduct™️ 4.0 water risk framework. It details the data and methodology used to create 13 indicators of global water risk. Indicators reflect both current conditions and future projections of water supply, demand, stress, and more. This paper also describes how water risks can be aggregated into categories of risk, such as physical and quality, as well as administrative risk.}
