@@ -8,26 +8,40 @@ This chapter reviews key research and frameworks related to flood risk modeling,
 \section{Flood Hazard Modeling}
 %----------------------------------------------------------------------------------------
 
-Flood hazard modeling involves estimating the spatial extent and intensity of flood events for given probabilities or return periods. It forms the foundational input to any flood risk assessment, determining where and how deep flooding occurs under specific scenarios. Two main categories of models are commonly used: global models and high-resolution local hydraulic models.
+Flood hazard modeling involves estimating the spatial extent and intensity of flood events for given probabilities or return periods. It forms the foundational input to any flood risk assessment, determining where and how deep flooding occurs under specific scenarios. Two main categories of models are commonly used: global-scale models and high-resolution local hydraulic models.
 
 \subsection{Global Flood Models}
+Global flood models are designed for consistency and scalability across countries. They typically simulate flood hazard using simplified hydrological and hydraulic methods driven by global datasets such as digital elevation models (e.g., MERIT DEM), river discharge statistics, and climate projections.
 
-Global flood models are designed for scalability and global coverage. They typically simulate flood hazard using simplified hydrological and hydraulic models driven by global datasets such as digital elevation models, river discharge records, and climate projections. A widely used example is the \textbf{WRI Aqueduct River Flood model}, which provides fluvial flood depth maps for return periods ranging from 2 to 1000 years, with a spatial resolution of ~1 km and support for climate change scenarios such as RCP4.5 and RCP8.5 \cite{wri_aqueduct_floods, ward_aqueduct_2020}.
+One such model is the \textbf{WRI Aqueduct River Flood Model}, developed by the World Resources Institute. It provides flood depth estimates at approximately 1 km resolution for return periods ranging from 2 to 1000 years and supports climate change scenarios such as RCP4.5 and RCP8.5 \cite{wri_aqueduct_floods, ward_aqueduct_2020}. The model is designed to support scenario-based stress testing, risk disclosures, and portfolio-level flood exposure estimation. However, its spatial granularity may be insufficient for site-level decision-making or building-level risk evaluation \cite{woetzel2020climate, ipcc2021}.
 
-These models are designed to support large-scale comparisons, stress testing, and financial disclosures. However, their coarse spatial resolution limits their application in local-level asset risk estimation or infrastructure planning \cite{woetzel2020climate, ipcc2021}.
 
 \subsection{Local Hydraulic Models}
 
-In contrast, local hydraulic models such as Slovenia’s \textbf{Integralna karta globin (IKG)} are developed with detailed topography, land use, and hydraulic calibration. These models often rely on 1D or 2D hydraulic simulations and historical flood data to generate detailed flood hazard maps for selected municipalities. In the case of IKG, flood depth is categorized into discrete classes (GM, GS, GB), corresponding to increasing flood severity, and available for return periods of 10, 100, and 500 years \cite{ikg_slovenia_2023, noauthor_karte_nodate}.
+In contrast, local hydraulic models are developed with detailed topographic, land use, and hydraulic calibration data for specific regions. Slovenia’s national flood hazard dataset—the \textbf{Integralna karta globin (IKG)}—is a prominent example. 
 
-While local models lack global coverage and scenario flexibility, they provide high spatial precision (typically 5–10 m resolution) that is critical for building-level flood risk modeling and regulatory planning.
+IKG is commissioned by the Ministry of Natural Resources and Spatial Planning, specifically its Water Directorate (\textit{Direkcija Republike Slovenije za vode}), and modeled by certified engineering firms such as DRI d.o.o., iS Projekt, and the Institute for Water of the Republic of Slovenia. These models are part of Slovenia’s implementation of the EU Floods Directive (2007/60/EC) and follow a standardized methodology set forth in national legislation \cite{noauthor_pravilnik_nodate}.
+
+Flood simulations are based on 1D or 2D hydraulic modeling using high-resolution LiDAR-derived terrain data. The outputs classify inundation into three discrete depth categories:
+\begin{itemize}
+    \item GM – Minor flooding (\(<0.5\) m),
+    \item GS – Medium flooding (0.5–1.5 m),
+    \item GV – Severe flooding (\(>1.5\) m).
+\end{itemize}
+
+These flood zones are available for return periods of 10, 100, and 500 years and are published as vector geospatial layers on the Slovenian open data portal \cite{ikg_slovenia_data_2025}. Their main regulatory purpose is to inform land-use planning, assess flood risk for development projects, and support disaster risk reduction.
+
+\textit{Use case description from official portal (translated) \cite{ikg_slovenia_data_2025}}:
+\begin{quote}
+"The core purpose of the IKG data layer is to define spatial restrictions for spatial interventions and land use on areas at risk of flooding. The data also serve for planning flood risk reduction measures, spatial planning, and informing the public about flood risk."
+\end{quote}
 
 \subsection{Return Periods and Exceedance Probabilities}
 
-Both global and local models represent flood hazard as a function of return period \( T \), which reflects the average time between flood events of a given magnitude. The annual exceedance probability (AEP) is defined as:
+Both global and local models represent flood hazard as a function of return period \( RP \), which reflects the average time between flood events of a given magnitude. The annual exceedance probability (AEP) is defined as:
 
 \[
-p = \frac{1}{T}
+AEP = \frac{1}{RP}
 \]
 
 This mathematical formulation allows different hazard layers to be harmonized and aggregated in subsequent risk calculations \cite{ward_how_2011}.
@@ -232,7 +246,7 @@ Similarly, the European Environment Agency (EEA) encourages cities and regions t
 
 \subsection{Role of National Authorities}
 
-At the national level, ministries of the environment and civil protection agencies—such as the \textbf{Uprava RS za zaščito in reševanje} in Slovenia—are responsible for developing flood hazard maps, collecting damage reports, and designating flood risk zones under the EU Floods Directive. These data and designations serve as critical inputs for both public and private sector climate risk assessments \cite{ikg_slovenia_2023, urszr_damage_data}.
+At the national level, ministries of the environment and civil protection agencies—such as the \textbf{Uprava RS za zaščito in reševanje} in Slovenia—are responsible for developing flood hazard maps, collecting damage reports, and designating flood risk zones under the EU Floods Directive. These data and designations serve as critical inputs for both public and private sector climate risk assessments \cite{ikg_slovenia_data_2025, urszr_damage_data}.
 
 Moreover, national legislation (e.g., the Slovenian regulation on flood zones \cite{noauthor_pravilnik_nodate}) defines how land parcels are classified into flood hazard classes, affecting insurance premiums, development rights, and adaptation investment decisions.
 

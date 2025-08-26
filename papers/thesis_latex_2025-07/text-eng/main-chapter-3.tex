@@ -2,7 +2,8 @@
 \chapter{Study Area, Data, and Methodology}
 %--------------------------------------------------------------------------------------------------
 
-This chapter introduces the geographic scope, data sources, and mathematical models used to evaluate flood hazard, vulnerability, and risk. The modeling framework is structured around three key components: \textbf{hazard} (depth), \textbf{vulnerability} (damage functions), and \textbf{exposure} (asset value). These elements are formally defined and then combined to compute expected flood losses under both scenario-based and probabilistic approaches.
+This chapter introduces the geographic scope, data sources, and mathematical models used to evaluate flood hazard, vulnerability, exposure and risk. The modeling framework is structured around three key components: \textbf{hazard} (depth), \textbf{vulnerability} (depth-damage functions), and \textbf{exposure} (asset value). These components are formally defined and then combined to estimate flood-related losses using both scenario-based calculations (e.g., damage under a 100-year flood) and probabilistic methods (e.g., Expected Annual Damage (EAD) integrated across return periods).
+
 
 %--------------------------------------------------------------------------------------------------
 \section{Hazard and Depth}
@@ -15,53 +16,58 @@ Flood hazard refers to the intensity and spatial extent of flooding, typically e
 Flood hazard is modeled as a spatially varying flood depth field:
 
 \begin{equation}
-	h : \Omega \times \mathcal{T} \rightarrow \mathbb{R}_{\geq 0}, \quad (x, y, T) \mapsto h(x, y, T)
+	h : \Omega \times \mathcal{RP} \rightarrow \mathbb{R}_{\geq 0}, \quad (x, y, RP) \mapsto h(x, y, RP)
 	\label{eq:hazard-map}
 \end{equation}
 
 where:
 \begin{itemize}
 	\item \( \Omega \subset \mathbb{R}^2 \) is the spatial domain (study area),
-	\item \( \mathcal{T} = \{ T_1, T_2, \dots, T_K \} \) is the set of modeled return periods (e.g., 10, 100, 500 years),
-	\item \( h(x, y, T) \) is the flood depth at location \( (x, y) \) under return period \( T \).
+	\item \( \mathcal{RP} = \{ RP_1, RP_2, \dots, RP_K \} \) is the set of modeled return periods (e.g., 10, 100, 500 years),
+	\item \( h(x, y, RP) \) is the flood depth at location \( (x, y) \) under return period \( RP \).
 \end{itemize}
 
-The return period \( T \) expresses the average time between flood events of that magnitude, while the annual exceedance probability (AEP) is its inverse:
+The return period \( RP \) expresses the average time between flood events of that magnitude, while the annual exceedance probability \(AEP \) is its inverse. For example, RP100 corresponds to a 100-year return period, which is equivalent to an \(AEP \) of 1/100.
 
 \begin{equation}
-	p = \frac{1}{T}
+	AEP = \frac{1}{RP}
 	\label{eq:return-period}
 \end{equation}
 
-Flood hazard maps \( h(x, y, T) \) are derived from hydrological and hydraulic models that simulate flood dynamics based on rainfall, runoff, topography, and river systems. In practice, the continuous function \( h(x, y, T) \) is approximated by raster arrays \( H_{i,j,k} \), where \( i,j \) index the spatial grid and \( k \) indexes the return period.
+Flood hazard maps \( h(x, y, RP) \) are derived from hydrological and hydraulic models that simulate flood dynamics based on rainfall, runoff, topography, and river systems. In practice, the continuous function \( h(x, y, RP) \) is approximated by raster arrays \( H_{i,j,k} \), where \( i,j \) index the spatial grid and \( k \) indexes the return period.
 
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=0.85\textwidth]{figures/03/hazard_map_returnperiod.png}
-	\caption[Example hazard map and depth–return period curve.]{Flood hazard illustration for a location in Slovenia (Litija). The top panel shows spatial coverage of flood modeling; the bottom panel shows flood depth \( h(x, y, T) \) versus return period \( T \).}
+	\caption[Example hazard map and depth–return period curve.]{Flood hazard illustration for a location in Slovenia (Litija). The top panel shows spatial coverage of flood modeling; the bottom panel shows flood depth \( h(x, y, RP) \) versus return period \( RP \).}
 	\label{fig:hazard-return-curve}
 \end{figure}
 
 \subsection{Hazard Data Sources and Modeling Approach}
 
-Two complementary hazard datasets are used in this study:
+This study uses two complementary hazard models for flood depth estimation: the global \textit{WRI Aqueduct River Flood Model} and the local \textit{Integralna karta globin (IKG)}. Both models are described in more detail in the following sections and a short comparison between the two models is presented in Table \ref{tab:hazard_models}.
 
-\begin{itemize}
-	\item \textbf{WRI Aqueduct River Flood Model:} A global flood hazard dataset developed by the World Resources Institute. It provides flood depth estimates at ~1 km resolution for return periods from 2 to 1000 years, using simulations based on historical river discharge, terrain data (e.g., MERIT DEM), and land surface parameters. Critically, this model incorporates climate scenarios through Representative Concentration Pathways (RCPs), including:
-		\begin{itemize}
-			\item \textbf{RCP4.5}: A moderate emissions pathway, stabilizing radiative forcing at 4.5 W/m\textsuperscript{2} by 2100.
-			\item \textbf{RCP8.5}: A high-emissions scenario, corresponding to >4\textdegree C warming by 2100.
-		\end{itemize}
-		Outputs are provided in GeoTIFF raster format (EPSG:4326).
+\subsubsection*{WRI Aqueduct River Flood Model}
+The WRI Aqueduct River Flood Model is a public-domain global flood hazard dataset developed by the World Resources Institute. It provides flood depth estimates at ~1 km resolution for return periods from 2 to 1000 years, using simulations based on historical river discharge, terrain data (e.g., MERIT DEM), and land surface parameters. The dataset is based on the modelling approach of \cite{ward_assessing_2013}. Critically, this model incorporates climate scenarios through Representative Concentration Pathways (RCPs), including:
+    \begin{itemize}
+        \item \textbf{RCP4.5}: A moderate greenhouse gas emissions pathway that assumes the implementation of climate policies and stabilization of radiative forcing at 4.5 W/m\textsuperscript{2} by the year 2100. This scenario reflects a future in which emissions peak around 2040 and then decline due to technological improvements, energy efficiency measures, and a shift towards lower-carbon energy sources. It leads to an approximate global average temperature increase of 1.8--2.6\textdegree C by 2100, depending on model sensitivity.
+        
+        \item \textbf{RCP8.5}: A high-emissions scenario often referred to as a "business-as-usual" trajectory, assuming no significant climate mitigation policies are implemented. Radiative forcing reaches 8.5 W/m\textsuperscript{2} by 2100, primarily due to continued reliance on fossil fuels, high population growth, and limited technological progress in energy efficiency. It results in a projected global average temperature increase exceeding 4\textdegree C by 2100, with more severe regional impacts and increased frequency and intensity of extreme events such as floods, droughts, and heatwaves.
+    \end{itemize}
+Outputs are provided in GeoTIFF raster format (EPSG:4326).
 
-	\item \textbf{Integralna karta globin (IKG):} A set of high-resolution flood hazard maps produced by Slovenian civil protection authorities. These are based on 1D/2D hydraulic modeling for return periods of 10, 100, and 500 years. The original data are provided as vector polygons categorized into three flood depth bands:
-		\begin{itemize}
-			\item GM – Minor inundation (up to 0.5 m),
-			\item GS – Significant inundation (up to 1.5 m),
-			\item GB – Severe inundation (up to 2.5 m).
-		\end{itemize}
-		IKG models are locally calibrated using historical flood events and topographic surveys. Vector inputs are rasterized to a 5 m grid in EPSG:3794 and harmonized with the other spatial layers.
+\subsubsection*{Integralna karta globin (IKG)}
+IKG is a high-resolution local flood hazard dataset produced as part of Slovenia’s implementation of the EU Floods Directive (2007/60/EC). The models are commissioned by Slovenia’s Ministry of Natural Resources and Spatial Planning via the Slovenian Water Agency. Hydraulic modeling and cartographic production are carried out by many different engineering firms (e.g., iS Projekt d.o.o., DRI d.o.o., Inštitut za vode Republike Slovenije, and others), typically for designated \textit{Areas of Significant Flood Risk} (\textit{Območja pomembnega vpliva poplav} or OPVP).
+
+IKG models are based on 1D or 2D hydraulic simulations using high-resolution LiDAR-derived terrain data. Flood simulations are performed under synthetic scenarios corresponding to return periods of 10, 100, and 500 years, and results are expressed in three standardized flood depth classes:
+    \begin{itemize}
+        \item GM – minor inundation (up to 0.5 m),
+        \item GS – significant inundation (up to 1.5 m),
+        \item GV – severe inundation (greater than 1.5 m).
 \end{itemize}
+The outputs are published as vector layers (shapefiles or GeoPackages) and made available through the national GIS portal \cite{ikg_slovenia_data_2025}. These layers use the national Slovenian coordinate system (EPSG:3794). Unlike global models, IKG datasets do not incorporate future climate change scenarios, and their coverage is limited to selected municipalities identified as flood-prone under national flood risk management planning.
+
+% For the purposes of this thesis, IKG data were transformed to a common 5 m grid, harmonized with other geospatial layers, and encoded into the Zarr format to enable cell-wise comparisons and scalable model integration.
 
 \begin{table}[htb]
     \centering
