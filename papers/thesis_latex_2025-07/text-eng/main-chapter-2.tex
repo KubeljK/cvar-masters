@@ -1,5 +1,6 @@
 %--------------------------------------------------------------------------------------------------
 \chapter{Literature Review and Related Work}
+\label{chap:literature-review-and-related-work}
 %--------------------------------------------------------------------------------------------------
 
 This chapter reviews key research and frameworks related to flood risk modeling, with a focus on hazard modeling, vulnerability assessment, exposure estimation, and regulatory context. The literature spans hydrology, geospatial modeling, and financial risk assessment, with special emphasis on tools applicable to European and Slovenian contexts.
@@ -7,31 +8,30 @@ This chapter reviews key research and frameworks related to flood risk modeling,
 %----------------------------------------------------------------------------------------
 \section{Flood Hazard Modeling}
 %----------------------------------------------------------------------------------------
-
-Flood hazard modeling involves estimating the spatial extent and intensity of flood events for given probabilities or return periods. It forms the foundational input to any flood risk assessment, determining where and how deep flooding occurs under specific scenarios. Two main categories of models are commonly used: global-scale models and high-resolution local hydraulic models.
+Flood hazard modeling estimates the spatial extent and intensity of inundation for specified exceedance probabilities or return periods. It provides the foundational input to flood risk assessment by determining where, how often, and how deep flooding occurs under given scenarios. Two broad model families dominate practice: (i) global models designed for comparability and scenario analysis, and (ii) high-resolution local hydraulic models developed for planning and regulation.
 
 \subsection{Global Flood Models}
 Global flood models are designed for consistency and scalability across countries. They typically simulate flood hazard using simplified hydrological and hydraulic methods driven by global datasets such as digital elevation models (e.g., MERIT DEM), river discharge statistics, and climate projections.
 
-One such model is the \textbf{WRI Aqueduct River Flood Model}, developed by the World Resources Institute. It provides flood depth estimates at approximately 1 km resolution for return periods ranging from 2 to 1000 years and supports climate change scenarios such as RCP4.5 and RCP8.5 \cite{wri_aqueduct_floods, ward_aqueduct_2020}. The model is designed to support scenario-based stress testing, risk disclosures, and portfolio-level flood exposure estimation. However, its spatial granularity may be insufficient for site-level decision-making or building-level risk evaluation \cite{woetzel2020climate, ipcc2021}.
+One such model is the \textbf{WRI Aqueduct River Flood Model}, developed by the World Resources Institute. It provides flood depth estimates at approximately 1 km resolution for return periods ranging from 2 to 1000 years and supports climate change scenarios such as RCP4.5 and RCP8.5 \cite{wri_aqueduct_floods, ward_aqueduct_2020, kuzma_aqueduct_2023}. The model is designed to support scenario-based stress testing, risk disclosures, and portfolio-level flood exposure estimation. However, its spatial granularity may be insufficient for site-level decision-making or building-level risk evaluation \cite{woetzel2020climate, ipcc2021}.
 
 
 \subsection{Local Hydraulic Models}
 
-In contrast, local hydraulic models are developed with detailed topographic, land use, and hydraulic calibration data for specific regions. Slovenia’s national flood hazard dataset—the \textbf{Integralna karta globin (IKG)}—is a prominent example. 
-
-IKG is commissioned by the Ministry of Natural Resources and Spatial Planning, specifically its Water Directorate (\textit{Direkcija Republike Slovenije za vode}), and modeled by certified engineering firms such as DRI d.o.o., iS Projekt, and the Institute for Water of the Republic of Slovenia. These models are part of Slovenia’s implementation of the EU Floods Directive (2007/60/EC) and follow a standardized methodology set forth in national legislation \cite{noauthor_pravilnik_nodate}.
-
-Flood simulations are based on 1D or 2D hydraulic modeling using high-resolution LiDAR-derived terrain data. The outputs classify inundation into three discrete depth categories:
+In Slovenia, the national flood mapping programme implements the EU Floods Directive (2007/60/EC) through three products derived from approved hydrological–hydraulic studies (HHS): 
 \begin{itemize}
-    \item GM – Minor flooding (\(<0.5\) m),
-    \item GS – Medium flooding (0.5–1.5 m),
-    \item GV – Severe flooding (\(>1.5\) m).
+    \item the \emph{integralna karta poplavne nevarnosti} (iKPN; extents for RP10/RP100/RP500)
+    \item the \emph{integralna karta razredov poplavne nevarnosti} (iKRPN; hazard classes)
+    \item the \emph{integralna karta globin pri Q100} (iKG100; depth classes at RP100)
 \end{itemize}
 
-These flood zones are available for return periods of 10, 100, and 500 years and are published as vector geospatial layers on the Slovenian open data portal \cite{ikg_slovenia_data_2025}. Their main regulatory purpose is to inform land-use planning, assess flood risk for development projects, and support disaster risk reduction.
+These layers are produced under the responsibility of Ministry of Natural Resources and Spatial Planning, specifically its Water Directorate (\textit{Direkcija Republike Slovenije za vode}), by aggregating and quality-controlling HHS prepared for multiple areas of importance (OPVP).\cite{si_ikg_posodabljanje_integralnih_kart_2015, si_ikg_flood_maps_methodology_2020}. These layers are modeled by certified engineering companies such as DRI d.o.o., iS Projekt, and the Institute for Water of the Republic of Slovenia. National methodology and production process summarized in \cite{si_ikg_posodabljanje_integralnih_kart_2015, si_ikg_flood_maps_methodology_2020,si_ikg_predhodna_ocena_poplavne_ogrozenosti_2019,si_ikg_pravilnik_2007}. Dataset access: \cite{si_ikg_data_2025}.
 
-\textit{Use case description from official portal (translated) \cite{ikg_slovenia_data_2025}}:
+Flood simulations are based on 1D or 2D hydraulic modeling using high-resolution LiDAR-derived terrain data. The iKG100 depth maps classify inundation into three discrete depth categories: \textbf{Gm} (depth $<0.5$\,m), \textbf{Gs} ($0.5$–$1.5$\,m), \textbf{Gv} ($\ge 1.5$\,m), with a polygon marking the model’s \emph{area of validity} (AOV).\cite{si_ikg_flood_maps_methodology_2020} 
+
+Compared with global models, these local layers provide substantially higher spatial resolution but are not scenario-aware. Although HHŠ typically produce flood depth estimates for multiple return periods (10, 100, 500 years), the integral depth product (iKG100) is officially published only for RP100 \cite{si_ikg_data_2025}. This represents a technical limitation, which is discussed further in Section~\ref{sec:hazard-data-sources-and-modeling-approach}.
+
+\textit{Use case description from official portal (translated) \cite{si_ikg_data_2025}}:
 \begin{quote}
 "The core purpose of the IKG data layer is to define spatial restrictions for spatial interventions and land use on areas at risk of flooding. The data also serve for planning flood risk reduction measures, spatial planning, and informing the public about flood risk."
 \end{quote}
@@ -246,7 +246,8 @@ Similarly, the European Environment Agency (EEA) encourages cities and regions t
 
 \subsection{Role of National Authorities}
 
-At the national level, ministries of the environment and civil protection agencies—such as the \textbf{Uprava RS za zaščito in reševanje} in Slovenia—are responsible for developing flood hazard maps, collecting damage reports, and designating flood risk zones under the EU Floods Directive. These data and designations serve as critical inputs for both public and private sector climate risk assessments \cite{ikg_slovenia_data_2025, urszr_damage_data}.
+At the Slovenian national level, flood hazard maps (e.g., IKG) are commissioned by the Ministry of Natural Resources and Spatial Planning via the Slovenian Water
+Agency and disseminated through national geoportals, while civil protection authorities (Uprava RS za zaščito in reševanje) collect and curate post-event damage reports used for validation and loss accounting \cite{si_ikg_data_2025,urszr_damage_data,noauthor_pravilnik_nodate}.
 
 Moreover, national legislation (e.g., the Slovenian regulation on flood zones \cite{noauthor_pravilnik_nodate}) defines how land parcels are classified into flood hazard classes, affecting insurance premiums, development rights, and adaptation investment decisions.
 

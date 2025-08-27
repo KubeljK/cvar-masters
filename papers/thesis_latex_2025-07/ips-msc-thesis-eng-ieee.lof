@@ -10,8 +10,10 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Example hazard map and depth–return period curve.}}{16}{figure.3.1}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Depth--damage function for residential buildings.}}{18}{figure.3.2}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Expected Annual Damage from flood risk.}}{21}{figure.3.3}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces iKG model coverage for RP 100.}}{18}{figure.3.2}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Flood depth for same geospatial location for iKG and WRI Aqueduct models.}}{19}{figure.3.3}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Depth--damage function for residential buildings.}}{20}{figure.3.4}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Expected Annual Damage from flood risk.}}{22}{figure.3.5}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Physrisk physical risk model components.}}{24}{figure.4.1}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Processing heterogeneous IKG flood models.}}{25}{figure.4.2}%

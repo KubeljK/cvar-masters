@@ -412,7 +412,185 @@
       \endverb
       \keyw{notion}
     \endentry
-    \entry{ikg_slovenia_data_2025}{misc}{}{}
+    \entry{kuzma_aqueduct_2023}{article}{}{}
+      \name{author}{7}{}{%
+        {{hash=37f584c529393aa1c877f929aa5c0c9a}{%
+           family={Kuzma},
+           familyi={K\bibinitperiod},
+           given={Samantha},
+           giveni={S\bibinitperiod}}}%
+        {{hash=917b3a1d0253a66cb37c7fe61c26d9a9}{%
+           family={Bierkens},
+           familyi={B\bibinitperiod},
+           given={Marc\bibnamedelimb F.\bibnamedelimi P.},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=f85fefd28a334c70c5e1b865f28e5d12}{%
+           family={Lakshman},
+           familyi={L\bibinitperiod},
+           given={Shivani},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f9459d2b716e875e38d6e899f45e1cbd}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Tianyi},
+           giveni={T\bibinitperiod}}}%
+        {{hash=7588f2ea1c9b95165fd59eaa937b8273}{%
+           family={Saccoccia},
+           familyi={S\bibinitperiod},
+           given={Liz},
+           giveni={L\bibinitperiod}}}%
+        {{hash=d46559b697a35ca1928b11e8b604792c}{%
+           family={Sutanudjaja},
+           familyi={S\bibinitperiod},
+           given={Edwin\bibnamedelima H.},
+           giveni={E\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=a7943badb97de874cd0dbdb7d28ac500}{%
+           family={Beek},
+           familyi={B\bibinitperiod},
+           given={Rens\bibnamedelima Van},
+           giveni={R\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{ea7477412b6f9b2221a9a6c153d96549}
+      \strng{fullhash}{3296536291c7530df424d031aefe28a1}
+      \strng{fullhashraw}{3296536291c7530df424d031aefe28a1}
+      \strng{bibnamehash}{ea7477412b6f9b2221a9a6c153d96549}
+      \strng{authorbibnamehash}{ea7477412b6f9b2221a9a6c153d96549}
+      \strng{authornamehash}{ea7477412b6f9b2221a9a6c153d96549}
+      \strng{authorfullhash}{3296536291c7530df424d031aefe28a1}
+      \strng{authorfullhashraw}{3296536291c7530df424d031aefe28a1}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{This technical note serves as the main reference for the updated Aqueduct™️ 4.0 water risk framework. It details the data and methodology used to create 13 indicators of global water risk. Indicators reflect both current conditions and future projections of water supply, demand, stress, and more. This paper also describes how water risks can be aggregated into categories of risk, such as physical and quality, as well as administrative risk.}
+      \field{month}{8}
+      \field{shorttitle}{Aqueduct 4.0}
+      \field{title}{Aqueduct 4.0: {Updated} {Decision}-{Relevant} {Global} {Water} {Risk} {Indicators}}
+      \field{urlday}{3}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb CVAR-aqueduct-4 - Updated Decision-Relevant Global Wat.pdf:/Users/klemenkubelj/Documents/school/graduate/masters/literature/CVAR-aqueduct-4 - Updated Decision-Relevant Global Wat.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.wri.org/research/aqueduct-40-updated-decision-relevant-global-water-risk-indicators
+      \endverb
+      \verb{url}
+      \verb https://www.wri.org/research/aqueduct-40-updated-decision-relevant-global-water-risk-indicators
+      \endverb
+      \keyw{notion}
+    \endentry
+    \entry{si_ikg_posodabljanje_integralnih_kart_2015}{inproceedings}{}{}
+      \name{author}{10}{}{%
+        {{hash=a0224d001a4ae9df2956110db3a0d68f}{%
+           family={Ajdič},
+           familyi={A\bibinitperiod},
+           given={Mladen},
+           giveni={M\bibinitperiod}}}%
+        {{hash=93490a9d95d4ef035a06cf8537418994}{%
+           family={Stele\bibnamedelima Jeglič},
+           familyi={S\bibinitperiod\bibinitdelim J\bibinitperiod},
+           given={Mojca},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4d103bb803c8d9277b0387742dd505f5}{%
+           family={Peček},
+           familyi={P\bibinitperiod},
+           given={Mitja},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8a1b7189be748c39606b7c178053be0f}{%
+           family={Klinc},
+           familyi={K\bibinitperiod},
+           given={Brane},
+           giveni={B\bibinitperiod}}}%
+        {{hash=9b027dce1898175fbb5545a7c30b017f}{%
+           family={Damjanovič},
+           familyi={D\bibinitperiod},
+           given={Branko},
+           giveni={B\bibinitperiod}}}%
+        {{hash=8f5b6b50a3179c9e2dcd708e5d9dd9fa}{%
+           family={Kregar},
+           familyi={K\bibinitperiod},
+           given={Maja},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ed27a39812010f82b53761bd8a0415ed}{%
+           family={Zupan\bibnamedelima Vrenko},
+           familyi={Z\bibinitperiod\bibinitdelim V\bibinitperiod},
+           given={Dunja},
+           giveni={D\bibinitperiod}}}%
+        {{hash=2ca24dc80409f28163a2c1238ce0d63f}{%
+           family={Mazi},
+           familyi={M\bibinitperiod},
+           given={Tina},
+           giveni={T\bibinitperiod}}}%
+        {{hash=fae78b02d248f7743331eae6edc72227}{%
+           family={Anzeljc},
+           familyi={A\bibinitperiod},
+           given={Darko},
+           giveni={D\bibinitperiod}}}%
+        {{hash=817e5b781022c3cc6410d371130a87e5}{%
+           family={Bizjak},
+           familyi={B\bibinitperiod},
+           given={Aleš},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Slovenia}%
+      }
+      \strng{namehash}{6f8d9ff08df499a705a2d54f8ecf0a27}
+      \strng{fullhash}{a2d148d03b2330808fb90b223ce27c7c}
+      \strng{fullhashraw}{a2d148d03b2330808fb90b223ce27c7c}
+      \strng{bibnamehash}{6f8d9ff08df499a705a2d54f8ecf0a27}
+      \strng{authorbibnamehash}{6f8d9ff08df499a705a2d54f8ecf0a27}
+      \strng{authornamehash}{6f8d9ff08df499a705a2d54f8ecf0a27}
+      \strng{authorfullhash}{a2d148d03b2330808fb90b223ce27c7c}
+      \strng{authorfullhashraw}{a2d148d03b2330808fb90b223ce27c7c}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{26. Mišičev vodarski dan 2015 – Strategija upravljanja z vodami (NUV 2015–2021)}
+      \field{note}{Inštitut za vode RS (IzVRS); opis integralnih kart iKPN, iKRPN, iKG100 in OVR}
+      \field{title}{Posodabljanje integralnih poplavnih kart}
+      \field{year}{2015}
+    \endentry
+    \entry{si_ikg_flood_maps_methodology_2020}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=7c6c9fbc5aeaa39c1525fa05a8d02d3e}{%
+           family={{Republika Slovenija, Ministrstvo za okolje in prostor}},
+           familyi={R\bibinitperiod},
+           given={Direktorat\bibnamedelimb za\bibnamedelimb vode\bibnamedelimb in\bibnamedelima investicije},
+           giveni={D\bibinitperiod\bibinitdelim z\bibinitperiod\bibinitdelim v\bibinitperiod\bibinitdelim i\bibinitperiod\bibinitdelim i\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {MOP}%
+      }
+      \list{location}{1}{%
+        {Ljubljana}%
+      }
+      \strng{namehash}{7c6c9fbc5aeaa39c1525fa05a8d02d3e}
+      \strng{fullhash}{7c6c9fbc5aeaa39c1525fa05a8d02d3e}
+      \strng{fullhashraw}{7c6c9fbc5aeaa39c1525fa05a8d02d3e}
+      \strng{bibnamehash}{7c6c9fbc5aeaa39c1525fa05a8d02d3e}
+      \strng{authorbibnamehash}{7c6c9fbc5aeaa39c1525fa05a8d02d3e}
+      \strng{authornamehash}{7c6c9fbc5aeaa39c1525fa05a8d02d3e}
+      \strng{authorfullhash}{7c6c9fbc5aeaa39c1525fa05a8d02d3e}
+      \strng{authorfullhashraw}{7c6c9fbc5aeaa39c1525fa05a8d02d3e}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{note}{Metodologija: iKPN (Q10/Q100/Q500), iKG100 (Gm/Gs/Gv pri Q100), OVR, seznam 86 OPVP}
+      \field{title}{Posodobitev in izdelava kart poplavne nevarnosti in kart poplavne ogroženosti za območja pomembnega vpliva poplav (opis metodologije)}
+      \field{type}{techreport}
+      \field{year}{2020}
+    \endentry
+    \entry{si_ikg_data_2025}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=ef15a37055bc0ec852671b0d63857491}{%
            family={{Ministrstvo za naravne vire in prostor}},
@@ -428,8 +606,8 @@
       \strng{authornamehash}{ef15a37055bc0ec852671b0d63857491}
       \strng{authorfullhash}{ef15a37055bc0ec852671b0d63857491}
       \strng{authorfullhashraw}{ef15a37055bc0ec852671b0d63857491}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://podatki.gov.si/dataset/integralna-karta-globin-ikg100}}
@@ -442,31 +620,6 @@
       \verb{url}
       \verb https://podatki.gov.si/dataset/integralna-karta-globin-ikg100
       \endverb
-    \endentry
-    \entry{noauthor_karte_nodate}{misc}{}{}
-      \list{language}{1}{%
-        {sl}%
-      }
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Karte poplavne nevarnost in karte poplavne ogroženosti za območja pomembnega vpliva poplav so pripravljene v skladu s slovenskim in EU pravnim redom (EU poplavna direktiva).}
-      \field{journaltitle}{Portal GOV.SI}
-      \field{title}{Karte poplavne nevarnosti in karte poplavne ogroženosti za območja pomembnega vpliva poplav {|} {GOV}.{SI}}
-      \field{urlday}{28}
-      \field{urlmonth}{11}
-      \field{urlyear}{2024}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb CVAR_SI-Posodobitev_in_izdelava_kart_poplavne_nevarnosti_in_ogrozenosti.pdf:/Users/klemenkubelj/Documents/school/graduate/masters/literature/CVAR_SI-Posodobitev_in_izdelava_kart_poplavne_nevarnosti_in_ogrozenosti.pdf:application/pdf;Snapshot:/Users/klemenkubelj/Zotero/storage/LISYD6X8/karte-poplavne-nevarnosti-in-karte-poplavne-ogrozenosti-za-obmocja-pomembnega-vpliva-poplav.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://www.gov.si/teme/karte-poplavne-nevarnosti-in-karte-poplavne-ogrozenosti-za-obmocja-pomembnega-vpliva-poplav/
-      \endverb
-      \verb{url}
-      \verb https://www.gov.si/teme/karte-poplavne-nevarnosti-in-karte-poplavne-ogrozenosti-za-obmocja-pomembnega-vpliva-poplav/
-      \endverb
-      \keyw{notion}
     \endentry
     \entry{ward_how_2011}{article}{}{}
       \name{author}{3}{}{%
@@ -606,8 +759,8 @@
       \strng{authornamehash}{568c578ca38fc9f4ca5a2d5e23cc6548}
       \strng{authorfullhash}{804f24859db9acae7d958e294d6be371}
       \strng{authorfullhashraw}{804f24859db9acae7d958e294d6be371}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Assessing potential damage of flood events is an important component in flood risk management. Determining direct flood damage is commonly done using depth-damage curves, which denote the flood damage that would occur at specific water depths per asset or per land-use class. Many countries have developed flood damage models using depth-damage curves based on analysis of past flood events and on expert judgement. However, the fact that such damage curves are not available for all regions hampers damage assessments in some areas. Moreover, due to different methodologies employed for various damage models in different countries, damage assessments cannot be directly compared with each other, obstructing also supra-national flood damage assessments. To address these problems a globally consistent database of depth-damage curves has been developed. This dataset contains damage curves depicting fractional damage as a function of water depth as well as the relevant maximum damage values for a variety of assets and land use classes. Based on an extensive literature survey normalised damage curves have been developed for each continent, while differentiation in flood damage between countries is established by determining maximum damage values at the country scale. These maximum damage values are based on construction cost surveys from multinational construction companies, which provide a coherent set of detailed building cost data across dozens of countries. A consistent set of maximum flood damage values for all countries was computed using statistical regressions with socio-economic World Development Indicators. Further, based on insights from the literature survey, guidance is also given on how the damage curves and maximum damage values can be adjusted for specific local circumstances, such as urban vs. rural locations or use of specific building material. This dataset can be used for consistent supra-national scale flood damage assessments, and guide assessment in countries where no damage model is currently available.}
@@ -673,8 +826,8 @@
       \strng{authornamehash}{95da3164c248f925b5eec5d7ecfc5858}
       \strng{authorfullhash}{26f5025677103f77ad5304ee930b62a4}
       \strng{authorfullhashraw}{26f5025677103f77ad5304ee930b62a4}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Part I of this two-part paper provides an overview of the HAZUS-MH Flood Model and a discussion of its capabilities for characterizing riverine and coastal flooding hazard. Included is a discussion of the Flood Information Tool, which permits rapid ...}
@@ -721,8 +874,8 @@
       \strng{authornamehash}{84ec18b1a100b6b73e5a89653edc158d}
       \strng{authorfullhash}{84ec18b1a100b6b73e5a89653edc158d}
       \strng{authorfullhashraw}{84ec18b1a100b6b73e5a89653edc158d}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Internal dataset obtained via collaboration or public request}
@@ -781,8 +934,8 @@
       \strng{authornamehash}{50cccdb4722f51e1305129bdfc529f76}
       \strng{authorfullhash}{e92b6e465260dd201400f0cdbac7387e}
       \strng{authorfullhashraw}{e92b6e465260dd201400f0cdbac7387e}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This study focuses on scoring, selecting, and developing physical fragility (i.e., the probability of reaching or exceeding a certain damage state given a specific hazard intensity) and/or vulnerability (i.e., the probability of impact - or consequence - given a specific hazard intensity) models for assets of interest, with particular emphasis on buildings. Given a set of multiple relevant hazards for a selected case-study region, the proposed procedure involves 1) mapping the relevant asset classes (i.e., construction types for a given occupancy) in the region to a set of existing candidate fragility, vulnerability and/or damage-to-impact models, also accounting for specific modelling requirements (e.g., time dependency due to ageing/deterioration, multi-hazard interactions); 2) scoring the candidate models according to relevant criteria to select the most suitable models for a given application; or 3) using state-of-the-art numerical or empirical methods to develop fragility/vulnerability models not already available. The approach is demonstrated for the buildings of the virtual urban testbed “Tomorrowville”, considering earthquakes, floods, and debris flows as case-study hazards.}
@@ -1037,8 +1190,8 @@
       \strng{authornamehash}{d1acfb68ece93882e9e15ef69062c21d}
       \strng{authorfullhash}{da8cf1094975e6390d66c663fd3f4674}
       \strng{authorfullhashraw}{da8cf1094975e6390d66c663fd3f4674}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{3}
@@ -1388,7 +1541,7 @@
       \field{year}{2020}
       \true{nocite}
     \endentry
-    \entry{ikg_slovenia_data_2025}{misc}{}{}
+    \entry{si_ikg_data_2025}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=ef15a37055bc0ec852671b0d63857491}{%
            family={{Ministrstvo za naravne vire in prostor}},
@@ -1419,6 +1572,114 @@
       \verb{url}
       \verb https://podatki.gov.si/dataset/integralna-karta-globin-ikg100
       \endverb
+    \endentry
+    \entry{si_ikg_posodabljanje_integralnih_kart_2015}{inproceedings}{}{}
+      \name{author}{10}{}{%
+        {{hash=a0224d001a4ae9df2956110db3a0d68f}{%
+           family={Ajdič},
+           familyi={A\bibinitperiod},
+           given={Mladen},
+           giveni={M\bibinitperiod}}}%
+        {{hash=93490a9d95d4ef035a06cf8537418994}{%
+           family={Stele\bibnamedelima Jeglič},
+           familyi={S\bibinitperiod\bibinitdelim J\bibinitperiod},
+           given={Mojca},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4d103bb803c8d9277b0387742dd505f5}{%
+           family={Peček},
+           familyi={P\bibinitperiod},
+           given={Mitja},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8a1b7189be748c39606b7c178053be0f}{%
+           family={Klinc},
+           familyi={K\bibinitperiod},
+           given={Brane},
+           giveni={B\bibinitperiod}}}%
+        {{hash=9b027dce1898175fbb5545a7c30b017f}{%
+           family={Damjanovič},
+           familyi={D\bibinitperiod},
+           given={Branko},
+           giveni={B\bibinitperiod}}}%
+        {{hash=8f5b6b50a3179c9e2dcd708e5d9dd9fa}{%
+           family={Kregar},
+           familyi={K\bibinitperiod},
+           given={Maja},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ed27a39812010f82b53761bd8a0415ed}{%
+           family={Zupan\bibnamedelima Vrenko},
+           familyi={Z\bibinitperiod\bibinitdelim V\bibinitperiod},
+           given={Dunja},
+           giveni={D\bibinitperiod}}}%
+        {{hash=2ca24dc80409f28163a2c1238ce0d63f}{%
+           family={Mazi},
+           familyi={M\bibinitperiod},
+           given={Tina},
+           giveni={T\bibinitperiod}}}%
+        {{hash=fae78b02d248f7743331eae6edc72227}{%
+           family={Anzeljc},
+           familyi={A\bibinitperiod},
+           given={Darko},
+           giveni={D\bibinitperiod}}}%
+        {{hash=817e5b781022c3cc6410d371130a87e5}{%
+           family={Bizjak},
+           familyi={B\bibinitperiod},
+           given={Aleš},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Slovenia}%
+      }
+      \strng{namehash}{6f8d9ff08df499a705a2d54f8ecf0a27}
+      \strng{fullhash}{a2d148d03b2330808fb90b223ce27c7c}
+      \strng{fullhashraw}{a2d148d03b2330808fb90b223ce27c7c}
+      \strng{bibnamehash}{6f8d9ff08df499a705a2d54f8ecf0a27}
+      \strng{authorbibnamehash}{6f8d9ff08df499a705a2d54f8ecf0a27}
+      \strng{authornamehash}{6f8d9ff08df499a705a2d54f8ecf0a27}
+      \strng{authorfullhash}{a2d148d03b2330808fb90b223ce27c7c}
+      \strng{authorfullhashraw}{a2d148d03b2330808fb90b223ce27c7c}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{26. Mišičev vodarski dan 2015 – Strategija upravljanja z vodami (NUV 2015–2021)}
+      \field{note}{Inštitut za vode RS (IzVRS); opis integralnih kart iKPN, iKRPN, iKG100 in OVR}
+      \field{title}{Posodabljanje integralnih poplavnih kart}
+      \field{year}{2015}
+      \true{nocite}
+    \endentry
+    \entry{si_ikg_flood_maps_methodology_2020}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=7c6c9fbc5aeaa39c1525fa05a8d02d3e}{%
+           family={{Republika Slovenija, Ministrstvo za okolje in prostor}},
+           familyi={R\bibinitperiod},
+           given={Direktorat\bibnamedelimb za\bibnamedelimb vode\bibnamedelimb in\bibnamedelima investicije},
+           giveni={D\bibinitperiod\bibinitdelim z\bibinitperiod\bibinitdelim v\bibinitperiod\bibinitdelim i\bibinitperiod\bibinitdelim i\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {MOP}%
+      }
+      \list{location}{1}{%
+        {Ljubljana}%
+      }
+      \strng{namehash}{7c6c9fbc5aeaa39c1525fa05a8d02d3e}
+      \strng{fullhash}{7c6c9fbc5aeaa39c1525fa05a8d02d3e}
+      \strng{fullhashraw}{7c6c9fbc5aeaa39c1525fa05a8d02d3e}
+      \strng{bibnamehash}{7c6c9fbc5aeaa39c1525fa05a8d02d3e}
+      \strng{authorbibnamehash}{7c6c9fbc5aeaa39c1525fa05a8d02d3e}
+      \strng{authornamehash}{7c6c9fbc5aeaa39c1525fa05a8d02d3e}
+      \strng{authorfullhash}{7c6c9fbc5aeaa39c1525fa05a8d02d3e}
+      \strng{authorfullhashraw}{7c6c9fbc5aeaa39c1525fa05a8d02d3e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{note}{Metodologija: iKPN (Q10/Q100/Q500), iKG100 (Gm/Gs/Gv pri Q100), OVR, seznam 86 OPVP}
+      \field{title}{Posodobitev in izdelava kart poplavne nevarnosti in kart poplavne ogroženosti za območja pomembnega vpliva poplav (opis metodologije)}
+      \field{type}{techreport}
+      \field{year}{2020}
+      \true{nocite}
     \endentry
     \entry{urszr_damage_data}{misc}{}{}
       \name{author}{1}{}{%
@@ -1731,8 +1992,8 @@
       \keyw{notion}
     \endentry
     \entry{noauthor_future_nodate}{misc}{}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{title}{The future of real estate valuations: the impact of {ESG}}
       \true{nocite}
@@ -1796,8 +2057,8 @@
       \strng{authorfullhash}{dc34490c2f434a52ad5bccd01861c89d}
       \strng{authorfullhashraw}{dc34490c2f434a52ad5bccd01861c89d}
       \field{extraname}{1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Globally, economic losses from flooding exceeded 19 billion in 2012, and are rising rapidly. Hence, there is an increasing need for global-scale flood risk assessments, also within the context of integrated global assessments. We have developed and validated a model cascade for producing global flood risk maps, based on numerous flood return-periods. Validation results indicate that the model simulates interannual fluctuations in flood impacts well. The cascade involves: hydrological and hydraulic modelling; extreme value statistics; inundation modelling; flood impact modelling; and estimating annual expected impacts. The initial results estimate global impacts for several indicators, for example annual expected exposed population (169 million); and annual expected exposed GDP (1383 billion). These results are relatively insensitive to the extreme value distribution employed to estimate low frequency flood volumes. However, they are extremely sensitive to the assumed flood protection standard; developing a database of such standards should be a research priority. Also, results are sensitive to the use of two different climate forcing datasets. The impact model can easily accommodate new, user-defined, impact indicators. We envisage several applications, for example: identifying risk hotspots; calculating macro-scale risk for the insurance industry and large companies; and assessing potential benefits (and costs) of adaptation measures.}
@@ -1904,6 +2165,7 @@
       \strng{authornamehash}{6f8d9ff08df499a705a2d54f8ecf0a27}
       \strng{authorfullhash}{02d95e49c088d4af0a69420e3273b373}
       \strng{authorfullhashraw}{02d95e49c088d4af0a69420e3273b373}
+      \field{extraname}{2}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -2396,8 +2658,8 @@
       \strng{authornamehash}{e914d1932e25a7222b0239f4408cc4da}
       \strng{authorfullhash}{f0a78ce97f44c5d31535aca0679f3375}
       \strng{authorfullhashraw}{f0a78ce97f44c5d31535aca0679f3375}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Climate physical risk assessment is crucial to inform adaptation policies and finance. However, science-based and transparent solutions to assess climate physical risks are limited, compounding the adaptation gap. This is a main limitation to fill the adaptation gap. We provide a methodology that quantifies physical risks on geolocalized productive assets, considering their exposure to chronic and acute impacts (hurricanes) across the scenarios of the Intergovernmental Panel on Climate Change. Then, we translate asset-level shocks into economic and financial losses. We apply the methodology to Mexico, a country highly exposed to physical risks, recipient of adaptation finance and foreign investments. We show that investor losses are underestimated up to 70\% when neglecting asset-level information, and up to 82\% when neglecting tail acute risks. Therefore, neglecting the asset-level and acute dimensions of physical risks leads to large errors in the identification of adaptation policy responses, investments and finance tools aimed to build resilience to climate change.}
@@ -2522,8 +2784,8 @@
       \strng{authorfullhash}{2aad3e27258b27f52ff0c8b83a75ac2b}
       \strng{authorfullhashraw}{2aad3e27258b27f52ff0c8b83a75ac2b}
       \field{extraname}{2}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Compound weather and climate events describe combinations of multiple climate drivers and/or hazards that contribute to societal or environmental risk. Although many climate-related disasters are caused by compound events, the understanding, analysis, quantification and prediction of such events is still in its infancy. In this Review, we propose a typology of compound events and suggest analytical and modelling approaches to aid in their investigation. We organize the highly diverse compound event types according to four themes: preconditioned, where a weather-driven or climate-driven precondition aggravates the impacts of a hazard; multivariate, where multiple drivers and/or hazards lead to an impact; temporally compounding, where a succession of hazards leads to an impact; and spatially compounding, where hazards in multiple connected locations cause an aggregated impact. Through structuring compound events and their respective analysis tools, the typology offers an opportunity for deeper insight into their mechanisms and impacts, benefiting the development of effective adaptation strategies. However, the complex nature of compound events results in some cases inevitably fitting into more than one class, necessitating soft boundaries within the typology. Future work must homogenize the available analytical approaches into a robust toolset for compound-event analysis under present and future climate conditions.}

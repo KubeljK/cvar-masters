@@ -43,7 +43,7 @@ Flood hazard maps \( h(x, y, RP) \) are derived from hydrological and hydraulic 
 	\label{fig:hazard-return-curve}
 \end{figure}
 
-\subsection{Hazard Data Sources and Modeling Approach}
+\subsection{Hazard Data Sources and Modeling Approach} \label{sec:hazard-data-sources-and-modeling-approach}
 
 This study uses two complementary hazard models for flood depth estimation: the global \textit{WRI Aqueduct River Flood Model} and the local \textit{Integralna karta globin (IKG)}. Both models are described in more detail in the following sections and a short comparison between the two models is presented in Table \ref{tab:hazard_models}.
 
@@ -60,33 +60,49 @@ Outputs are provided in GeoTIFF raster format (EPSG:4326).
 IKG is a high-resolution local flood hazard dataset produced as part of Slovenia’s implementation of the EU Floods Directive (2007/60/EC). The models are commissioned by Slovenia’s Ministry of Natural Resources and Spatial Planning via the Slovenian Water Agency. Hydraulic modeling and cartographic production are carried out by many different engineering firms (e.g., iS Projekt d.o.o., DRI d.o.o., Inštitut za vode Republike Slovenije, and others), typically for designated \textit{Areas of Significant Flood Risk} (\textit{Območja pomembnega vpliva poplav} or OPVP).
 
 IKG models are based on 1D or 2D hydraulic simulations using high-resolution LiDAR-derived terrain data. Flood simulations are performed under synthetic scenarios corresponding to return periods of 10, 100, and 500 years, and results are expressed in three standardized flood depth classes:
-    \begin{itemize}
-        \item GM – minor inundation (up to 0.5 m),
-        \item GS – significant inundation (up to 1.5 m),
-        \item GV – severe inundation (greater than 1.5 m).
+\begin{itemize}
+    \item Gm – Minor flooding (\(<0.5\) m),
+    \item Gs – Medium flooding (\(0.5-1.5\) m),
+    \item Gv – Severe flooding (\(>1.5\) m).
 \end{itemize}
-The outputs are published as vector layers (shapefiles or GeoPackages) and made available through the national GIS portal \cite{ikg_slovenia_data_2025}. These layers use the national Slovenian coordinate system (EPSG:3794). Unlike global models, IKG datasets do not incorporate future climate change scenarios, and their coverage is limited to selected municipalities identified as flood-prone under national flood risk management planning.
+The outputs are published as vector layers (shapefiles or GeoPackages) and made available through the national GIS portal \cite{si_ikg_data_2025}. These layers use the national Slovenian coordinate system (EPSG:3794). Unlike global models, IKG datasets do not incorporate future climate change scenarios, and their coverage is limited to selected municipalities identified as flood-prone under national flood risk management planning.
 
-% For the purposes of this thesis, IKG data were transformed to a common 5 m grid, harmonized with other geospatial layers, and encoded into the Zarr format to enable cell-wise comparisons and scalable model integration.
+Depth classes for all 86 areas of importance are officially published only for RP100 \cite{si_ikg_flood_maps_methodology_2020}. This coverage is shown in Figure~\ref{fig:ikg-coverage-rp100}. Depth data is also for RP10 and RP500, but only for 18 areas of importance and is only available on request throught the Ministry of Natural Resources and Spatial Planning (for the purpose of this thesis, the data for RP10 and RP500 was requested and recieved through email). Because of this technical limitation, this thesis focuses on analyzing IKG model performance only for RP100. However, this thesis also establishes a data processing and onboarding pipeline for all return periods. This pipeline is described in Chapter~\ref{chap:model-integration-and-analysis-framework}. This will allow for straightforward analysis of other return periods when the data is available.
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.75\textwidth]{figures/03/ikg_coverage_rp100.png}
+	\caption[iKG model coverage for RP 100.]{iKG model coverage for RP 100. The map shows the coverage of the iKG model for all 86 areas of importance.}
+	\label{fig:ikg-coverage-rp100}
+\end{figure}
 
 \begin{table}[htb]
     \centering
     \caption{Comparison of flood hazard models used in the study.}
     \label{tab:hazard_models}
-    \begin{tabular}{|p{4.2cm}|p{5.5cm}|p{5.5cm}|}
+    \begin{tabular}{|p{4.2cm}|p{5cm}|p{5cm}|}
         \hline
         \textbf{Feature} & \textbf{WRI Aqueduct River Flood} & \textbf{Integralna karta globin (IKG)} \\
         \hline
         Spatial resolution & $\sim$1 km & 5 m \\
-        Coverage & Global & 18 regions in Slovenia \\
+        Coverage & Global & 86 (RP100) / 18 (RP10, RP500) areas of importance in Slovenia \\
         Climate scenarios & RCP-aware (RCP4.5, RCP8.5) & Not scenario-aware \\
-        Depth type & Continuous (in meters) & Discrete classes (0.5, 1.5, 2.5 m) \\
+        Depth type & Continuous (in meters) & 3 discrete classes (>0.5, >1.5, <1.5 m) \\
         Return periods & 2 to 1000 years & 10, 100, 500 years \\
         File format & Raster (GeoTIFF) & Vector (shapefile, GPKG) \\
         Coordinate system & EPSG:4326 & EPSG:3794 (transformed) \\
         \hline
     \end{tabular}
 \end{table}
+
+Figure~\ref{fig:ikg-and-wri-for-one-point-example} shows different flood depth maps for the same geospatial location for iKG and WRI Aqueduct models.
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.75\textwidth]{figures/03/ikg_and_wri_for_one_point_example.png}
+	\caption[Flood depth for same geospatial location for iKG and WRI Aqueduct models.]{Flood depth for same geospatial location for iKG and WRI Aqueduct models. The map shows the flood depth for different return periods for the location of Litija, Slovenia.}
+	\label{fig:ikg-and-wri-for-one-point-example}
+\end{figure}
 
 To enable direct comparison and model evaluation, all flood depth maps are resampled to a common 5 m grid and spatial reference system. These harmonized hazard layers serve as inputs to the vulnerability and risk modeling framework described in the following sections.
 
