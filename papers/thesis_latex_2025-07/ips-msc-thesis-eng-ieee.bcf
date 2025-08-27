@@ -2374,24 +2374,25 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">references.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1" intorder="1">ipcc2021</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">eea2020floods</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">ecb2020</bcf:citekey>
-    <bcf:citekey order="3" intorder="2">tcfd2017</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">moorhouse2024</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">woetzel2020climate</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">ecb2020</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">wri_aqueduct_floods</bcf:citekey>
-    <bcf:citekey order="7" intorder="2">ward_aqueduct_2020</bcf:citekey>
-    <bcf:citekey order="7" intorder="3">kuzma_aqueduct_2023</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">woetzel2020climate</bcf:citekey>
-    <bcf:citekey order="8" intorder="2">ipcc2021</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">si_ikg_posodabljanje_integralnih_kart_2015</bcf:citekey>
-    <bcf:citekey order="9" intorder="2">si_ikg_flood_maps_methodology_2020</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">ipcc2021</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">eea2020floods</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">ecb2020</bcf:citekey>
+    <bcf:citekey order="4" intorder="2">tcfd2017</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">moorhouse2024</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">woetzel2020climate</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">ecb2020</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">wri_aqueduct_floods</bcf:citekey>
+    <bcf:citekey order="8" intorder="2">ward_aqueduct_2020</bcf:citekey>
+    <bcf:citekey order="8" intorder="3">kuzma_aqueduct_2023</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">woetzel2020climate</bcf:citekey>
+    <bcf:citekey order="9" intorder="2">ipcc2021</bcf:citekey>
     <bcf:citekey order="10" intorder="1">si_ikg_posodabljanje_integralnih_kart_2015</bcf:citekey>
     <bcf:citekey order="10" intorder="2">si_ikg_flood_maps_methodology_2020</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">si_ikg_data_2025</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">si_ikg_flood_maps_methodology_2020</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">si_ikg_posodabljanje_integralnih_kart_2015</bcf:citekey>
+    <bcf:citekey order="11" intorder="2">si_ikg_flood_maps_methodology_2020</bcf:citekey>
+    <bcf:citekey order="11" intorder="3">si_ikg_predhodna_ocena_poplavne_ogrozenosti_2019</bcf:citekey>
+    <bcf:citekey order="11" intorder="4">si_ikg_pravilnik_2007</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">si_ikg_data_2025</bcf:citekey>
     <bcf:citekey order="13" intorder="1">si_ikg_flood_maps_methodology_2020</bcf:citekey>
     <bcf:citekey order="14" intorder="1">si_ikg_data_2025</bcf:citekey>
     <bcf:citekey order="15" intorder="1">si_ikg_data_2025</bcf:citekey>
@@ -2455,20 +2456,13 @@
     <bcf:citekey order="57" intorder="1">huizinga_global_2017</bcf:citekey>
     <bcf:citekey order="58" intorder="1">huizinga_global_2017</bcf:citekey>
     <bcf:citekey order="59" intorder="1">huizinga_global_2017</bcf:citekey>
-    <bcf:citekey order="60" intorder="1">moorhouse2024</bcf:citekey>
-    <bcf:citekey order="61" intorder="1">moorhouse2024</bcf:citekey>
-    <bcf:citekey order="62" intorder="1">huizinga_global_2017</bcf:citekey>
-    <bcf:citekey order="63" intorder="1">huizinga_global_2017</bcf:citekey>
-  </bcf:section>
-  <!-- SECTION 1 -->
-  <bcf:bibdata section="1">
-    <bcf:datasource type="file" datatype="bibtex" glob="false">references.bib</bcf:datasource>
-  </bcf:bibdata>
-  <bcf:section number="1">
-    <bcf:citekey order="1" intorder="1" nocite="1">*</bcf:citekey>
-  </bcf:section>
-  <!-- SECTION 0 (cont.) -->
-  <bcf:section number="0">
+    <bcf:citekey order="60" intorder="1">huizinga_global_2017</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">urszr_damage_data</bcf:citekey>
+    <bcf:citekey order="62" intorder="1">urszr_damage_data</bcf:citekey>
+    <bcf:citekey order="63" intorder="1">moorhouse2024</bcf:citekey>
+    <bcf:citekey order="64" intorder="1">moorhouse2024</bcf:citekey>
+    <bcf:citekey order="65" intorder="1">huizinga_global_2017</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">huizinga_global_2017</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
@@ -2481,16 +2475,6 @@
   </bcf:sortingtemplate>
   <!-- DATALISTS -->
   <bcf:datalist section="0"
-                name="none/global//global/global/global"
-                type="entry"
-                sortingtemplatename="none"
-                sortingnamekeytemplatename="global"
-                labelprefix=""
-                uniquenametemplatename="global"
-                labelalphanametemplatename="global"
-                namehashtemplatename="global">
-  </bcf:datalist>
-  <bcf:datalist section="1"
                 name="none/global//global/global/global"
                 type="entry"
                 sortingtemplatename="none"
