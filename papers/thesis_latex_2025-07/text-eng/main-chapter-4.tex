@@ -5,12 +5,12 @@ Accurate flood risk assessment requires the integration of diverse data sources 
 
 The focus lies on harmonizing the \textit{Integralna karta globin} (IKG) flood maps, which vary in structure, format, and coordinate reference systems, and transforming them into a consistent, machine-readable representation. These models are rasterized, standardized by return period, and encoded in the cloud-optimized Zarr format. The processed datasets are then onboarded into the modular Physrisk platform, which separates hazard, vulnerability, and financial components and allows for flexible model evaluation.
 
-To facilitate empirical comparison, the framework also includes a toolset that enables side-by-side querying and batch evaluation of both global and local models at precise geolocations, aligned with the validation dataset. This infrastructure supports all subsequent experimental analysis presented in Chapter~5 and lays the groundwork for scalable, reproducible climate risk assessments.
+To facilitate empirical comparison, the framework also includes a toolset that enables side-by-side querying and batch evaluation of both global and local models at precise geolocations, aligned with the validation dataset. This infrastructure supports all subsequent experimental analysis presented in Chapter~\ref{chap:experimental-analysis} and lays the groundwork for scalable, reproducible physical climate risk assessments.
 
 The chapter is organized as follows:
 \begin{itemize}
     \item Section~4.1 presents the overall system architecture and the interaction between components.
-    \item Section~4.2 describes the pipeline for transforming and combining IKG models across multiple Slovenian regions.
+    \item Section~4.2 describes the pipeline for transforming and combining IKG models across multiple areas of significant importance.
     \item Section~4.3 explains how the standardized hazard data are integrated into the Physrisk platform.
     \item Section~4.4 outlines the model comparison toolset used to evaluate prediction accuracy across models.
 \end{itemize}
@@ -37,7 +37,7 @@ The onboarded models are then encoded in Zarr format and stored in an AWS S3-com
 
 Each flood model—whether global or local—is processed through the same onboarding interface, allowing standardization of outputs while preserving return-period-specific intensity information. The hazard models are structured into three-dimensional Zarr arrays indexed by latitude, longitude, and return period. This enables consistent querying and evaluation across models with different spatial resolutions or geographic coverage.
 
-Once onboarded, all hazard layers become interchangeable within the Physrisk pipeline. Vulnerability models (e.g., depth--damage functions) and exposure datasets (e.g., building values or asset locations) can then be used in combination with any hazard source. This interoperability facilitates both comparative experiments and compound risk evaluations, where multiple models are used to bound uncertainty or stress-test assumptions.
+Once onboarded, all hazard layers become interchangeable within the Physrisk pipeline. Vulnerability models (e.g., depth--damage functions) and exposure datasets (e.g., building values or asset locations) can then be used in combination with any hazard source. This interoperability allows for both comparative experiments and compound risk evaluations, where multiple models are used to bound uncertainty or stress-test assumptions.
 
 \subsection{Integration of the IKG Model}
 
@@ -49,7 +49,7 @@ The locally developed IKG model, originally provided in shapefile and GeoPackage
     \item Converting the raster layers into Zarr format for chunked cloud storage.
 \end{itemize}
 
-The unified model was then uploaded to AWS S3 and integrated into the Physrisk hazard module alongside WRI and TU Delft models. This enabled direct comparison and batch evaluation of global versus local model predictions, described further in Section~4.4.
+The unified model was then uploaded to AWS S3 and integrated into the Physrisk hazard module alongside WRI Aqueduct (and other, already onboarded models). This enabled direct comparison and batch evaluation of global versus local model predictions, described further in Section~\ref{sec:comparison-toolset}.
 
 \begin{figure}[htb]
     \centering
@@ -114,7 +114,7 @@ To unify the IKG datasets into a single model, the following pipeline was develo
 
 \subsection{Unified Flood Hazard Product}
 
-The final result of this pipeline is a unified flood hazard model for Slovenia covering all 18 areas of importance. This model:
+The final result of this pipeline is a unified flood hazard model for Slovenia covering all 18 areas of importance for the 3 defined return periods. This model:
 \begin{itemize}
     \item Captures flood depth estimates at high spatial resolution for three return periods,
     \item Standardizes input data from diverse local models into a single harmonized format,
@@ -123,17 +123,13 @@ The final result of this pipeline is a unified flood hazard model for Slovenia c
 
 Figure~\ref{fig:ikg_processing_pipeline} provides a schematic representation of the transformation process, from raw shapefiles to a standardized hazard product.
 
-\begin{figure}[htb]
-    \centering
-    \includegraphics[width=0.95\textwidth]{00548351-a4bb-43ad-ae13-8315a1a15417.png}
-    \caption{Pipeline for combining heterogeneous IKG flood models across 18 areas of importance.}
-    \label{fig:ikg_processing_pipeline}
-\end{figure}
-
-This unified model was subsequently converted to Zarr format and onboarded into the Physrisk platform, as described in Section~4.3.
+This unified model was subsequently converted to Zarr format and onboarded into the Physrisk platform, as described in Section~\ref{sec:physrisk-framework-model-onboarding}.
 
 
+%--------------------------------------------------------------------------------------------------
 \section{Physrisk Framework – Model Onboarding}
+\label{sec:physrisk-framework-model-onboarding}
+%--------------------------------------------------------------------------------------------------
 
 Once the local IKG flood models were unified into a standardized and spatially consistent format, the next step involved integrating them into the modular \textit{Physrisk} framework. Physrisk is part of the broader OS-Climate open-source ecosystem and is designed to facilitate scalable, scenario-based physical climate risk analysis. The framework separates hazard, vulnerability, and financial components and enables flexible model composition, comparison, and evaluation.
 
@@ -182,13 +178,6 @@ The onboarding process was implemented using the Physrisk hazard onboarding tool
     \item \textbf{Register the Model:} Add a model reference entry into the hazard configuration of Physrisk, enabling downstream access via API and batch processors.
 \end{enumerate}
 
-\begin{figure}[htb]
-    \centering
-    \includegraphics[width=0.95\textwidth]{cd9b1828-382a-4dcb-9644-aef436dd1194.png}
-    \caption{Physrisk hazard onboarding pipeline for integrating the IKG model.}
-    \label{fig:ikg_onboarding}
-\end{figure}
-
 \subsection{Integration with Other Models}
 
 With the IKG model onboarded, it became available in the same infrastructure alongside global flood hazard layers, including:
@@ -199,8 +188,10 @@ With the IKG model onboarded, it became available in the same infrastructure alo
 
 This interoperability allows any of the onboarded hazard layers to be used with common vulnerability functions and exposure datasets, enabling direct comparisons, uncertainty bounding, and ensemble evaluations. The IKG model is now fully accessible via the Physrisk API and can be used for property-level flood risk analysis in Slovenia under a unified modeling interface.
 
-
+%--------------------------------------------------------------------------------------------------
 \section{Comparison Toolset}
+\label{sec:comparison-toolset}
+%--------------------------------------------------------------------------------------------------
 
 To evaluate and compare the predictive performance of flood hazard models, a model-agnostic comparison toolset was developed and integrated into the Physrisk framework. This toolset enables side-by-side querying of multiple hazard sources at specific geolocations and return periods, aligned with the reference flood observations used for validation in Chapter~5.
 

@@ -49,39 +49,39 @@
 \contentsline {section}{\numberline {3.1}Hazard and Depth}{15}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Mathematical Definition of Flood Hazard}{15}{subsection.3.1.1}%
 \contentsline {subsection}{\numberline {3.1.2}Hazard Data Sources and Modeling Approach}{16}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}Vulnerability and Damage Function}{17}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Vulnerability and Damage Function}{18}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Mathematical Definition of Flood Vulnerability}{18}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Vulnerability Data Source}{18}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.2}Vulnerability Data Source}{19}{subsection.3.2.2}%
 \contentsline {section}{\numberline {3.3}Exposure and Property Value}{19}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Flood Risk Modeling}{19}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Risk for a Single Return Period}{20}{subsection.3.4.1}%
+\contentsline {section}{\numberline {3.4}Flood Risk Modeling}{20}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Risk for a Single Return Period}{21}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Expected Annual Damage (EAD)}{21}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Use Cases and Applications}{21}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.3}Use Cases and Applications}{22}{subsection.3.4.3}%
 \contentsline {section}{\numberline {3.5}Validation Dataset}{22}{section.3.5}%
 \contentsline {subsection}{\numberline {3.5.1}Source and Scope}{22}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Variables and Structure}{22}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Preprocessing and Harmonization}{22}{subsection.3.5.3}%
-\contentsline {subsection}{\numberline {3.5.4}Intended Uses in This Thesis}{23}{subsection.3.5.4}%
-\contentsline {chapter}{\numberline {4}Model Integration and Analysis Framework}{25}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Architectural Diagram}{25}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}System Overview}{26}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Data Flow and Model Interoperability}{26}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Integration of the IKG Model}{27}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.1.4}Hazard Onboarding Pipeline}{27}{subsection.4.1.4}%
-\contentsline {section}{\numberline {4.2}Pipeline for Combining Heterogeneous IKG Models}{28}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Data Sources and Heterogeneity}{28}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Standardization and Processing Workflow}{29}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Unified Flood Hazard Product}{29}{subsection.4.2.3}%
-\contentsline {section}{\numberline {4.3}Physrisk Framework – Model Onboarding}{29}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Physrisk Architecture and Modules}{30}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Zarr Format and Indexing}{31}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Onboarding Procedure}{31}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Integration with Other Models}{31}{subsection.4.3.4}%
-\contentsline {section}{\numberline {4.4}Comparison Toolset}{32}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Purpose and Design Principles}{32}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {3.5.2}Variables and Structure}{23}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Preprocessing and Harmonization}{24}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}Intended Uses in This Thesis}{24}{subsection.3.5.4}%
+\contentsline {chapter}{\numberline {4}Model Integration and Analysis Framework}{27}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Architectural Diagram}{27}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}System Overview}{28}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Data Flow and Model Interoperability}{28}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Integration of the IKG Model}{29}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Hazard Onboarding Pipeline}{29}{subsection.4.1.4}%
+\contentsline {section}{\numberline {4.2}Pipeline for Combining Heterogeneous IKG Models}{30}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Data Sources and Heterogeneity}{30}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Standardization and Processing Workflow}{31}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Unified Flood Hazard Product}{31}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Physrisk Framework – Model Onboarding}{31}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Physrisk Architecture and Modules}{32}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Zarr Format and Indexing}{32}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Onboarding Procedure}{32}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Integration with Other Models}{33}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}Comparison Toolset}{33}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Purpose and Design Principles}{33}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Interface and Functionality}{33}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Supported Models and Inputs}{33}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}Integration with Validation Workflow}{33}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.4.3}Supported Models and Inputs}{34}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Integration with Validation Workflow}{34}{subsection.4.4.4}%
 \contentsline {subsection}{\numberline {4.4.5}Reproducibility and Extensibility}{34}{subsection.4.4.5}%
 \contentsline {chapter}{\numberline {5}Experimental Design and Evaluation}{35}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Experimental Goals}{35}{section.5.1}%
