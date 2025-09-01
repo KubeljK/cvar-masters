@@ -3,6 +3,7 @@ import os
 from matplotlib import pyplot as plt
 import requests
 import zarr
+import numpy as np
 
 from scipy.interpolate import interp1d
 from fsspec.implementations.local import LocalFileSystem
@@ -134,6 +135,55 @@ def plot_wri_and_si_hazard_data(data: dict, request: dict, x_axis: str = "RP"):
 # -----
 # Vulnerability Data
 # -----
+residential_damage_fractions = [
+    (0, 0.00),
+    (0.5, 0.25),
+    (1, 0.40),
+    (1.5, 0.50),
+    (2, 0.60),
+    (2.5, 0.675),
+    (3, 0.75),
+    (4, 0.85),
+    (5, 0.95),
+    (6, 1.00),
+]
+commercial_damage_function = [
+    (0, 0.00),
+    (0.5, 0.15),
+    (1, 0.30),
+    (1.5, 0.45),
+    (2, 0.55),
+    (2.5, 0.675),
+    (3, 0.75),
+    (4, 0.90),
+    (5, 1.00),
+    (6, 1.00),
+]
+industrial_damage_function = [
+    (0, 0.00),
+    (0.5, 0.15),
+    (1, 0.27),
+    (1.5, 0.40),
+    (2, 0.52),
+    (2.5, 0.675),
+    (3, 0.70),
+    (4, 0.85),
+    (5, 1.00),
+    (6, 1.00),
+]
+agriculture_damage_function = [
+    (0, 0.00),
+    (0.5, 0.30),
+    (1, 0.55),
+    (1.5, 0.65),
+    (2, 0.75),
+    (2.5, 0.80),
+    (3, 0.85),
+    (4, 0.95),
+    (5, 1.00),
+    (6, 1.00),
+]
+
 def plot_wri_and_si_vulnerability_data(data: dict, request: dict):
     fig1 = make_subplots()
 
@@ -161,7 +211,18 @@ def apply_damage_fraction(data: dict):
         item["intensity_curve_set"][0]["intensities"] = [get_damage_fraction(depth) for depth in item["intensity_curve_set"][0]["intensities"]]
     return risk_data
 
-def get_damage_fraction(depth: float) -> float:
+def get_depth_damage_function(property_type: str):
+    _map = {
+        "residential": residential_damage_fractions,
+        "commercial": commercial_damage_function,
+        "industrial": industrial_damage_function,
+        "agriculture": agriculture_damage_function,
+    }
+    # Create interpolation function
+    damage_function = _map[property_type]
+    return damage_function
+
+def get_damage_fraction(depth: float, property_type: str = None) -> float:
     """
     Get damage fraction for a given flood depth using polynomial interpolation.
     For depths outside the range, we clamp the values to [0, 1].
@@ -173,32 +234,39 @@ def get_damage_fraction(depth: float) -> float:
         float: Damage fraction between 0 and 1
     """
     # Values taken from JRE Global Flood Damage Estimates (2020)
-    flood_depths = [
-        0,
-        0.5,
-        1,
-        1.5,
-        2,
-        3,
-        4,
-        5,
-        6
-    ]
-    # Residential, EU
-    damage_fractions = [
-        0.00,
-        0.25,
-        0.40,
-        0.50,
-        0.60,
-        0.75,
-        0.85,
-        0.95,
-        1.00
-    ]
-
-    # Create interpolation function
-    f = interp1d(flood_depths, damage_fractions, kind="linear", bounds_error=False, fill_value=(0, 1))
+    if not property_type:
+        print("Property type not provided, using residential as default!!!!!!")
+        property_type = "residential"
     
-    
+    damage_function = get_depth_damage_function(property_type)
+    f = interp1d([i[0] for i in damage_function], [i[1] for i in damage_function], kind="linear", bounds_error=False, fill_value=(0, 1))
     return float(f(depth))
+
+def plot_damage_function_full_range(property_type: str, color="orange", label="NONE"):
+    fig = plt.gcf()
+    ax = plt.gca()
+    damage_function = get_depth_damage_function(property_type)
+
+    flood_depths = [i[0] for i in damage_function]
+    damage_fractions = [i[1] for i in damage_function]
+
+    # Create points for smooth curve visualization
+    depths_smooth = np.linspace(0, max(flood_depths), 100)
+    damage_smooth = [get_damage_fraction(d, property_type) for d in depths_smooth]
+
+    # Plot the data and fitted curve
+    ax.plot(flood_depths, damage_fractions, "o", color=color)
+    # Dont show this in legend
+    ax.plot(depths_smooth, damage_smooth, "-", label=label, color=color)
+    
+    # Set y-axis range from 0 to 1
+    # ax.set_ylim(0, 1)
+    
+    # Add labels and title
+    ax.set_xlabel("Flood depth [m]")
+    ax.set_ylabel("Damage")
+    # ax.set_title("Damage Function")
+    ax.grid(True, linestyle="--", alpha=0.7)
+    
+    # Return the figure and axis for further customization
+    return fig, ax
