@@ -93,43 +93,60 @@ def get_wri_and_si_hazard_data(coords: dict):
 
 def plot_wri_and_si_hazard_data(data: dict, request: dict, x_axis: str = "RP"):
     """
-    Plot the hazard data for the WRI and SI models.
+    Plot the hazard data for the WRI and SI models using matplotlib.
 
     x_axis can be "RP" (Return Period) or "AEP" (Annual Exceedance Probability).
     """
 
     if x_axis == "RP":
-        x_axis_title = "Return period (years)"
+        x_axis_title = "Return period"
     elif x_axis == "AEP":
-        x_axis_title = "Annual exceedance probability"
+        x_axis_title = "Average exceedance probability"
     else:
         raise ValueError(f"Invalid x_axis: {x_axis}")
-    
-    fig1 = make_subplots()
+
+    fig, ax = plt.subplots(figsize=(8, 4.5))
 
     gps = {
         "lat": request["items"][0]["latitudes"][0],
         "lng": request["items"][0]["longitudes"][0],
     }
+    lat_str = f"{gps['lat']:.5f}"
+    lng_str = f"{gps['lng']:.5f}"
 
     for idx, item in enumerate(data["items"]):
-        name = request["items"][idx]["path"].format(**request["items"][idx])
+        # Friendly, compact legend labels
+        req_item = request["items"][idx]
+        rid = req_item.get("request_item_id", "")
+        if rid == "si":
+            continue
+        friendly = {"wri": "WRI Aqueduct", "si_old": "SI IKG", "si": "SI v2"}.get(rid, rid or "Model")
+        scenario = req_item.get("scenario", "?")
+        year = req_item.get("year", "?")
+        name = f"{friendly}"# ({scenario} {year})"
         index_values = item["intensity_curve_set"][0]["index_values"]
         if x_axis == "AEP":
             index_values = [1 / rp for rp in index_values]
 
-        print("index_values: ",index_values)
-        
+        print("index_values: ", index_values)
+
         intensities = item["intensity_curve_set"][0]["intensities"]
         print("intensities: ", intensities)
-        fig1.add_scatter(x=index_values, y=intensities, name=name, row=1, col=1)
+        ax.plot(index_values, intensities, marker="o", markersize=4, linewidth=1.6, label=name)
 
-    fig1.update_xaxes(title=x_axis_title, title_font={"size": 14}, row=1, col=1, type="log")
-    fig1.update_yaxes(title="Flood depth (m)", title_font={"size": 14}, row=1, col=1)
-    fig1.update_layout(legend=dict(orientation="h", y=-0.15))
-    fig1.update_layout(margin=dict(l=20, r=20, t=40, b=20))
-    fig1.update_layout(title=f"Flood depth (m) for different models. GPS: {gps}")
-    return fig1
+    ax.set_xscale("log")
+    ax.set_xlabel(x_axis_title, fontsize=12)
+    ax.set_ylabel("Flood depth [m]", fontsize=12)
+    # ax.set_title(f"Flood depth (m) for different models (lat={lat_str}, lng={lng_str})")
+    ax.grid(True, linestyle="--", alpha=0.4)
+    ax.margins(x=0.05)
+
+    # Place legend outside the plot on the right to avoid crowding
+    fig.subplots_adjust(right=0.75)
+    ax.legend(loc="upper left", fontsize=12)
+    fig.tight_layout()
+
+    return fig
 
 
 # -----
@@ -141,7 +158,7 @@ residential_damage_fractions = [
     (1, 0.40),
     (1.5, 0.50),
     (2, 0.60),
-    (2.5, 0.675),
+    # (2.5, 0.675),
     (3, 0.75),
     (4, 0.85),
     (5, 0.95),
@@ -153,7 +170,7 @@ commercial_damage_function = [
     (1, 0.30),
     (1.5, 0.45),
     (2, 0.55),
-    (2.5, 0.675),
+    # (2.5, 0.675),
     (3, 0.75),
     (4, 0.90),
     (5, 1.00),
@@ -165,7 +182,7 @@ industrial_damage_function = [
     (1, 0.27),
     (1.5, 0.40),
     (2, 0.52),
-    (2.5, 0.675),
+    # (2.5, 0.64),
     (3, 0.70),
     (4, 0.85),
     (5, 1.00),
@@ -177,7 +194,7 @@ agriculture_damage_function = [
     (1, 0.55),
     (1.5, 0.65),
     (2, 0.75),
-    (2.5, 0.80),
+    # (2.5, 0.80),
     (3, 0.85),
     (4, 0.95),
     (5, 1.00),
