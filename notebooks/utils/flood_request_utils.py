@@ -91,7 +91,15 @@ def get_wri_and_si_hazard_data(coords: dict):
     return data, request
 
 
-def plot_wri_and_si_hazard_data(data: dict, request: dict, x_axis: str = "RP"):
+def plot_wri_and_si_hazard_data(
+        data: dict,
+        request: dict,
+        x_axis: str = "RP",
+        plot_from: list = ["si_old", "wri"],
+        logscale: bool = True,
+        show_legend: bool = True,
+        legend_loc: str = "upper left"
+    ):
     """
     Plot the hazard data for the WRI and SI models using matplotlib.
 
@@ -118,7 +126,7 @@ def plot_wri_and_si_hazard_data(data: dict, request: dict, x_axis: str = "RP"):
         # Friendly, compact legend labels
         req_item = request["items"][idx]
         rid = req_item.get("request_item_id", "")
-        if rid == "si":
+        if rid not in plot_from:
             continue
         friendly = {"wri": "WRI Aqueduct", "si_old": "SI IKG", "si": "SI v2"}.get(rid, rid or "Model")
         scenario = req_item.get("scenario", "?")
@@ -128,22 +136,23 @@ def plot_wri_and_si_hazard_data(data: dict, request: dict, x_axis: str = "RP"):
         if x_axis == "AEP":
             index_values = [1 / rp for rp in index_values]
 
-        print("index_values: ", index_values)
-
         intensities = item["intensity_curve_set"][0]["intensities"]
-        print("intensities: ", intensities)
         ax.plot(index_values, intensities, marker="o", markersize=4, linewidth=1.6, label=name)
 
-    ax.set_xscale("log")
-    ax.set_xlabel(x_axis_title, fontsize=12)
-    ax.set_ylabel("Flood depth [m]", fontsize=12)
+    if logscale:
+        ax.set_xscale("log")
+    ax.set_xlabel(x_axis_title, fontsize=14)
+    ax.set_ylabel("Flood depth [m]", fontsize=14)
     # ax.set_title(f"Flood depth (m) for different models (lat={lat_str}, lng={lng_str})")
     ax.grid(True, linestyle="--", alpha=0.4)
     ax.margins(x=0.05)
 
+    # ax.set_ylim(0, None)
+
     # Place legend outside the plot on the right to avoid crowding
     fig.subplots_adjust(right=0.75)
-    ax.legend(loc="upper left", fontsize=12)
+    if show_legend:
+        ax.legend(loc=legend_loc, fontsize=14)
     fig.tight_layout()
 
     return fig
