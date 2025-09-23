@@ -93,7 +93,7 @@ def st_dev_residuals(real_values:List[float], predicted_values:List[float]) -> f
     if len(real_values) == 0 or len(predicted_values) == 0:
         return 0
 
-    errors = [relative_diff(real, pred) for real, pred in zip(real_values, predicted_values)]
+    errors = [pred - real for real, pred in zip(real_values, predicted_values)]
     return np.std(errors, ddof=1)
 
 
