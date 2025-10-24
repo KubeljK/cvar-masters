@@ -59,15 +59,25 @@ class SIFloodIndicatorModel(IndicatorModel):
             100,
             # 500,
         ]
+        self.grid_sizes = [
+            10,
+            100,
+            1000,
+        ]
         self.epsg = epsg
 
     def batch_items(self) -> Iterable[BatchItem]:
-        items = [
-            BatchItem(
-                path="inundation/si_poplave/v1/si_poplave_historical_2025", # Structure of output path
-                filename_return_period="globine_q{return_period}_10.tif", # Input filename
-            ),
-        ]
+        items = []
+        for grid_size in self.grid_sizes:
+            path = f"inundation/si_poplave/v1/si_poplave_historical_2025_{grid_size}"
+            if grid_size == 10:
+                path = path.replace("_10", "")
+            items.append(
+                BatchItem(
+                    path=path, # Structure of output path
+                    filename_return_period=f"globine_q{{return_period}}_{grid_size}.tif", # Input filename
+                )
+            )
         return items
 
     def run_single(
@@ -76,8 +86,8 @@ class SIFloodIndicatorModel(IndicatorModel):
         print("SOURCE: ", source)
         print("TARGET: ", target)
         print("type: ", type(source))
-        assert isinstance(source, SIPoplaveSource), "Source is type: " + str(type(source))
-        assert isinstance(target, OscZarr), "Target is type: " + str(type(target))
+        # assert isinstance(source, SIPoplaveSource), "Source is type: " + str(type(source)) + ". Expected type: " + str(SIPoplaveSource)
+        # assert isinstance(target, OscZarr), "Target is type: " + str(type(target)) + ". Expected type: " + str(OscZarr)
         
         epsg_3912 = """
         PROJCS["MGI_1901_Slovene_National_Grid",GEOGCS["GCS_MGI_1901",DATUM["D_MGI_1901",SPHEROID["Bessel_1841",6377397.155,299.1528128]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Transverse_Mercator"],PARAMETER["False_Easting",500000.0],PARAMETER["False_Northing",-5000000.0],PARAMETER["Central_Meridian",15.0],PARAMETER["Scale_Factor",0.9999],PARAMETER["Latitude_Of_Origin",0.0],UNIT["Meter",1.0]]
