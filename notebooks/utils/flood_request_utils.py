@@ -50,6 +50,26 @@ def get_wri_and_si_hazard_data(coords: dict):
                 "longitudes": [coords["lng"]],
                 "latitudes": [coords["lat"]],
             },
+            {
+                "request_item_id": "si_res_100", # friendly name
+                "hazard_type": "RiverineInundation",
+                "indicator_id": "flood_depth",
+                "scenario": "historical",
+                "path": "inundation/si_poplave/v2/si_poplave_{scenario}_{year}_100",
+                "year": 2025,
+                "longitudes": [coords["lng"]],
+                "latitudes": [coords["lat"]],
+            },
+            {
+                "request_item_id": "si_res_1000", # friendly name
+                "hazard_type": "RiverineInundation",
+                "indicator_id": "flood_depth",
+                "scenario": "historical",
+                "path": "inundation/si_poplave/v2/si_poplave_{scenario}_{year}_1000",
+                "year": 2025,
+                "longitudes": [coords["lng"]],
+                "latitudes": [coords["lat"]],
+            },
         ]
     }
 
@@ -128,7 +148,13 @@ def plot_wri_and_si_hazard_data(
         rid = req_item.get("request_item_id", "")
         if rid not in plot_from:
             continue
-        friendly = {"wri": "WRI Aqueduct", "si_old": "SI IKG", "si": "SI v2"}.get(rid, rid or "Model")
+        friendly = {
+            "wri": "WRI Aqueduct",
+            "si_old": "SI IKG v1",
+            "si": "SI v2 - 10m resolution",
+            "si_res_100": "SI v2 - 100m resolution",
+            "si_res_1000": "SI v2 - 1000m resolution",
+        }.get(rid, rid or "Model")
         scenario = req_item.get("scenario", "?")
         year = req_item.get("year", "?")
         name = f"{friendly}"# ({scenario} {year})"
@@ -261,7 +287,7 @@ def get_damage_fraction(depth: float, property_type: str = None) -> float:
     """
     # Values taken from JRE Global Flood Damage Estimates (2020)
     if not property_type:
-        print("Property type not provided, using residential as default!!!!!!")
+        # print("Property type not provided, using residential as default!!!!!!")
         property_type = "residential"
     
     damage_function = get_depth_damage_function(property_type)

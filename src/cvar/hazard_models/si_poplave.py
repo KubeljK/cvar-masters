@@ -86,7 +86,7 @@ class SIFloodIndicatorModel(IndicatorModel):
         print("SOURCE: ", source)
         print("TARGET: ", target)
         print("type: ", type(source))
-        # assert isinstance(source, SIPoplaveSource), "Source is type: " + str(type(source)) + ". Expected type: " + str(SIPoplaveSource)
+        # assert isinstance(source, SIPoplasveSource), "Source is type: " + str(type(source)) + ". Expected type: " + str(SIPoplaveSource)
         # assert isinstance(target, OscZarr), "Target is type: " + str(type(target)) + ". Expected type: " + str(OscZarr)
         
         epsg_3912 = """
