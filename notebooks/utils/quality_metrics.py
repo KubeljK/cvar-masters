@@ -4,24 +4,24 @@ import pandas as pd
 import numpy as np
 
 
-def absolute_diff(benchmark_value:float, estimated_value:float) -> float:
+def absolute_diff(real_value: float, predicted_value: float) -> float:
     """
     Given a value and benchmark value, it calculates difference
-    as estimated_value - benchmark_value. Difference  can be
+    as predicted_value - real_value. Difference  can be
     positive or negative.
     """
-    return estimated_value - benchmark_value
+    return predicted_value - real_value
 
 
-def relative_diff(benchmark_value:float, estimated_value:float) -> float:
+def relative_diff(real_value: float, predicted_value: float) -> float:
     """
     Given a value and benchmark value, it calculates relative
     difference as relative to benchmark value. Difference  can be
     positive or negative.
     """
-    if benchmark_value == 0:
+    if real_value == 0:
         return 0
-    return float((estimated_value - benchmark_value) / benchmark_value)
+    return float((predicted_value - real_value) / real_value)
 
 
 def within_x(real_values:List[float], predicted_values:List[float], x=20) -> float:
@@ -42,7 +42,7 @@ def within_x(real_values:List[float], predicted_values:List[float], x=20) -> flo
     return n / len(real_values)
 
 
-def overshoot_x(real_values:List[float], predicted_values:List[float], x=20) -> float:
+def overshoot_x(real_values: List[float], predicted_values: List[float], x: int = 20) -> float:
     """
     Given a list of real values and predicted values,
     calculate share of predictions that overshoot x% of benchmark values.
@@ -60,7 +60,7 @@ def overshoot_x(real_values:List[float], predicted_values:List[float], x=20) -> 
     return n / len(real_values)
 
 
-def median_relative_error(real_values:List[float], predicted_values:List[float]) -> float:
+def median_relative_error(real_values: List[float], predicted_values: List[float]) -> float:
     """
     Given a list of real values and predicted values,
     calculate median relative error.
@@ -75,7 +75,7 @@ def median_relative_error(real_values:List[float], predicted_values:List[float])
     return median(errors)
 
 
-def median_absolute_relative_error(real_values:List[float], predicted_values:List[float]) -> float:
+def median_absolute_relative_error(real_values: List[float], predicted_values: List[float]) -> float:
     """
     Given a list of real values and predicted values,
     calculate median absolute relative error.
@@ -89,7 +89,7 @@ def median_absolute_relative_error(real_values:List[float], predicted_values:Lis
     errors = [abs(relative_diff(real, pred)) for real, pred in zip(real_values, predicted_values)]
     return median(errors)
 
-def st_dev_residuals(real_values:List[float], predicted_values:List[float]) -> float:
+def st_dev_residuals(real_values: List[float], predicted_values: List[float]) -> float:
     if len(real_values) == 0 or len(predicted_values) == 0:
         return 0
 
@@ -97,7 +97,7 @@ def st_dev_residuals(real_values:List[float], predicted_values:List[float]) -> f
     return np.std(errors, ddof=1)
 
 
-def get_metrics(real_values:List[float], predicted_values:List[float]) -> dict:
+def get_metrics(real_values: List[float], predicted_values: List[float]) -> dict:
     """
     Given a list of real and predicted values, calculate the most common metrics.
     :param real_values:list
@@ -112,11 +112,11 @@ def get_metrics(real_values:List[float], predicted_values:List[float]) -> dict:
         # "overshoot_20": overshoot_x(real_values, predicted_values, 20),
         # "median_relative_error": median_relative_error(real_values, predicted_values),
         # "median_absolute_relative_error": median_absolute_relative_error(real_values, predicted_values),
-        "median_error": round(median([real - pred for real, pred in zip(real_values, predicted_values)]), 4),
-        "mean_error": round(np.mean([real - pred for real, pred in zip(real_values, predicted_values)]), 4),
-        "median_absolute_error": np.median([abs(real - pred) for real, pred in zip(real_values, predicted_values)]),
+        "median_error": round(median([pred - real for real, pred in zip(real_values, predicted_values)]), 4),
+        "mean_error": round(np.mean([pred - real for real, pred in zip(real_values, predicted_values)]), 4),
+        "median_absolute_error": np.median([abs(pred - real) for real, pred in zip(real_values, predicted_values)]),
         # "mean_absolute_error": np.mean([abs(real - pred) for real, pred in zip(real_values, predicted_values)]),
-        "RMSE": round(np.sqrt(np.mean([(real - pred)**2 for real, pred in zip(real_values, predicted_values)])), 4),
+        "RMSE": round(np.sqrt(np.mean([(pred - real)**2 for real, pred in zip(real_values, predicted_values)])), 4),
         "st_dev_residuals": round(st_dev_residuals(real_values, predicted_values), 4),
         "total_samples": len(real_values),
     }
