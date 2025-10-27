@@ -33,6 +33,9 @@ def within_x(real_values:List[float], predicted_values:List[float], x=20) -> flo
         predicted_values: list of predicted values of target feature
         x: integer - error percentage tolerance (i.e. 5, 10, 15, 20)
     """
+    if len(real_values) == 0 or len(predicted_values) == 0:
+        return 0.0
+    
     n = 0
     for real, pred in zip(real_values, predicted_values):
         # rel_diff = (pred - real) / real
@@ -51,6 +54,9 @@ def overshoot_x(real_values: List[float], predicted_values: List[float], x: int 
         predicted_values: list of predicted values of target feature
         x: integer - error percentage tolerance (i.e. 5, 10, 15, 20)
     """
+    if len(real_values) == 0 or len(predicted_values) == 0:
+        return 0.0
+    
     n = 0
     for real, pred in zip(real_values, predicted_values):
         # rel_diff = (pred - real) / real
@@ -104,6 +110,18 @@ def get_metrics(real_values: List[float], predicted_values: List[float]) -> dict
     :param predicted_values:list
     :return: dict
     """
+    # Handle empty lists
+    if len(real_values) == 0 or len(predicted_values) == 0:
+        return {
+            "within_20": 0.0,
+            "median_error": 0.0,
+            "mean_error": 0.0,
+            "median_absolute_error": 0.0,
+            "RMSE": 0.0,
+            "st_dev_residuals": 0.0,
+            "total_samples": 0,
+        }
+    
     return {
         # "within_5": within_x(real_values, predicted_values, 5),
         # "within_10": within_x(real_values, predicted_values, 10),
