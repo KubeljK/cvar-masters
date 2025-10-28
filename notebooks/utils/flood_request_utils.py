@@ -1,3 +1,4 @@
+from calendar import c
 import json
 import os
 from matplotlib import pyplot as plt
@@ -70,6 +71,26 @@ def get_wri_and_si_hazard_data(coords: dict):
                 "longitudes": [coords["lng"]],
                 "latitudes": [coords["lat"]],
             },
+            {
+                "request_item_id": "si_res_100_max", # friendly name
+                "hazard_type": "RiverineInundation",
+                "indicator_id": "flood_depth",
+                "scenario": "historical",
+                "path": "inundation/si_poplave/v2/si_poplave_{scenario}_{year}_100_max",
+                "year": 2025,
+                "longitudes": [coords["lng"]],
+                "latitudes": [coords["lat"]],
+            },
+            {
+                "request_item_id": "si_res_1000_max", # friendly name
+                "hazard_type": "RiverineInundation",
+                "indicator_id": "flood_depth",
+                "scenario": "historical",
+                "path": "inundation/si_poplave/v2/si_poplave_{scenario}_{year}_1000_max",
+                "year": 2025,
+                "longitudes": [coords["lng"]],
+                "latitudes": [coords["lat"]],
+            },
         ]
     }
 
@@ -111,6 +132,135 @@ def get_wri_and_si_hazard_data(coords: dict):
     return data, request
 
 
+def get_wri_and_si_hazard_data_multiple(coords: dict | list):
+
+    lngs = [c["lng"] for c in coords]
+    lats = [c["lat"] for c in coords]
+
+    request = {
+        "interpolation": "max",
+        "items": [
+            {
+                "request_item_id": "wri", # friendly name
+                "hazard_type": "RiverineInundation",
+                "indicator_id": "flood_depth",
+                "scenario": "rcp4p5",
+                "path": "inundation/wri/v2/inunriver_{scenario}_00000NorESM1-M_{year}",
+                "year": 2030,
+                "longitudes": lngs,
+                "latitudes": lats,
+            },
+            {
+                "request_item_id": "si_old", # friendly name
+                "hazard_type": "RiverineInundation",
+                "indicator_id": "flood_depth",
+                "scenario": "historical",
+                "path": "inundation/si_poplave/v1/si_poplave_{scenario}_{year}",
+                "year": 2025,
+                "longitudes": lngs,
+                "latitudes": lats,
+            },
+            {
+                "request_item_id": "si", # friendly name
+                "hazard_type": "RiverineInundation",
+                "indicator_id": "flood_depth",
+                "scenario": "historical",
+                "path": "inundation/si_poplave/v2/si_poplave_{scenario}_{year}",
+                "year": 2025,
+                "longitudes": lngs,
+                "latitudes": lats,
+            },
+            {
+                "request_item_id": "si_res_100", # friendly name
+                "hazard_type": "RiverineInundation",
+                "indicator_id": "flood_depth",
+                "scenario": "historical",
+                "path": "inundation/si_poplave/v2/si_poplave_{scenario}_{year}_100",
+                "year": 2025,
+                "longitudes": lngs,
+                "latitudes": lats,
+            },
+            {
+                "request_item_id": "si_res_1000", # friendly name
+                "hazard_type": "RiverineInundation",
+                "indicator_id": "flood_depth",
+                "scenario": "historical",
+                "path": "inundation/si_poplave/v2/si_poplave_{scenario}_{year}_1000",
+                "year": 2025,
+                "longitudes": lngs,
+                "latitudes": lats,
+            },
+            {
+                "request_item_id": "si_res_100_max", # friendly name
+                "hazard_type": "RiverineInundation",
+                "indicator_id": "flood_depth",
+                "scenario": "historical",
+                "path": "inundation/si_poplave/v2/si_poplave_{scenario}_{year}_100_max",
+                "year": 2025,
+                "longitudes": lngs,
+                "latitudes": lats,
+            },
+            {
+                "request_item_id": "si_res_1000_max", # friendly name
+                "hazard_type": "RiverineInundation",
+                "indicator_id": "flood_depth",
+                "scenario": "historical",
+                "path": "inundation/si_poplave/v2/si_poplave_{scenario}_{year}_1000_max",
+                "year": 2025,
+                "longitudes": lngs,
+                "latitudes": lats,
+            },
+        ]
+    }
+
+    DATA_DIR = "../data"
+    # fdir = os.path.join(DATA_DIR, "test_output_wri_aqueduct2", "hazard", "hazard.zarr")
+    fdir = os.path.join(DATA_DIR, "full_models", "hazard", "hazard.zarr")
+
+    # Make sure the directory exists
+    if not os.path.exists(fdir):
+        raise FileNotFoundError(f"Directory {fdir} does not exist")
+
+    inventory_reader = InventoryReader(fs=LocalFileSystem(), base_path="/Users/klemenkubelj/Documents/school/graduate/masters/code/cvar-masters/data/full_models")
+    local_store = zarr.DirectoryStore(fdir)
+    container_ls = Container(zarr_store=local_store, inventory_reader=inventory_reader)
+    requester_ls = container_ls.requester()
+
+    result = requester_ls.get(request_id="get_hazard_data", request_dict=request)
+    data = json.loads(result)
+    
+    # Parse/clean data for easier processing
+    # Each item contains multiple intensity curves (one per coordinate)
+    parsed_data = {}
+    for item in data["items"]:
+        request_id = item["request_item_id"]
+        parsed_data[request_id] = []
+        
+        # Process each intensity curve (one per coordinate)
+        for curve_set in item["intensity_curve_set"]:
+            rps = curve_set["index_values"]
+            intensities = curve_set["intensities"]
+            coord_data = {
+                rp: intensity
+                for rp, intensity in zip(rps, intensities)
+            }
+            parsed_data[request_id].append(coord_data)
+    
+    data["flood_depths"] = parsed_data
+
+    # Apply damage fractions for each coordinate
+    processed_damage_fractions = {}
+    for k, coord_list in data["flood_depths"].items():
+        processed_damage_fractions[k] = []
+        for coord_data in coord_list:  # coord_data is a dict {rp: depth}
+            coord_damage = {}
+            for rp, depth in coord_data.items():
+                coord_damage[rp] = get_damage_fraction(depth)
+            processed_damage_fractions[k].append(coord_damage)
+    data["damage_fractions"] = processed_damage_fractions
+
+    return data, request
+    
 def plot_wri_and_si_hazard_data(
         data: dict,
         request: dict,
@@ -202,7 +352,7 @@ residential_damage_fractions = [
 residential_damage_fractions_calibrated = [
     (0, 0.00),
     (0.5, 0.3),
-    (1, 0.50),
+    (1, 0.4),
     (1.5, 0.50),
     (2, 0.50),
     # (2.5, 0.675),
@@ -226,9 +376,9 @@ commercial_damage_function = [
 commercial_damage_function_calibrated = [
     (0, 0.00),
     (0.5, 0.3),
-    (1, 0.50),
-    (1.5, 0.8),
-    (2, 0.8),
+    (1, 0.425),
+    (1.5, 0.5),
+    (2, 0.65),
     # (2.5, 0.675),
     (3, 0.75),
     (4, 0.90),
@@ -250,9 +400,9 @@ industrial_damage_function = [
 industrial_damage_function_calibrated = [
     (0, 0.00),
     (0.5, 0.3),
-    (1, 0.425),
-    (1.5, 0.5),
-    (2, 0.65),
+    (1, 0.5),
+    (1.5, 0.8),
+    (2, 0.8),
     # (2.5, 0.64),
     (3, 0.70),
     (4, 0.85),
@@ -283,6 +433,20 @@ agriculture_damage_function_calibrated = [
     (5, 1.00),
     (6, 1.00),
 ]
+
+def residential_damage_function_calibrated(x):
+    # 0.42571429 + 0.18333333·x - 0.17142857·x² + 0.06666667·x³
+    return 0.42571429 + 0.18333333*x - 0.17142857*x**2 + 0.06666667*x**3
+def industrial_damage_function_calibrated(x):
+    # 0.55142857 + 0.53333333·x - 0.14285714·x² - 0.13333333·x³
+    return 0.55142857 + 0.53333333*x - 0.14285714*x**2 - 0.13333333*x**3
+def commercial_damage_function_calibrated(x):
+    # 0.425 + 0.15833333·x - 0.1·x² + 0.16666667·x³
+    return 0.425 + 0.15833333*x - 0.1*x**2 + 0.16666667*x**3
+def agriculture_damage_function_calibrated(x):
+    # 0.37714286 + 0.18333333·x - 0.11428571·x² + 0.06666667·x³
+    return 0.37714286 + 0.18333333*x - 0.11428571*x**2 + 0.06666667*x**3
+
 
 def plot_wri_and_si_vulnerability_data(data: dict, request: dict):
     fig1 = make_subplots()

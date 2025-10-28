@@ -78,6 +78,20 @@ class SIFloodIndicatorModel(IndicatorModel):
                     filename_return_period=f"globine_q{{return_period}}_{grid_size}.tif", # Input filename
                 )
             )
+
+        # MAX-APPROACH (just res 100 and 1000)
+        items.append(
+            BatchItem(
+                path=f"inundation/si_poplave/v1/si_poplave_historical_2025_100_max", # Structure of output path
+                filename_return_period=f"globine_q{{return_period}}_100_max.tif", # Input filename
+            )
+        )
+        items.append(
+            BatchItem(
+                path=f"inundation/si_poplave/v1/si_poplave_historical_2025_1000_max", # Structure of output path
+                filename_return_period=f"globine_q{{return_period}}_1000_max.tif", # Input filename
+            )
+        )
         return items
 
     def run_single(
