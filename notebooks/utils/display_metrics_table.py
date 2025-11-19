@@ -17,29 +17,27 @@ def display_metrics_table(metrics_dict, bias_adjusted=False):
         raise ValueError("metrics_dict is empty")
     
     # Extract all metric names from the first entry
-    first_event = list(metrics_dict.keys())[0]
+    # first_event = list(metrics_dict.keys())[0]
     
     # Handle different possible structures
-    if isinstance(metrics_dict[first_event], dict) and 'si' in metrics_dict[first_event]:
-        metric_names = list(metrics_dict[first_event]['si'].keys())
-    else:
-        raise ValueError(f"Expected metrics structure with 'si' and 'wri' keys, but got: {list(metrics_dict[first_event].keys()) if isinstance(metrics_dict[first_event], dict) else type(metrics_dict[first_event])}")
+    # if isinstance(metrics_dict[first_event], dict) and 'si' in metrics_dict[first_event]:
+    #     metric_names = list(metrics_dict[first_event]['si'].keys())
+    # elif isinstance(metrics_dict[first_event], dict) and 'predicted_si_depth' in metrics_dict[first_event]:
+    #     metric_names = list(metrics_dict[first_event]['predicted_si_depth'].keys())
+    # else:
+    #     raise ValueError(f"Expected metrics structure with 'si' and 'wri' keys, but got: {list(metrics_dict[first_event].keys()) if isinstance(metrics_dict[first_event], dict) else type(metrics_dict[first_event])}")
     
     # Create a list to store all rows
     rows = []
     
     for event in metrics_dict.keys():
-        # Add SI row
-        si_row = {'Event': event, 'Model': 'SI'}
-        for metric in metric_names:
-            si_row[metric] = metrics_dict[event]['si'][metric]
-        rows.append(si_row)
         
-        # Add WRI row
-        wri_row = {'Event': event, 'Model': 'WRI'}
-        for metric in metric_names:
-            wri_row[metric] = metrics_dict[event]['wri'][metric]
-        rows.append(wri_row)
+        for pred_type in metrics_dict[event].keys():
+            metric_names = list(metrics_dict[event][pred_type].keys())
+            _row = {'Event': event, 'Model': pred_type}
+            for metric in metric_names:
+                _row[metric] = metrics_dict[event][pred_type][metric]
+            rows.append(_row)
     
     # Create DataFrame
     df = pd.DataFrame(rows)
