@@ -13,6 +13,7 @@ from physrisk.data.inventory_reader import InventoryReader
 from plotly.subplots import make_subplots
 from IPython.display import Markdown, display
 
+from . import colors
 
 # -----
 # Hazard Data
@@ -275,6 +276,7 @@ def plot_wri_and_si_hazard_data(
 
     x_axis can be "RP" (Return Period) or "AEP" (Annual Exceedance Probability).
     """
+    print("plot_wri_and_si_hazard_data")
 
     if x_axis == "RP":
         x_axis_title = "Return period"
@@ -298,9 +300,14 @@ def plot_wri_and_si_hazard_data(
         rid = req_item.get("request_item_id", "")
         if rid not in plot_from:
             continue
+        color = "red"
+        if rid == "si_old":
+            color = colors.COLOR_SI_IKG
+        if rid == "wri":
+            color = colors.COLOR_WRI
         friendly = {
             "wri": "WRI Aqueduct",
-            "si_old": "SI IKG v1",
+            "si_old": "SI IKG",
             "si": "SI v2 - 10m resolution",
             "si_res_100": "SI v2 - 100m resolution",
             "si_res_1000": "SI v2 - 1000m resolution",
@@ -313,10 +320,12 @@ def plot_wri_and_si_hazard_data(
             index_values = [1 / rp for rp in index_values]
 
         intensities = item["intensity_curve_set"][0]["intensities"]
-        ax.plot(index_values, intensities, marker="o", markersize=4, linewidth=1.6, label=name)
+        ax.plot(index_values, intensities, marker="o", markersize=4, linewidth=1.6, label=name, color=color)
 
     if logscale:
-        ax.set_xscale("log")
+        ax.set_xscale("log") # But keep thousands as labels!
+        import matplotlib
+        ax.get_xaxis().set_major_formatter(matplotlib.ticker.ScalarFormatter())
     ax.set_xlabel(x_axis_title, fontsize=14)
     ax.set_ylabel("Flood depth [m]", fontsize=14)
     # ax.set_title(f"Flood depth (m) for different models (lat={lat_str}, lng={lng_str})")
